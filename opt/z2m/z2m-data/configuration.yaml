@@ -1,0 +1,21 @@
+permit_join: true
+mqtt:
+  base_topic: zigbee2mqtt
+  server: mqtt://mqtt
+serial:
+  port: /dev/ttyACM0
+frontend:
+  port: 8080
+devices:
+  '0x000000000171a526':
+    friendly_name: sw01
+  '0x000000000171a0d9':
+    friendly_name: sw02
+  '0x001788010328496a':
+    friendly_name: hm01
+    description: kitchen
+  '0x001788010866ce87':
+    friendly_name: hm02
+    description: office
+advanced:
+  log_level: error

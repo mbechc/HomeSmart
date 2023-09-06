@@ -1,0 +1,42 @@
+{
+    "0x000000000171a526": {
+        "linkquality": 127
+    },
+    "0x000000000171a0d9": {
+        "linkquality": 127
+    },
+    "0x001788010328496a": {
+        "battery": 10,
+        "occupancy_timeout": 0,
+        "occupancy": false,
+        "motion_sensitivity": "high",
+        "temperature": 25.61,
+        "illuminance": 7413,
+        "illuminance_lux": 6,
+        "linkquality": 255,
+        "led_indication": false,
+        "update": {
+            "state": "idle",
+            "installed_version": 1107323831,
+            "latest_version": 1107323831
+        },
+        "update_available": false
+    },
+    "0x001788010866ce87": {
+        "motion_sensitivity": "high",
+        "led_indication": false,
+        "occupancy_timeout": 0,
+        "battery": 59.5,
+        "occupancy": false,
+        "temperature": 24.46,
+        "illuminance": 0,
+        "illuminance_lux": 0,
+        "update": {
+            "state": "idle",
+            "installed_version": 1107323831,
+            "latest_version": 1107323831
+        },
+        "update_available": false,
+        "linkquality": 188
+    }
+}

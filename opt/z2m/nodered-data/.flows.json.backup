@@ -1,0 +1,558 @@
+[
+    {
+        "id": "538b5625d6a42d4c",
+        "type": "tab",
+        "label": "kitchen",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "4b07733b0a63051d",
+        "type": "tab",
+        "label": "buttons",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "07d8eff2566f48c0",
+        "type": "subflow",
+        "name": "Subflow 1",
+        "info": "",
+        "in": [
+            {
+                "x": 140,
+                "y": 140,
+                "wires": [
+                    {
+                        "id": "26a5ae2148738756"
+                    }
+                ]
+            }
+        ],
+        "out": [
+            {
+                "x": 580,
+                "y": 40,
+                "wires": [
+                    {
+                        "id": "01352fde99019142",
+                        "port": 0
+                    }
+                ]
+            },
+            {
+                "x": 580,
+                "y": 100,
+                "wires": [
+                    {
+                        "id": "7e9ab0a1a92e32e2",
+                        "port": 0
+                    }
+                ]
+            },
+            {
+                "x": 580,
+                "y": 160,
+                "wires": [
+                    {
+                        "id": "8e0a9737cce50454",
+                        "port": 0
+                    }
+                ]
+            },
+            {
+                "x": 580,
+                "y": 220,
+                "wires": [
+                    {
+                        "id": "be34c7951728eef0",
+                        "port": 0
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "e9c6b6542203d706",
+        "type": "zigbee2mqtt-server",
+        "name": "docker-mqtt",
+        "host": "mqtt",
+        "mqtt_port": "1883",
+        "mqtt_username": "",
+        "mqtt_password": "",
+        "mqtt_qos": "0",
+        "tls": "",
+        "usetls": false,
+        "base_topic": "zigbee2mqtt"
+    },
+    {
+        "id": "dbd1130749e5858a",
+        "type": "button-events-config",
+        "name": "",
+        "clickedInterval": "500",
+        "pressedInterval": "750",
+        "debounceInterval": "15"
+    },
+    {
+        "id": "a4716607def37d0e",
+        "type": "button-events-config",
+        "name": "test",
+        "clickedInterval": "500",
+        "pressedInterval": "750",
+        "debounceInterval": "15"
+    },
+    {
+        "id": "26a5ae2148738756",
+        "type": "switch",
+        "z": "07d8eff2566f48c0",
+        "name": "",
+        "property": "payload.action",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "cont",
+                "v": "_1",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "_2",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "_3",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "_4",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "_1_and_3",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "_2_and_4",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 6,
+        "x": 250,
+        "y": 140,
+        "wires": [
+            [
+                "01352fde99019142"
+            ],
+            [
+                "7e9ab0a1a92e32e2"
+            ],
+            [
+                "8e0a9737cce50454"
+            ],
+            [
+                "be34c7951728eef0"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "01352fde99019142",
+        "type": "function",
+        "z": "07d8eff2566f48c0",
+        "name": "function 5",
+        "func": "if (msg.payload.action == \"press_1\" )\n{ \n    msg.payload.button  = \"up\"\n    msg.payload.side    = \"left\" \n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 460,
+        "y": 40,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7e9ab0a1a92e32e2",
+        "type": "function",
+        "z": "07d8eff2566f48c0",
+        "name": "function 6",
+        "func": "if (msg.payload.action.includes(\"press\")) { msg.payload = 1 }\nif (msg.payload.action.includes(\"release\")) { msg.payload = 0 }\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 460,
+        "y": 100,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "8e0a9737cce50454",
+        "type": "function",
+        "z": "07d8eff2566f48c0",
+        "name": "function 7",
+        "func": "if (msg.payload.action.includes(\"press\")) { msg.payload = 1 }\nif (msg.payload.action.includes(\"release\")) { msg.payload = 0 }\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 460,
+        "y": 160,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "be34c7951728eef0",
+        "type": "function",
+        "z": "07d8eff2566f48c0",
+        "name": "function 8",
+        "func": "if (msg.payload.action.includes(\"press\")) { msg.payload = 1 }\nif (msg.payload.action.includes(\"release\")) { msg.payload = 0 }\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 460,
+        "y": 220,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e683e4a392b02c08",
+        "type": "link in",
+        "z": "538b5625d6a42d4c",
+        "name": "link in 1",
+        "links": [
+            "f322a9e32d77c4b3"
+        ],
+        "x": 165,
+        "y": 100,
+        "wires": [
+            [
+                "4a0f59a247556fe7"
+            ]
+        ]
+    },
+    {
+        "id": "4a0f59a247556fe7",
+        "type": "debug",
+        "z": "538b5625d6a42d4c",
+        "name": "debug 4",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 540,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "e446fa591429a76e",
+        "type": "zigbee2mqtt-in",
+        "z": "4b07733b0a63051d",
+        "name": "sw01",
+        "server": "e9c6b6542203d706",
+        "friendly_name": "sw01 (PTM 215Z)",
+        "device_id": "0x000000000171a526",
+        "state": "0",
+        "outputAtStartup": true,
+        "filterChanges": false,
+        "enableMultiple": false,
+        "x": 70,
+        "y": 200,
+        "wires": [
+            [
+                "2e7182eeed9cc8ba"
+            ]
+        ]
+    },
+    {
+        "id": "2e7182eeed9cc8ba",
+        "type": "switch",
+        "z": "4b07733b0a63051d",
+        "name": "",
+        "property": "payload.action",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "cont",
+                "v": "_1",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "_2",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "_3",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "_4",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "_1_and_3",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "_2_and_4",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 6,
+        "x": 190,
+        "y": 200,
+        "wires": [
+            [
+                "c320ead3effd51ba"
+            ],
+            [
+                "4dc51e754a532096"
+            ],
+            [
+                "b99339070bba8ebe"
+            ],
+            [
+                "6ec82e02d7abf5d9"
+            ],
+            [
+                "1fafa22a245422ad"
+            ],
+            [
+                "c1f1f0c213f2bf9f"
+            ]
+        ]
+    },
+    {
+        "id": "f322a9e32d77c4b3",
+        "type": "link out",
+        "z": "4b07733b0a63051d",
+        "name": "sw01-left-down",
+        "mode": "link",
+        "links": [
+            "e683e4a392b02c08"
+        ],
+        "x": 665,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "1fafa22a245422ad",
+        "type": "link out",
+        "z": "4b07733b0a63051d",
+        "name": "sw01-top",
+        "mode": "link",
+        "links": [],
+        "x": 325,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "c1f1f0c213f2bf9f",
+        "type": "link out",
+        "z": "4b07733b0a63051d",
+        "name": "sw01-bottom",
+        "mode": "link",
+        "links": [],
+        "x": 325,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "8f2db85850927456",
+        "type": "zigbee2mqtt-in",
+        "z": "4b07733b0a63051d",
+        "name": "sw02",
+        "server": "e9c6b6542203d706",
+        "friendly_name": "sw02 (PTM 215Z)",
+        "device_id": "0x000000000171a0d9",
+        "state": "0",
+        "outputAtStartup": true,
+        "filterChanges": false,
+        "enableMultiple": false,
+        "x": 110,
+        "y": 420,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4744bd727a44b845",
+        "type": "link out",
+        "z": "4b07733b0a63051d",
+        "name": "sw02-right",
+        "mode": "link",
+        "links": [],
+        "x": 455,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "d811825f90d1f514",
+        "type": "link out",
+        "z": "4b07733b0a63051d",
+        "name": "sw02-left",
+        "mode": "link",
+        "links": [],
+        "x": 455,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "8064ee5bdadb43d7",
+        "type": "link out",
+        "z": "4b07733b0a63051d",
+        "name": "sw02-top",
+        "mode": "link",
+        "links": [],
+        "x": 455,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "61ce50aed9b2900f",
+        "type": "link out",
+        "z": "4b07733b0a63051d",
+        "name": "sw02-bottom",
+        "mode": "link",
+        "links": [],
+        "x": 455,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "c320ead3effd51ba",
+        "type": "function",
+        "z": "4b07733b0a63051d",
+        "name": "function 1",
+        "func": "if (msg.payload.action.includes(\"press\")) { msg.payload = 1 }\nif (msg.payload.action.includes(\"release\")) { msg.payload = 0 }\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 370,
+        "y": 100,
+        "wires": [
+            [
+                "18a33da7f0ded734"
+            ]
+        ]
+    },
+    {
+        "id": "4dc51e754a532096",
+        "type": "function",
+        "z": "4b07733b0a63051d",
+        "name": "function 2",
+        "func": "if (msg.payload.action.includes(\"press\")) { msg.payload = 1 }\nif (msg.payload.action.includes(\"release\")) { msg.payload = 0 }\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 370,
+        "y": 140,
+        "wires": [
+            [
+                "f322a9e32d77c4b3"
+            ]
+        ]
+    },
+    {
+        "id": "18a33da7f0ded734",
+        "type": "link out",
+        "z": "4b07733b0a63051d",
+        "name": "sw01-left-up",
+        "mode": "link",
+        "links": [],
+        "x": 665,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "b99339070bba8ebe",
+        "type": "function",
+        "z": "4b07733b0a63051d",
+        "name": "function 3",
+        "func": "if (msg.payload.action.includes(\"press\")) { msg.payload = 1 }\nif (msg.payload.action.includes(\"release\")) { msg.payload = 0 }\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 370,
+        "y": 180,
+        "wires": [
+            [
+                "57c62d3e03316a1d"
+            ]
+        ]
+    },
+    {
+        "id": "6ec82e02d7abf5d9",
+        "type": "function",
+        "z": "4b07733b0a63051d",
+        "name": "function 4",
+        "func": "if (msg.payload.action.includes(\"press\")) { msg.payload = 1 }\nif (msg.payload.action.includes(\"release\")) { msg.payload = 0 }\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 370,
+        "y": 220,
+        "wires": [
+            [
+                "5baeb3421b68fffd"
+            ]
+        ]
+    },
+    {
+        "id": "57c62d3e03316a1d",
+        "type": "link out",
+        "z": "4b07733b0a63051d",
+        "name": "sw01-right-up",
+        "mode": "link",
+        "links": [],
+        "x": 665,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "5baeb3421b68fffd",
+        "type": "link out",
+        "z": "4b07733b0a63051d",
+        "name": "sw01-right-down",
+        "mode": "link",
+        "links": [],
+        "x": 665,
+        "y": 220,
+        "wires": []
+    }
+]

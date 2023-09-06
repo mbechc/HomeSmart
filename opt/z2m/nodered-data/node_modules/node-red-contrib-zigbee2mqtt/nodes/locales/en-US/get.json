@@ -1,0 +1,21 @@
+{
+    "label": {
+        "name": "Name",
+        "server": "Server",
+        "topic": "Device",
+        "state": "Payload output",
+        "refresh": "Refresh",
+        "legacy_api": "Legacy API",
+        "refresh_devices_list": "Refresh Devices List"
+    },
+    "placeholder": {
+        "name": "Name"
+    },
+    "multiselect": {
+        "devices": "Devices",
+        "filter_devices": "Filter devices...",
+        "refresh": "Refresh devices list",
+        "none_selected": "None selected",
+        "complete_payload": "Complete state payload"
+    }
+}

@@ -1,0 +1,21 @@
+info  2023-09-03 12:46:13: Logging to console and directory: '/app/data/log/2023-09-03.12-46-13' filename: log.txt
+info  2023-09-03 12:46:13: Starting Zigbee2MQTT version 1.33.0 (commit #7ee207f)
+info  2023-09-03 12:46:13: Starting zigbee-herdsman (0.18.5)
+info  2023-09-03 12:46:13: zigbee-herdsman started (resumed)
+info  2023-09-03 12:46:13: Coordinator firmware version: '{"meta":{"maintrel":0,"majorrel":38,"minorrel":114,"product":0,"revision":"0x26720700","transportrev":0},"type":"ConBee2/RaspBee2"}'
+info  2023-09-03 12:46:13: Currently 0 devices are joined:
+warn  2023-09-03 12:46:13: `permit_join` set to  `true` in configuration.yaml.
+warn  2023-09-03 12:46:13: Allowing new devices to join.
+warn  2023-09-03 12:46:13: Set `permit_join` to `false` once you joined all devices.
+info  2023-09-03 12:46:13: Zigbee: allowing new devices to join.
+info  2023-09-03 12:46:15: Connecting to MQTT server at mqtt://mqtt
+info  2023-09-03 12:46:15: Connected to MQTT server
+info  2023-09-03 12:46:15: MQTT publish: topic 'zigbee2mqtt/bridge/state', payload 'online'
+info  2023-09-03 12:46:15: Started frontend on port 0.0.0.0:8080
+info  2023-09-03 12:46:15: MQTT publish: topic 'zigbee2mqtt/bridge/config', payload '{"commit":"7ee207f","coordinator":{"meta":{"maintrel":0,"majorrel":38,"minorrel":114,"product":0,"revision":"0x26720700","transportrev":0},"type":"ConBee2/RaspBee2"},"log_level":"info","network":{"channel":11,"extendedPanID":"0xdddddddddddddddd","panID":6754},"permit_join":true,"version":"1.33.0"}'
+info  2023-09-03 12:46:15: Zigbee2MQTT started!
+info  2023-09-03 12:46:21: MQTT publish: topic 'zigbee2mqtt/bridge/state', payload 'offline'
+info  2023-09-03 12:46:21: Disconnecting from MQTT server
+info  2023-09-03 12:46:21: Stopping zigbee-herdsman...
+info  2023-09-03 12:46:23: Stopped zigbee-herdsman
+info  2023-09-03 12:46:23: Stopped Zigbee2MQTT
