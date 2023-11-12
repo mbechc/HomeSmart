@@ -1,0 +1,13 @@
+debug 2023-10-05 11:45:36: Loaded state from file /app/data/state.json
+info  2023-10-05 11:45:36: Logging to console and directory: '/app/data/log/2023-10-05.11-45-36' filename: log.txt
+debug 2023-10-05 11:45:36: Removing old log directory '/app/data/log/2023-10-05.11-41-27'
+info  2023-10-05 11:45:36: Starting Zigbee2MQTT version 1.33.0 (commit #7ee207f)
+info  2023-10-05 11:45:36: Starting zigbee-herdsman (0.18.5)
+debug 2023-10-05 11:45:36: Using zigbee-herdsman with settings: '{"adapter":{"concurrent":null,"delay":null,"disableLED":false},"backupPath":"/app/data/coordinator_backup.json","databaseBackupPath":"/app/data/database.db.backup","databasePath":"/app/data/database.db","network":{"channelList":[11],"extendedPanID":[221,221,221,221,221,221,221,221],"networkKey":"HIDDEN","panID":6754},"serialPort":{"adapter":"ezsp","path":"/dev/ttyACM1"}}'
+error 2023-10-05 11:45:42: Error while starting zigbee-herdsman
+error 2023-10-05 11:45:42: Failed to start zigbee
+error 2023-10-05 11:45:42: Check https://www.zigbee2mqtt.io/guide/installation/20_zigbee2mqtt-fails-to-start.html for possible solutions
+error 2023-10-05 11:45:42: Exiting...
+error 2023-10-05 11:45:42: Error: Failure send getNetworkParameters:{"type":"Buffer","data":[24,0,1,40,0]}
+    at /app/node_modules/zigbee-herdsman/src/adapter/ezsp/driver/ezsp.ts:562:23
+    at Queue.executeNext (/app/node_modules/zigbee-herdsman/src/utils/queue.ts:32:32)

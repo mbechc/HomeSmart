@@ -4,17 +4,18 @@ services:
     restart: unless-stopped
     volumes:
       - "./mqtt-data:/mosquitto"
+    network_mode: "host"
     ports:
       - 1883:1883
       - 9001:9001
     command: "mosquitto -c /mosquitto-no-auth.conf"
 
-  zigbee2mqtt:
-    container_name: zigbee2mqtt
+  z2m-conbee:
+    container_name: z2m-conbee
     restart: unless-stopped
     image: koenkk/zigbee2mqtt
     volumes:
-      - ./z2m-data:/app/data
+      - ./z2m-conbee-data:/app/data
       - /run/udev:/run/udev:ro
     ports:
       - 8080:8080
@@ -22,13 +23,17 @@ services:
       - TZ=Europe/Copenhagen
     devices:
       - /dev/ttyACM0:/dev/ttyACM0
+    depends_on:
+            - mqtt
 
   node-red:
     image: nodered/node-red:latest
     restart: unless-stopped
+    user: root
     environment:
       - TZ=Europe/Copenhagen
-    ports:
-      - "80:1880"
     volumes:
       - ./nodered-data:/data
+    network_mode: "host"
+    depends_on:
+            - mqtt

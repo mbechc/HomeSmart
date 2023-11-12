@@ -1,0 +1,142 @@
+0 verbose cli /usr/local/bin/node /usr/local/bin/npm
+1 info using npm@8.19.4
+2 info using node@v16.20.1
+3 timing npm:load:whichnode Completed in 1ms
+4 timing config:load:defaults Completed in 7ms
+5 timing config:load:file:/usr/local/lib/node_modules/npm/npmrc Completed in 1ms
+6 timing config:load:builtin Completed in 1ms
+7 timing config:load:cli Completed in 2ms
+8 timing config:load:env Completed in 0ms
+9 timing config:load:file:/data/.npmrc Completed in 0ms
+10 timing config:load:project Completed in 1ms
+11 timing config:load:file:/root/.npmrc Completed in 0ms
+12 timing config:load:user Completed in 0ms
+13 timing config:load:file:/usr/local/etc/npmrc Completed in 1ms
+14 timing config:load:global Completed in 1ms
+15 timing config:load:validate Completed in 1ms
+16 timing config:load:credentials Completed in 0ms
+17 timing config:load:setEnvs Completed in 0ms
+18 timing config:load Completed in 15ms
+19 timing npm:load:configload Completed in 15ms
+20 timing npm:load:mkdirpcache Completed in 1ms
+21 timing npm:load:mkdirplogs Completed in 1ms
+22 verbose title npm remove node-red-contrib-dynamic-dimmer
+23 verbose argv "remove" "--no-audit" "--no-update-notifier" "--no-fund" "--save" "node-red-contrib-dynamic-dimmer"
+24 timing npm:load:setTitle Completed in 1ms
+25 timing config:load:flatten Completed in 3ms
+26 timing npm:load:display Completed in 4ms
+27 verbose logfile logs-max:10 dir:/data/.npm/_logs
+28 verbose logfile /data/.npm/_logs/2023-11-12T15_51_32_257Z-debug-0.log
+29 timing npm:load:logFile Completed in 5ms
+30 timing npm:load:timers Completed in 0ms
+31 timing npm:load:configScope Completed in 0ms
+32 timing npm:load Completed in 28ms
+33 timing arborist:ctor Completed in 1ms
+34 silly logfile start cleaning logs, removing 1 files
+35 silly logfile done cleaning log files
+36 timing idealTree:init Completed in 191ms
+37 timing idealTree:userRequests Completed in 2ms
+38 silly idealTree buildDeps
+39 timing idealTree:#root Completed in 1ms
+40 timing idealTree:buildDeps Completed in 1ms
+41 timing idealTree:fixDepFlags Completed in 4ms
+42 timing idealTree Completed in 202ms
+43 verbose shrinkwrap failed to load node_modules/.package-lock.json missing from node_modules: ../root/smartButtons
+44 timing reify:loadTrees Completed in 408ms
+45 timing reify:diffTrees Completed in 8ms
+46 silly reify mark retired [ '/data/node_modules/smartButtons' ]
+47 silly reify mark retired [ '/data/node_modules/clone' ]
+48 silly reify mark retired [ '/data/node_modules/complex.js' ]
+49 silly reify mark retired [ '/data/node_modules/d3-ease' ]
+50 silly reify mark retired [ '/data/node_modules/decimal.js' ]
+51 silly reify mark retired [ '/data/node_modules/dot-prop' ]
+52 silly reify mark retired [ '/data/node_modules/escape-latex' ]
+53 silly reify mark retired [ '/data/node_modules/fraction.js' ]
+54 silly reify mark retired [ '/data/node_modules/get-parameter-names' ]
+55 silly reify mark retired [ '/data/node_modules/is-obj' ]
+56 silly reify mark retired [ '/data/node_modules/javascript-natural-sort' ]
+57 silly reify mark retired [ '/data/node_modules/mathjs', '/data/node_modules/.bin/mathjs' ]
+58 silly reify mark retired [ '/data/node_modules/moment' ]
+59 silly reify mark retired [ '/data/node_modules/node-red-contrib-dynamic-dimmer' ]
+60 silly reify mark retired [ '/data/node_modules/regenerator-runtime' ]
+61 silly reify mark retired [ '/data/node_modules/reflect-metadata' ]
+62 silly reify mark retired [ '/data/node_modules/rxjs' ]
+63 silly reify mark retired [ '/data/node_modules/seedrandom' ]
+64 silly reify mark retired [ '/data/node_modules/tiny-emitter' ]
+65 silly reify mark retired [ '/data/node_modules/tslib' ]
+66 silly reify mark retired [ '/data/node_modules/typed-function' ]
+67 silly reify mark retired [ '/data/node_modules/@babel/runtime' ]
+68 silly reify mark retired [ '/data/node_modules/@marcj/estdlib' ]
+69 silly reify mark retired [ '/data/node_modules/@marcj/marshal' ]
+70 silly reify moves {
+70 silly reify   '/data/node_modules/smartButtons': '/data/node_modules/.smartButtons-7IP2qf4q',
+70 silly reify   '/data/node_modules/clone': '/data/node_modules/.clone-eFAFUQfl',
+70 silly reify   '/data/node_modules/complex.js': '/data/node_modules/.complex.js-HwbUMuJP',
+70 silly reify   '/data/node_modules/d3-ease': '/data/node_modules/.d3-ease-8ogq86FN',
+70 silly reify   '/data/node_modules/decimal.js': '/data/node_modules/.decimal.js-I6uIPt9x',
+70 silly reify   '/data/node_modules/dot-prop': '/data/node_modules/.dot-prop-vQaCuSaZ',
+70 silly reify   '/data/node_modules/escape-latex': '/data/node_modules/.escape-latex-QQgTBHgL',
+70 silly reify   '/data/node_modules/fraction.js': '/data/node_modules/.fraction.js-VvMUaaZW',
+70 silly reify   '/data/node_modules/get-parameter-names': '/data/node_modules/.get-parameter-names-fNo5g0JF',
+70 silly reify   '/data/node_modules/is-obj': '/data/node_modules/.is-obj-Mq1X81nw',
+70 silly reify   '/data/node_modules/javascript-natural-sort': '/data/node_modules/.javascript-natural-sort-mkV62aAh',
+70 silly reify   '/data/node_modules/mathjs': '/data/node_modules/.mathjs-fW0I536U',
+70 silly reify   '/data/node_modules/.bin/mathjs': '/data/node_modules/.bin/.mathjs-5WaLFlYB',
+70 silly reify   '/data/node_modules/moment': '/data/node_modules/.moment-HMXFnPrn',
+70 silly reify   '/data/node_modules/node-red-contrib-dynamic-dimmer': '/data/node_modules/.node-red-contrib-dynamic-dimmer-SyIOW5QT',
+70 silly reify   '/data/node_modules/regenerator-runtime': '/data/node_modules/.regenerator-runtime-CS9yvAbW',
+70 silly reify   '/data/node_modules/reflect-metadata': '/data/node_modules/.reflect-metadata-xQrMF6Wv',
+70 silly reify   '/data/node_modules/rxjs': '/data/node_modules/.rxjs-fi2oBhE4',
+70 silly reify   '/data/node_modules/seedrandom': '/data/node_modules/.seedrandom-2iZwEZs2',
+70 silly reify   '/data/node_modules/tiny-emitter': '/data/node_modules/.tiny-emitter-uRKcHAuF',
+70 silly reify   '/data/node_modules/tslib': '/data/node_modules/.tslib-6LOZ5WH5',
+70 silly reify   '/data/node_modules/typed-function': '/data/node_modules/.typed-function-RJxZIzQz',
+70 silly reify   '/data/node_modules/@babel/runtime': '/data/node_modules/@babel/.runtime-OtcWIx9I',
+70 silly reify   '/data/node_modules/@marcj/estdlib': '/data/node_modules/@marcj/.estdlib-03dUsRCV',
+70 silly reify   '/data/node_modules/@marcj/marshal': '/data/node_modules/@marcj/.marshal-Y1XH88Wy'
+70 silly reify }
+71 timing reify:retireShallow Completed in 14ms
+72 timing reify:createSparse Completed in 0ms
+73 timing reify:loadBundles Completed in 0ms
+74 timing reifyNode:node_modules/smartButtons Completed in 182ms
+75 timing reify:unpack Completed in 182ms
+76 timing reify:unretire Completed in 0ms
+77 timing build:queue Completed in 0ms
+78 timing build:deps Completed in 0ms
+79 timing build:queue Completed in 0ms
+80 timing build:links Completed in 0ms
+81 timing build Completed in 1ms
+82 timing reify:build Completed in 1ms
+83 timing reify:trash Completed in 338ms
+84 timing reify:save Completed in 58ms
+85 timing reify Completed in 1041ms
+86 silly REMOVE node_modules/@marcj/marshal
+87 silly REMOVE node_modules/@marcj/estdlib
+88 silly REMOVE node_modules/@marcj/estdlib/node_modules/is-obj
+89 silly REMOVE node_modules/@marcj/estdlib/node_modules/dot-prop
+90 silly REMOVE node_modules/@babel/runtime
+91 silly REMOVE node_modules/typed-function
+92 silly REMOVE node_modules/tslib
+93 silly REMOVE node_modules/tiny-emitter
+94 silly REMOVE node_modules/seedrandom
+95 silly REMOVE node_modules/rxjs
+96 silly REMOVE node_modules/reflect-metadata
+97 silly REMOVE node_modules/regenerator-runtime
+98 silly REMOVE node_modules/node-red-contrib-dynamic-dimmer
+99 silly REMOVE node_modules/moment
+100 silly REMOVE node_modules/mathjs
+101 silly REMOVE node_modules/javascript-natural-sort
+102 silly REMOVE node_modules/is-obj
+103 silly REMOVE node_modules/get-parameter-names
+104 silly REMOVE node_modules/fraction.js
+105 silly REMOVE node_modules/escape-latex
+106 silly REMOVE node_modules/dot-prop
+107 silly REMOVE node_modules/decimal.js
+108 silly REMOVE node_modules/d3-ease
+109 silly REMOVE node_modules/complex.js
+110 silly REMOVE node_modules/clone
+111 silly CHANGE node_modules/smartButtons
+112 timing command:remove Completed in 1045ms
+113 verbose exit 0
+114 timing npm Completed in 1214ms
+115 info ok

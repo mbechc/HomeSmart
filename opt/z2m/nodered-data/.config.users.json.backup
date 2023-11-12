@@ -18,6 +18,7 @@
         },
         "debug": {
             "filter": "filterCurrent"
-        }
+        },
+        "menu-menu-item-sidebar": true
     }
 }

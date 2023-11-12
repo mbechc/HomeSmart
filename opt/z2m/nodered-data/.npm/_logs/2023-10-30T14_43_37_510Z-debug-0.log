@@ -1,0 +1,272 @@
+0 verbose cli /usr/local/bin/node /usr/local/bin/npm
+1 info using npm@8.19.4
+2 info using node@v16.20.1
+3 timing npm:load:whichnode Completed in 0ms
+4 timing config:load:defaults Completed in 4ms
+5 timing config:load:file:/usr/local/lib/node_modules/npm/npmrc Completed in 2ms
+6 timing config:load:builtin Completed in 3ms
+7 warn config production Use `--omit=dev` instead.
+8 timing config:load:cli Completed in 7ms
+9 timing config:load:env Completed in 1ms
+10 timing config:load:file:/data/.npmrc Completed in 0ms
+11 timing config:load:project Completed in 1ms
+12 timing config:load:file:/root/.npmrc Completed in 0ms
+13 timing config:load:user Completed in 0ms
+14 timing config:load:file:/usr/local/etc/npmrc Completed in 1ms
+15 timing config:load:global Completed in 1ms
+16 timing config:load:validate Completed in 1ms
+17 timing config:load:credentials Completed in 1ms
+18 timing config:load:setEnvs Completed in 0ms
+19 timing config:load Completed in 19ms
+20 timing npm:load:configload Completed in 19ms
+21 timing npm:load:mkdirpcache Completed in 1ms
+22 timing npm:load:mkdirplogs Completed in 0ms
+23 verbose title npm install node-red-contrib-dynamic-dimmer@1.4.0
+24 verbose argv "install" "--no-audit" "--no-update-notifier" "--no-fund" "--save" "--save-prefix" "~" "--production" "--engine-strict" "node-red-contrib-dynamic-dimmer@1.4.0"
+25 timing npm:load:setTitle Completed in 1ms
+26 timing config:load:flatten Completed in 3ms
+27 timing npm:load:display Completed in 5ms
+28 verbose logfile logs-max:10 dir:/data/.npm/_logs
+29 verbose logfile /data/.npm/_logs/2023-10-30T14_43_37_510Z-debug-0.log
+30 timing npm:load:logFile Completed in 5ms
+31 timing npm:load:timers Completed in 1ms
+32 timing npm:load:configScope Completed in 0ms
+33 timing npm:load Completed in 35ms
+34 timing arborist:ctor Completed in 1ms
+35 silly logfile start cleaning logs, removing 1 files
+36 silly logfile done cleaning log files
+37 timing idealTree:init Completed in 167ms
+38 timing idealTree:userRequests Completed in 2ms
+39 silly idealTree buildDeps
+40 silly fetch manifest node-red-contrib-dynamic-dimmer@1.4.0
+41 verbose shrinkwrap failed to load node_modules/.package-lock.json missing from node_modules: ../root/smartButtons
+42 http fetch GET 200 https://registry.npmjs.org/node-red-contrib-dynamic-dimmer 283ms (cache miss)
+43 silly placeDep ROOT node-red-contrib-dynamic-dimmer@1.4.0 OK for: node-red-project@0.0.1 want: 1.4.0
+44 silly fetch manifest @marcj/marshal@^2.1.13
+45 silly fetch manifest d3-ease@^1.0.6
+46 silly fetch manifest dot-prop@^6.0.1
+47 silly fetch manifest mathjs@^9.5.0
+48 silly fetch manifest reflect-metadata@^0.1.13
+49 silly fetch manifest rxjs@^7.4.0
+50 http fetch GET 200 https://registry.npmjs.org/mathjs 134ms (cache miss)
+51 http fetch GET 200 https://registry.npmjs.org/reflect-metadata 145ms (cache miss)
+52 http fetch GET 200 https://registry.npmjs.org/d3-ease 149ms (cache miss)
+53 http fetch GET 200 https://registry.npmjs.org/dot-prop 149ms (cache miss)
+54 http fetch GET 200 https://registry.npmjs.org/rxjs 186ms (cache miss)
+55 http fetch GET 200 https://registry.npmjs.org/@marcj%2fmarshal 200ms (cache miss)
+56 timing idealTree:#root Completed in 491ms
+57 silly placeDep ROOT @marcj/marshal@2.1.13 OK for: node-red-contrib-dynamic-dimmer@1.4.0 want: ^2.1.13
+58 silly placeDep ROOT d3-ease@1.0.7 OK for: node-red-contrib-dynamic-dimmer@1.4.0 want: ^1.0.6
+59 silly placeDep ROOT dot-prop@6.0.1 OK for: node-red-contrib-dynamic-dimmer@1.4.0 want: ^6.0.1
+60 silly placeDep ROOT mathjs@9.5.2 OK for: node-red-contrib-dynamic-dimmer@1.4.0 want: ^9.5.0
+61 silly placeDep ROOT reflect-metadata@0.1.13 OK for: node-red-contrib-dynamic-dimmer@1.4.0 want: ^0.1.13
+62 silly placeDep ROOT rxjs@7.8.1 OK for: node-red-contrib-dynamic-dimmer@1.4.0 want: ^7.4.0
+63 silly fetch manifest @marcj/estdlib@^0.1.18
+64 silly fetch manifest clone@^2.1.2
+65 silly fetch manifest get-parameter-names@^0.3.0
+66 silly fetch manifest moment@^2.0.0
+67 silly fetch manifest is-obj@^2.0.0
+68 silly fetch manifest @babel/runtime@^7.15.4
+69 silly fetch manifest complex.js@^2.0.15
+70 silly fetch manifest decimal.js@^10.3.1
+71 silly fetch manifest escape-latex@^1.2.0
+72 silly fetch manifest fraction.js@^4.1.1
+73 silly fetch manifest javascript-natural-sort@^0.7.1
+74 silly fetch manifest seedrandom@^3.0.5
+75 silly fetch manifest tiny-emitter@^2.1.0
+76 silly fetch manifest typed-function@^2.0.0
+77 silly fetch manifest tslib@^2.1.0
+78 http fetch GET 200 https://registry.npmjs.org/clone 67ms (cache miss)
+79 http fetch GET 200 https://registry.npmjs.org/moment 67ms (cache miss)
+80 http fetch GET 200 https://registry.npmjs.org/is-obj 82ms (cache miss)
+81 http fetch GET 200 https://registry.npmjs.org/javascript-natural-sort 83ms (cache miss)
+82 http fetch GET 200 https://registry.npmjs.org/decimal.js 102ms (cache miss)
+83 http fetch GET 200 https://registry.npmjs.org/tslib 108ms (cache miss)
+84 http fetch GET 200 https://registry.npmjs.org/@babel%2fruntime 120ms (cache miss)
+85 http fetch GET 200 https://registry.npmjs.org/tiny-emitter 118ms (cache miss)
+86 http fetch GET 200 https://registry.npmjs.org/fraction.js 122ms (cache miss)
+87 http fetch GET 200 https://registry.npmjs.org/seedrandom 122ms (cache miss)
+88 http fetch GET 200 https://registry.npmjs.org/escape-latex 840ms (cache miss)
+89 http fetch GET 200 https://registry.npmjs.org/get-parameter-names 846ms (cache miss)
+90 http fetch GET 200 https://registry.npmjs.org/typed-function 840ms (cache miss)
+91 http fetch GET 200 https://registry.npmjs.org/complex.js 855ms (cache miss)
+92 http fetch GET 200 https://registry.npmjs.org/@marcj%2festdlib 1664ms (cache miss)
+93 timing idealTree:node_modules/node-red-contrib-dynamic-dimmer Completed in 1677ms
+94 silly placeDep ROOT @marcj/estdlib@0.1.19 OK for: @marcj/marshal@2.1.13 want: ^0.1.18
+95 silly placeDep ROOT clone@2.1.2 OK for: @marcj/marshal@2.1.13 want: ^2.1.2
+96 silly placeDep ROOT get-parameter-names@0.3.0 OK for: @marcj/marshal@2.1.13 want: ^0.3.0
+97 silly placeDep ROOT moment@2.29.4 OK for: @marcj/marshal@2.1.13 want: ^2.0.0
+98 silly fetch manifest dot-prop@^4.2.0
+99 timing idealTree:node_modules/@marcj/marshal Completed in 14ms
+100 silly placeDep node_modules/@marcj/estdlib dot-prop@4.2.1 OK for: @marcj/estdlib@0.1.19 want: ^4.2.0
+101 silly fetch manifest is-obj@^1.0.0
+102 timing idealTree:node_modules/@marcj/estdlib Completed in 6ms
+103 timing idealTree:node_modules/clone Completed in 1ms
+104 timing idealTree:node_modules/d3-ease Completed in 0ms
+105 silly placeDep ROOT is-obj@2.0.0 OK for: dot-prop@6.0.1 want: ^2.0.0
+106 timing idealTree:node_modules/dot-prop Completed in 3ms
+107 timing idealTree:node_modules/get-parameter-names Completed in 0ms
+108 timing idealTree:node_modules/is-obj Completed in 0ms
+109 silly placeDep ROOT @babel/runtime@7.23.2 OK for: mathjs@9.5.2 want: ^7.15.4
+110 silly placeDep ROOT complex.js@2.1.1 OK for: mathjs@9.5.2 want: ^2.0.15
+111 silly placeDep ROOT decimal.js@10.4.3 OK for: mathjs@9.5.2 want: ^10.3.1
+112 silly placeDep ROOT escape-latex@1.2.0 OK for: mathjs@9.5.2 want: ^1.2.0
+113 silly placeDep ROOT fraction.js@4.3.7 OK for: mathjs@9.5.2 want: ^4.1.1
+114 silly placeDep ROOT javascript-natural-sort@0.7.1 OK for: mathjs@9.5.2 want: ^0.7.1
+115 silly placeDep ROOT seedrandom@3.0.5 OK for: mathjs@9.5.2 want: ^3.0.5
+116 silly placeDep ROOT tiny-emitter@2.1.0 OK for: mathjs@9.5.2 want: ^2.1.0
+117 silly placeDep ROOT typed-function@2.1.0 OK for: mathjs@9.5.2 want: ^2.0.0
+118 silly fetch manifest regenerator-runtime@^0.14.0
+119 http fetch GET 200 https://registry.npmjs.org/regenerator-runtime 37ms (cache miss)
+120 timing idealTree:node_modules/mathjs Completed in 63ms
+121 silly placeDep ROOT regenerator-runtime@0.14.0 OK for: @babel/runtime@7.23.2 want: ^0.14.0
+122 timing idealTree:node_modules/@babel/runtime Completed in 3ms
+123 timing idealTree:node_modules/complex.js Completed in 0ms
+124 timing idealTree:node_modules/decimal.js Completed in 0ms
+125 timing idealTree:node_modules/escape-latex Completed in 0ms
+126 timing idealTree:node_modules/fraction.js Completed in 0ms
+127 timing idealTree:node_modules/javascript-natural-sort Completed in 0ms
+128 timing idealTree:node_modules/moment Completed in 0ms
+129 timing idealTree:node_modules/reflect-metadata Completed in 0ms
+130 timing idealTree:node_modules/regenerator-runtime Completed in 0ms
+131 silly placeDep ROOT tslib@2.6.2 OK for: rxjs@7.8.1 want: ^2.1.0
+132 timing idealTree:node_modules/rxjs Completed in 3ms
+133 timing idealTree:node_modules/seedrandom Completed in 0ms
+134 timing idealTree:node_modules/tiny-emitter Completed in 0ms
+135 timing idealTree:node_modules/tslib Completed in 0ms
+136 timing idealTree:node_modules/typed-function Completed in 0ms
+137 silly placeDep node_modules/@marcj/estdlib is-obj@1.0.1 OK for: dot-prop@4.2.1 want: ^1.0.0
+138 timing idealTree:node_modules/@marcj/estdlib/node_modules/dot-prop Completed in 3ms
+139 timing idealTree:node_modules/@marcj/estdlib/node_modules/is-obj Completed in 0ms
+140 timing idealTree:buildDeps Completed in 2269ms
+141 timing idealTree:fixDepFlags Completed in 18ms
+142 timing idealTree Completed in 2467ms
+143 timing reify:loadTrees Completed in 2468ms
+144 timing reify:diffTrees Completed in 18ms
+145 silly reify mark retired [ '/data/node_modules/smartButtons' ]
+146 silly reify moves {
+146 silly reify   '/data/node_modules/smartButtons': '/data/node_modules/.smartButtons-7IP2qf4q'
+146 silly reify }
+147 timing reify:retireShallow Completed in 13ms
+148 timing reify:createSparse Completed in 10ms
+149 timing reify:trashOmits Completed in 1ms
+150 timing reify:loadBundles Completed in 0ms
+151 silly tarball no local data for tslib@https://registry.npmjs.org/tslib/-/tslib-2.6.2.tgz. Extracting by manifest.
+152 silly tarball no local data for regenerator-runtime@https://registry.npmjs.org/regenerator-runtime/-/regenerator-runtime-0.14.0.tgz. Extracting by manifest.
+153 silly tarball no local data for tiny-emitter@https://registry.npmjs.org/tiny-emitter/-/tiny-emitter-2.1.0.tgz. Extracting by manifest.
+154 silly tarball no local data for typed-function@https://registry.npmjs.org/typed-function/-/typed-function-2.1.0.tgz. Extracting by manifest.
+155 silly tarball no local data for seedrandom@https://registry.npmjs.org/seedrandom/-/seedrandom-3.0.5.tgz. Extracting by manifest.
+156 silly tarball no local data for fraction.js@https://registry.npmjs.org/fraction.js/-/fraction.js-4.3.7.tgz. Extracting by manifest.
+157 silly tarball no local data for decimal.js@https://registry.npmjs.org/decimal.js/-/decimal.js-10.4.3.tgz. Extracting by manifest.
+158 silly tarball no local data for complex.js@https://registry.npmjs.org/complex.js/-/complex.js-2.1.1.tgz. Extracting by manifest.
+159 silly tarball no local data for is-obj@https://registry.npmjs.org/is-obj/-/is-obj-2.0.0.tgz. Extracting by manifest.
+160 silly tarball no local data for get-parameter-names@https://registry.npmjs.org/get-parameter-names/-/get-parameter-names-0.3.0.tgz. Extracting by manifest.
+161 silly tarball no local data for javascript-natural-sort@https://registry.npmjs.org/javascript-natural-sort/-/javascript-natural-sort-0.7.1.tgz. Extracting by manifest.
+162 silly tarball no local data for clone@https://registry.npmjs.org/clone/-/clone-2.1.2.tgz. Extracting by manifest.
+163 silly tarball no local data for rxjs@https://registry.npmjs.org/rxjs/-/rxjs-7.8.1.tgz. Extracting by manifest.
+164 silly tarball no local data for @babel/runtime@https://registry.npmjs.org/@babel/runtime/-/runtime-7.23.2.tgz. Extracting by manifest.
+165 silly tarball no local data for mathjs@https://registry.npmjs.org/mathjs/-/mathjs-9.5.2.tgz. Extracting by manifest.
+166 silly tarball no local data for dot-prop@https://registry.npmjs.org/dot-prop/-/dot-prop-6.0.1.tgz. Extracting by manifest.
+167 silly tarball no local data for d3-ease@https://registry.npmjs.org/d3-ease/-/d3-ease-1.0.7.tgz. Extracting by manifest.
+168 silly tarball no local data for moment@https://registry.npmjs.org/moment/-/moment-2.29.4.tgz. Extracting by manifest.
+169 silly tarball no local data for reflect-metadata@https://registry.npmjs.org/reflect-metadata/-/reflect-metadata-0.1.13.tgz. Extracting by manifest.
+170 silly tarball no local data for is-obj@https://registry.npmjs.org/is-obj/-/is-obj-1.0.1.tgz. Extracting by manifest.
+171 silly tarball no local data for dot-prop@https://registry.npmjs.org/dot-prop/-/dot-prop-4.2.1.tgz. Extracting by manifest.
+172 silly tarball no local data for @marcj/marshal@https://registry.npmjs.org/@marcj/marshal/-/marshal-2.1.13.tgz. Extracting by manifest.
+173 silly tarball no local data for escape-latex@https://registry.npmjs.org/escape-latex/-/escape-latex-1.2.0.tgz. Extracting by manifest.
+174 silly tarball no local data for node-red-contrib-dynamic-dimmer@https://registry.npmjs.org/node-red-contrib-dynamic-dimmer/-/node-red-contrib-dynamic-dimmer-1.4.0.tgz. Extracting by manifest.
+175 silly tarball no local data for @marcj/estdlib@https://registry.npmjs.org/@marcj/estdlib/-/estdlib-0.1.19.tgz. Extracting by manifest.
+176 timing reifyNode:node_modules/smartButtons Completed in 349ms
+177 http fetch GET 200 https://registry.npmjs.org/is-obj/-/is-obj-1.0.1.tgz 274ms (cache miss)
+178 timing reifyNode:node_modules/@marcj/estdlib/node_modules/is-obj Completed in 379ms
+179 http fetch GET 200 https://registry.npmjs.org/is-obj/-/is-obj-2.0.0.tgz 302ms (cache miss)
+180 timing reifyNode:node_modules/is-obj Completed in 384ms
+181 http fetch GET 200 https://registry.npmjs.org/dot-prop/-/dot-prop-4.2.1.tgz 279ms (cache miss)
+182 timing reifyNode:node_modules/@marcj/estdlib/node_modules/dot-prop Completed in 385ms
+183 http fetch GET 200 https://registry.npmjs.org/d3-ease/-/d3-ease-1.0.7.tgz 285ms (cache miss)
+184 timing reifyNode:node_modules/d3-ease Completed in 394ms
+185 http fetch GET 200 https://registry.npmjs.org/get-parameter-names/-/get-parameter-names-0.3.0.tgz 316ms (cache miss)
+186 timing reifyNode:node_modules/get-parameter-names Completed in 398ms
+187 http fetch GET 200 https://registry.npmjs.org/clone/-/clone-2.1.2.tgz 304ms (cache miss)
+188 timing reifyNode:node_modules/clone Completed in 402ms
+189 http fetch GET 200 https://registry.npmjs.org/tiny-emitter/-/tiny-emitter-2.1.0.tgz 345ms (cache miss)
+190 timing reifyNode:node_modules/tiny-emitter Completed in 404ms
+191 http fetch GET 200 https://registry.npmjs.org/complex.js/-/complex.js-2.1.1.tgz 329ms (cache miss)
+192 http fetch GET 200 https://registry.npmjs.org/regenerator-runtime/-/regenerator-runtime-0.14.0.tgz 351ms (cache miss)
+193 timing reifyNode:node_modules/complex.js Completed in 409ms
+194 timing reifyNode:node_modules/regenerator-runtime Completed in 410ms
+195 http fetch GET 200 https://registry.npmjs.org/dot-prop/-/dot-prop-6.0.1.tgz 313ms (cache miss)
+196 timing reifyNode:node_modules/dot-prop Completed in 413ms
+197 http fetch GET 200 https://registry.npmjs.org/escape-latex/-/escape-latex-1.2.0.tgz 315ms (cache miss)
+198 timing reifyNode:node_modules/escape-latex Completed in 429ms
+199 http fetch GET 200 https://registry.npmjs.org/fraction.js/-/fraction.js-4.3.7.tgz 361ms (cache miss)
+200 http fetch GET 200 https://registry.npmjs.org/javascript-natural-sort/-/javascript-natural-sort-0.7.1.tgz 339ms (cache miss)
+201 timing reifyNode:node_modules/fraction.js Completed in 435ms
+202 timing reifyNode:node_modules/javascript-natural-sort Completed in 435ms
+203 http fetch GET 200 https://registry.npmjs.org/tslib/-/tslib-2.6.2.tgz 381ms (cache miss)
+204 timing reifyNode:node_modules/tslib Completed in 437ms
+205 http fetch GET 200 https://registry.npmjs.org/node-red-contrib-dynamic-dimmer/-/node-red-contrib-dynamic-dimmer-1.4.0.tgz 364ms (cache miss)
+206 timing reifyNode:node_modules/node-red-contrib-dynamic-dimmer Completed in 483ms
+207 http fetch GET 200 https://registry.npmjs.org/typed-function/-/typed-function-2.1.0.tgz 440ms (cache miss)
+208 timing reifyNode:node_modules/typed-function Completed in 501ms
+209 http fetch GET 200 https://registry.npmjs.org/reflect-metadata/-/reflect-metadata-0.1.13.tgz 411ms (cache miss)
+210 timing reifyNode:node_modules/reflect-metadata Completed in 515ms
+211 http fetch GET 200 https://registry.npmjs.org/decimal.js/-/decimal.js-10.4.3.tgz 453ms (cache miss)
+212 timing reifyNode:node_modules/decimal.js Completed in 531ms
+213 http fetch GET 200 https://registry.npmjs.org/seedrandom/-/seedrandom-3.0.5.tgz 464ms (cache miss)
+214 timing reifyNode:node_modules/seedrandom Completed in 538ms
+215 http fetch GET 200 https://registry.npmjs.org/@babel/runtime/-/runtime-7.23.2.tgz 522ms (cache miss)
+216 timing reifyNode:node_modules/@babel/runtime Completed in 623ms
+217 http fetch GET 200 https://registry.npmjs.org/moment/-/moment-2.29.4.tgz 823ms (cache miss)
+218 timing reifyNode:node_modules/moment Completed in 926ms
+219 http fetch GET 200 https://registry.npmjs.org/@marcj/marshal/-/marshal-2.1.13.tgz 932ms (cache miss)
+220 timing reifyNode:node_modules/@marcj/marshal Completed in 1042ms
+221 http fetch GET 200 https://registry.npmjs.org/@marcj/estdlib/-/estdlib-0.1.19.tgz 850ms (cache miss)
+222 timing reifyNode:node_modules/@marcj/estdlib Completed in 1100ms
+223 http fetch GET 200 https://registry.npmjs.org/rxjs/-/rxjs-7.8.1.tgz 1601ms (cache miss)
+224 timing reifyNode:node_modules/rxjs Completed in 1700ms
+225 http fetch GET 200 https://registry.npmjs.org/mathjs/-/mathjs-9.5.2.tgz 2110ms (cache miss)
+226 timing reifyNode:node_modules/mathjs Completed in 2209ms
+227 timing reify:unpack Completed in 2212ms
+228 timing reify:unretire Completed in 1ms
+229 timing build:queue Completed in 1ms
+230 timing build:link:node_modules/mathjs Completed in 2ms
+231 timing build:link Completed in 2ms
+232 timing build:deps Completed in 3ms
+233 timing build:queue Completed in 0ms
+234 timing build:links Completed in 0ms
+235 timing build Completed in 4ms
+236 timing reify:build Completed in 5ms
+237 timing reify:trash Completed in 0ms
+238 timing reify:save Completed in 65ms
+239 timing reify Completed in 4825ms
+240 silly ADD node_modules/tslib
+241 silly ADD node_modules/regenerator-runtime
+242 silly ADD node_modules/typed-function
+243 silly ADD node_modules/tiny-emitter
+244 silly ADD node_modules/seedrandom
+245 silly ADD node_modules/javascript-natural-sort
+246 silly ADD node_modules/fraction.js
+247 silly ADD node_modules/escape-latex
+248 silly ADD node_modules/decimal.js
+249 silly ADD node_modules/complex.js
+250 silly ADD node_modules/@babel/runtime
+251 silly ADD node_modules/is-obj
+252 silly ADD node_modules/moment
+253 silly ADD node_modules/get-parameter-names
+254 silly ADD node_modules/clone
+255 silly ADD node_modules/@marcj/estdlib
+256 silly ADD node_modules/@marcj/estdlib/node_modules/is-obj
+257 silly ADD node_modules/@marcj/estdlib/node_modules/dot-prop
+258 silly ADD node_modules/rxjs
+259 silly ADD node_modules/reflect-metadata
+260 silly ADD node_modules/mathjs
+261 silly ADD node_modules/dot-prop
+262 silly ADD node_modules/d3-ease
+263 silly ADD node_modules/@marcj/marshal
+264 silly ADD node_modules/node-red-contrib-dynamic-dimmer
+265 silly CHANGE node_modules/smartButtons
+266 timing command:install Completed in 4830ms
+267 verbose exit 0
+268 timing npm Completed in 4949ms
+269 info ok

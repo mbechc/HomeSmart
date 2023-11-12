@@ -1,0 +1,21 @@
+permit_join: false
+mqtt:
+  base_topic: z2m-sonoff
+  server: mqtt://172.16.255.164
+serial:
+  port: /dev/ttyACM1
+  adapter: ezsp
+frontend:
+  port: 8081
+advanced:
+  log_level: debug
+  homeassistant_legacy_entity_attributes: false
+  legacy_api: false
+  legacy_availability_payload: false
+device_options:
+  legacy: false
+devices:
+  '0x943469fffea79959':
+    friendly_name: relay01
+blocklist:
+  - '0x0017880104cb5e5b'

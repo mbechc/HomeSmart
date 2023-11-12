@@ -1,0 +1,82 @@
+debug 2023-10-05 12:12:05: Loaded state from file /app/data/state.json
+info  2023-10-05 12:12:05: Logging to console and directory: '/app/data/log/2023-10-05.12-12-05' filename: log.txt
+debug 2023-10-05 12:12:05: Removing old log directory '/app/data/log/2023-10-05.11-45-28'
+info  2023-10-05 12:12:05: Starting Zigbee2MQTT version 1.33.0 (commit #7ee207f)
+info  2023-10-05 12:12:05: Starting zigbee-herdsman (0.18.5)
+debug 2023-10-05 12:12:05: Using zigbee-herdsman with settings: '{"adapter":{"concurrent":null,"delay":null,"disableLED":false},"backupPath":"/app/data/coordinator_backup.json","databaseBackupPath":"/app/data/database.db.backup","databasePath":"/app/data/database.db","network":{"channelList":[11],"extendedPanID":[221,221,221,221,221,221,221,221],"networkKey":"HIDDEN","panID":6754},"serialPort":{"adapter":"ezsp","path":"/dev/ttyACM1"}}'
+info  2023-10-05 12:12:08: zigbee-herdsman started (resumed)
+info  2023-10-05 12:12:08: Coordinator firmware version: '{"meta":{"maintrel":"3 ","majorrel":"6","minorrel":"10","product":8,"revision":"6.10.3.0 build 297"},"type":"EZSP v8"}'
+debug 2023-10-05 12:12:08: Zigbee network parameters: {"channel":11,"extendedPanID":221,"panID":6754}
+info  2023-10-05 12:12:08: Currently 1 devices are joined:
+info  2023-10-05 12:12:08: relay01 (0x943469fffea79959): ZG102-BOX-UNIDIM - Envilar ZigBee AC phase-cut dimmer (Router)
+info  2023-10-05 12:12:08: Zigbee: disabling joining new devices.
+info  2023-10-05 12:12:08: Connecting to MQTT server at mqtt://172.16.255.164
+debug 2023-10-05 12:12:08: Using MQTT anonymous login
+info  2023-10-05 12:12:08: Connected to MQTT server
+info  2023-10-05 12:12:08: MQTT publish: topic 'z2m-sonoff/bridge/state', payload '{"state":"online"}'
+info  2023-10-05 12:12:08: Started frontend on port 0.0.0.0:8081
+info  2023-10-05 12:12:08: MQTT publish: topic 'z2m-sonoff/relay01', payload '{"brightness":254,"linkquality":116,"power_on_behavior":"previous","state":"ON"}'
+info  2023-10-05 12:12:08: Zigbee2MQTT started!
+debug 2023-10-05 12:12:08: Received MQTT message on 'z2m-sonoff/relay01/get' with data '{"power_on_behavior":""}'
+debug 2023-10-05 12:12:08: Publishing get 'get' 'power_on_behavior' to 'relay01'
+error 2023-10-05 12:12:36: Publish 'get' 'power_on_behavior' to 'relay01' failed: 'Error: Read 0x943469fffea79959/1 genOnOff(["startUpOnOff"], {"sendWhen":"immediate","timeout":10000,"disableResponse":false,"disableRecovery":false,"disableDefaultResponse":true,"direction":0,"srcEndpoint":null,"reservedBits":0,"manufacturerCode":null,"transactionSequenceNumber":null,"writeUndiv":false}) failed (sendZclFrameToEndpointInternal error)'
+debug 2023-10-05 12:12:36: Error: Read 0x943469fffea79959/1 genOnOff(["startUpOnOff"], {"sendWhen":"immediate","timeout":10000,"disableResponse":false,"disableRecovery":false,"disableDefaultResponse":true,"direction":0,"srcEndpoint":null,"reservedBits":0,"manufacturerCode":null,"transactionSequenceNumber":null,"writeUndiv":false}) failed (sendZclFrameToEndpointInternal error)
+    at EZSPAdapter.sendZclFrameToEndpointInternal (/app/node_modules/zigbee-herdsman/src/adapter/ezsp/adapter/ezspAdapter.ts:462:19)
+    at Request.send (/app/node_modules/zigbee-herdsman/src/controller/helpers/request.ts:81:20)
+    at Endpoint.read (/app/node_modules/zigbee-herdsman/src/controller/model/endpoint.ts:559:28)
+    at Object.convertGet (/app/node_modules/zigbee-herdsman-converters/src/converters/toZigbee.js:120:13)
+    at Publish.onMQTTMessage (/app/lib/extension/publish.ts:275:21)
+error 2023-10-05 12:13:49: MQTT error: connect ECONNREFUSED 172.16.255.164:1883
+info  2023-10-05 12:13:49: Accepting joining not in blocklist device '0x943469fffea79959'
+debug 2023-10-05 12:13:49: Received Zigbee message from 'relay01', type 'attributeReport', cluster 'genBasic', data '{"modelId":"ZG102-BOX-UNIDIM"}' from endpoint 1 with groupID 0
+debug 2023-10-05 12:13:49: Received Zigbee message from 'relay01', type 'attributeReport', cluster 'genOta', data '{"currentFileVersion":55}' from endpoint 1 with groupID 0
+error 2023-10-05 12:13:50: MQTT error: connect ECONNREFUSED 172.16.255.164:1883
+info  2023-10-05 12:13:52: Connected to MQTT server
+info  2023-10-05 12:13:52: MQTT publish: topic 'z2m-sonoff/bridge/state', payload '{"state":"online"}'
+info  2023-10-05 12:13:54: MQTT publish: topic 'z2m-sonoff/bridge/state', payload '{"state":"online"}'
+debug 2023-10-05 12:13:54: Received MQTT message on 'z2m-sonoff/relay01/get' with data '{"power_on_behavior":""}'
+debug 2023-10-05 12:13:54: Publishing get 'get' 'power_on_behavior' to 'relay01'
+error 2023-10-05 12:13:54: Publish 'get' 'power_on_behavior' to 'relay01' failed: 'Error: Read 0x943469fffea79959/1 genOnOff(["startUpOnOff"], {"sendWhen":"immediate","timeout":10000,"disableResponse":false,"disableRecovery":false,"disableDefaultResponse":true,"direction":0,"srcEndpoint":null,"reservedBits":0,"manufacturerCode":null,"transactionSequenceNumber":null,"writeUndiv":false}) failed (sendZclFrameToEndpointInternal error)'
+debug 2023-10-05 12:13:54: Error: Read 0x943469fffea79959/1 genOnOff(["startUpOnOff"], {"sendWhen":"immediate","timeout":10000,"disableResponse":false,"disableRecovery":false,"disableDefaultResponse":true,"direction":0,"srcEndpoint":null,"reservedBits":0,"manufacturerCode":null,"transactionSequenceNumber":null,"writeUndiv":false}) failed (sendZclFrameToEndpointInternal error)
+    at EZSPAdapter.sendZclFrameToEndpointInternal (/app/node_modules/zigbee-herdsman/src/adapter/ezsp/adapter/ezspAdapter.ts:462:19)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at Request.send (/app/node_modules/zigbee-herdsman/src/controller/helpers/request.ts:81:20)
+    at Endpoint.read (/app/node_modules/zigbee-herdsman/src/controller/model/endpoint.ts:559:28)
+    at Object.convertGet (/app/node_modules/zigbee-herdsman-converters/src/converters/toZigbee.js:120:13)
+    at Publish.onMQTTMessage (/app/lib/extension/publish.ts:275:21)
+debug 2023-10-05 12:14:31: Received MQTT message on 'z2m-sonoff/relay01/get' with data '{"power_on_behavior":""}'
+debug 2023-10-05 12:14:31: Publishing get 'get' 'power_on_behavior' to 'relay01'
+error 2023-10-05 12:14:31: Publish 'get' 'power_on_behavior' to 'relay01' failed: 'Error: Read 0x943469fffea79959/1 genOnOff(["startUpOnOff"], {"sendWhen":"immediate","timeout":10000,"disableResponse":false,"disableRecovery":false,"disableDefaultResponse":true,"direction":0,"srcEndpoint":null,"reservedBits":0,"manufacturerCode":null,"transactionSequenceNumber":null,"writeUndiv":false}) failed (sendZclFrameToEndpointInternal error)'
+debug 2023-10-05 12:14:31: Error: Read 0x943469fffea79959/1 genOnOff(["startUpOnOff"], {"sendWhen":"immediate","timeout":10000,"disableResponse":false,"disableRecovery":false,"disableDefaultResponse":true,"direction":0,"srcEndpoint":null,"reservedBits":0,"manufacturerCode":null,"transactionSequenceNumber":null,"writeUndiv":false}) failed (sendZclFrameToEndpointInternal error)
+    at EZSPAdapter.sendZclFrameToEndpointInternal (/app/node_modules/zigbee-herdsman/src/adapter/ezsp/adapter/ezspAdapter.ts:462:19)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at Request.send (/app/node_modules/zigbee-herdsman/src/controller/helpers/request.ts:81:20)
+    at Endpoint.read (/app/node_modules/zigbee-herdsman/src/controller/model/endpoint.ts:559:28)
+    at Object.convertGet (/app/node_modules/zigbee-herdsman-converters/src/converters/toZigbee.js:120:13)
+    at Publish.onMQTTMessage (/app/lib/extension/publish.ts:275:21)
+debug 2023-10-05 12:14:33: Received MQTT message on 'z2m-sonoff/relay01/set' with data '{"brightness_step":0}'
+debug 2023-10-05 12:14:33: Publishing 'set' 'brightness_step' to 'relay01'
+error 2023-10-05 12:14:33: Publish 'set' 'brightness_step' to 'relay01' failed: 'Error: Command 0x943469fffea79959/1 genLevelCtrl.step({"stepmode":1,"stepsize":0,"transtime":0}, {"sendWhen":"immediate","timeout":10000,"disableResponse":false,"disableRecovery":false,"disableDefaultResponse":false,"direction":0,"srcEndpoint":null,"reservedBits":0,"manufacturerCode":null,"transactionSequenceNumber":null,"writeUndiv":false}) failed (sendZclFrameToEndpointInternal error)'
+debug 2023-10-05 12:14:33: Error: Command 0x943469fffea79959/1 genLevelCtrl.step({"stepmode":1,"stepsize":0,"transtime":0}, {"sendWhen":"immediate","timeout":10000,"disableResponse":false,"disableRecovery":false,"disableDefaultResponse":false,"direction":0,"srcEndpoint":null,"reservedBits":0,"manufacturerCode":null,"transactionSequenceNumber":null,"writeUndiv":false}) failed (sendZclFrameToEndpointInternal error)
+    at EZSPAdapter.sendZclFrameToEndpointInternal (/app/node_modules/zigbee-herdsman/src/adapter/ezsp/adapter/ezspAdapter.ts:462:19)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at Request.send (/app/node_modules/zigbee-herdsman/src/controller/helpers/request.ts:81:20)
+    at Endpoint.command (/app/node_modules/zigbee-herdsman/src/controller/model/endpoint.ts:834:28)
+    at Object.convertSet (/app/node_modules/zigbee-herdsman-converters/src/converters/toZigbee.js:667:13)
+    at Publish.onMQTTMessage (/app/lib/extension/publish.ts:248:36)
+debug 2023-10-05 12:14:34: Received MQTT message on 'z2m-sonoff/relay01/set' with data '{"brightness_step":100}'
+debug 2023-10-05 12:14:34: Publishing 'set' 'brightness_step' to 'relay01'
+error 2023-10-05 12:14:34: Publish 'set' 'brightness_step' to 'relay01' failed: 'Error: Command 0x943469fffea79959/1 genLevelCtrl.step({"stepmode":0,"stepsize":100,"transtime":0}, {"sendWhen":"immediate","timeout":10000,"disableResponse":false,"disableRecovery":false,"disableDefaultResponse":false,"direction":0,"srcEndpoint":null,"reservedBits":0,"manufacturerCode":null,"transactionSequenceNumber":null,"writeUndiv":false}) failed (sendZclFrameToEndpointInternal error)'
+debug 2023-10-05 12:14:34: Error: Command 0x943469fffea79959/1 genLevelCtrl.step({"stepmode":0,"stepsize":100,"transtime":0}, {"sendWhen":"immediate","timeout":10000,"disableResponse":false,"disableRecovery":false,"disableDefaultResponse":false,"direction":0,"srcEndpoint":null,"reservedBits":0,"manufacturerCode":null,"transactionSequenceNumber":null,"writeUndiv":false}) failed (sendZclFrameToEndpointInternal error)
+    at EZSPAdapter.sendZclFrameToEndpointInternal (/app/node_modules/zigbee-herdsman/src/adapter/ezsp/adapter/ezspAdapter.ts:462:19)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at Request.send (/app/node_modules/zigbee-herdsman/src/controller/helpers/request.ts:81:20)
+    at Endpoint.command (/app/node_modules/zigbee-herdsman/src/controller/model/endpoint.ts:834:28)
+    at Object.convertSet (/app/node_modules/zigbee-herdsman-converters/src/converters/toZigbee.js:667:13)
+    at Publish.onMQTTMessage (/app/lib/extension/publish.ts:248:36)
+debug 2023-10-05 12:17:05: Saving state to file /app/data/state.json
+debug 2023-10-05 12:19:08: Saving state to file /app/data/state.json
+info  2023-10-05 12:19:08: MQTT publish: topic 'z2m-sonoff/bridge/state', payload '{"state":"offline"}'
+info  2023-10-05 12:19:08: Disconnecting from MQTT server
+info  2023-10-05 12:19:08: Stopping zigbee-herdsman...
+error 2023-10-05 12:19:08: Failed to stop Zigbee2MQTT

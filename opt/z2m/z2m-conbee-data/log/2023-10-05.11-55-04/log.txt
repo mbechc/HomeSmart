@@ -1,0 +1,108 @@
+debug 2023-10-05 11:55:04: Loaded state from file /app/data/state.json
+info  2023-10-05 11:55:04: Logging to console and directory: '/app/data/log/2023-10-05.11-55-04' filename: log.txt
+debug 2023-10-05 11:55:04: Removing old log directory '/app/data/log/2023-10-05.11-45-00'
+info  2023-10-05 11:55:04: Starting Zigbee2MQTT version 1.33.0 (commit #7ee207f)
+info  2023-10-05 11:55:04: Starting zigbee-herdsman (0.18.5)
+debug 2023-10-05 11:55:04: Using zigbee-herdsman with settings: '{"adapter":{"concurrent":null,"delay":null,"disableLED":false},"backupPath":"/app/data/coordinator_backup.json","databaseBackupPath":"/app/data/database.db.backup","databasePath":"/app/data/database.db","network":{"channelList":[11],"extendedPanID":[221,221,221,221,221,221,221,221],"networkKey":"HIDDEN","panID":6754},"serialPort":{"path":"/dev/ttyACM0"}}'
+info  2023-10-05 11:55:04: zigbee-herdsman started (resumed)
+info  2023-10-05 11:55:04: Coordinator firmware version: '{"meta":{"maintrel":0,"majorrel":38,"minorrel":114,"product":0,"revision":"0x26720700","transportrev":0},"type":"ConBee2/RaspBee2"}'
+debug 2023-10-05 11:55:07: Zigbee network parameters: {"channel":11,"extendedPanID":"0xdddddddddddddddd","panID":6754}
+info  2023-10-05 11:55:07: Currently 4 devices are joined:
+info  2023-10-05 11:55:07: sw02 (0x000000000171a0d9): PTM 215Z - EnOcean Pushbutton transmitter module (GreenPower)
+info  2023-10-05 11:55:07: sw01 (0x000000000171a526): PTM 215Z - EnOcean Pushbutton transmitter module (GreenPower)
+info  2023-10-05 11:55:07: BB96E9 (0x0017880104cb5e5b): 8718696449691 - Philips Hue White A60 Single bulb E27/B22 (Router)
+info  2023-10-05 11:55:07: hm01 (0x001788010866ce87): 9290012607 - Philips Hue motion sensor (EndDevice)
+info  2023-10-05 11:55:07: Zigbee: disabling joining new devices.
+info  2023-10-05 11:55:09: Connecting to MQTT server at mqtt://172.16.255.164
+debug 2023-10-05 11:55:09: Using MQTT anonymous login
+info  2023-10-05 11:55:09: Connected to MQTT server
+info  2023-10-05 11:55:09: MQTT publish: topic 'z2m-conbee/bridge/state', payload 'online'
+info  2023-10-05 11:55:09: Started frontend on port 0.0.0.0:8080
+info  2023-10-05 11:55:09: MQTT publish: topic 'z2m-conbee/bridge/config', payload '{"commit":"7ee207f","coordinator":{"meta":{"maintrel":0,"majorrel":38,"minorrel":114,"product":0,"revision":"0x26720700","transportrev":0},"type":"ConBee2/RaspBee2"},"log_level":"debug","network":{"channel":11,"extendedPanID":"0xdddddddddddddddd","panID":6754},"permit_join":false,"version":"1.33.0"}'
+info  2023-10-05 11:55:09: MQTT publish: topic 'z2m-conbee/sw02', payload '{"linkquality":127}'
+info  2023-10-05 11:55:09: MQTT publish: topic 'z2m-conbee/sw01', payload '{"linkquality":127}'
+info  2023-10-05 11:55:09: MQTT publish: topic 'z2m-conbee/BB96E9', payload '{"brightness":0,"linkquality":255,"power_on_behavior":"on","state":"OFF"}'
+info  2023-10-05 11:55:09: MQTT publish: topic 'z2m-conbee/hm01', payload '{"battery":34,"illuminance":25184,"illuminance_lux":330,"linkquality":255,"motion_sensitivity":"high","occupancy":false,"occupancy_timeout":0,"temperature":20.36}'
+info  2023-10-05 11:55:09: Zigbee2MQTT started!
+debug 2023-10-05 11:55:09: Received MQTT message on 'z2m-conbee/BB96E9/get' with data '{"power_on_behavior":""}'
+debug 2023-10-05 11:55:09: Publishing get 'get' 'power_on_behavior' to 'BB96E9'
+debug 2023-10-05 11:55:09: Received MQTT message on 'z2m-conbee/hm01/get' with data '{"motion_sensitivity":"","led_indication":"","occupancy_timeout":""}'
+debug 2023-10-05 11:55:09: Publishing get 'get' 'motion_sensitivity' to 'hm01'
+error 2023-10-05 11:55:19: Publish 'get' 'motion_sensitivity' to 'hm01' failed: 'Error: Read 0x001788010866ce87/2 msOccupancySensing([48], {"sendWhen":"immediate","timeout":10000,"disableResponse":false,"disableRecovery":false,"disableDefaultResponse":true,"direction":0,"srcEndpoint":null,"reservedBits":0,"manufacturerCode":4107,"transactionSequenceNumber":null,"writeUndiv":false}) failed (no response received (4))'
+debug 2023-10-05 11:55:20: Error: Read 0x001788010866ce87/2 msOccupancySensing([48], {"sendWhen":"immediate","timeout":10000,"disableResponse":false,"disableRecovery":false,"disableDefaultResponse":true,"direction":0,"srcEndpoint":null,"reservedBits":0,"manufacturerCode":4107,"transactionSequenceNumber":null,"writeUndiv":false}) failed (no response received (4))
+    at DeconzAdapter.sendZclFrameToEndpoint (/app/node_modules/zigbee-herdsman/src/adapter/deconz/adapter/deconzAdapter.ts:656:23)
+    at runNextTicks (node:internal/process/task_queues:60:5)
+    at processTimers (node:internal/timers:509:9)
+    at Request.send (/app/node_modules/zigbee-herdsman/src/controller/helpers/request.ts:81:20)
+    at Endpoint.read (/app/node_modules/zigbee-herdsman/src/controller/model/endpoint.ts:559:28)
+    at Object.convertGet (/app/node_modules/zigbee-herdsman-converters/src/lib/philips.ts:302:13)
+    at Publish.onMQTTMessage (/app/lib/extension/publish.ts:275:21)
+info  2023-10-05 11:55:20: MQTT publish: topic 'z2m-conbee/bridge/log', payload '{"message":"Publish 'get' 'motion_sensitivity' to 'hm01' failed: 'Error: Read 0x001788010866ce87/2 msOccupancySensing([48], {\"sendWhen\":\"immediate\",\"timeout\":10000,\"disableResponse\":false,\"disableRecovery\":false,\"disableDefaultResponse\":true,\"direction\":0,\"srcEndpoint\":null,\"reservedBits\":0,\"manufacturerCode\":4107,\"transactionSequenceNumber\":null,\"writeUndiv\":false}) failed (no response received (4))'","meta":{"friendly_name":"hm01"},"type":"zigbee_publish_error"}'
+debug 2023-10-05 11:55:20: Publishing get 'get' 'led_indication' to 'hm01'
+error 2023-10-05 11:55:20: Publish 'get' 'power_on_behavior' to 'BB96E9' failed: 'Error: Read 0x0017880104cb5e5b/11 genOnOff(["startUpOnOff"], {"sendWhen":"immediate","timeout":10000,"disableResponse":false,"disableRecovery":false,"disableDefaultResponse":true,"direction":0,"srcEndpoint":null,"reservedBits":0,"manufacturerCode":null,"transactionSequenceNumber":null,"writeUndiv":false}) failed (no response received (3))'
+debug 2023-10-05 11:55:20: Error: Read 0x0017880104cb5e5b/11 genOnOff(["startUpOnOff"], {"sendWhen":"immediate","timeout":10000,"disableResponse":false,"disableRecovery":false,"disableDefaultResponse":true,"direction":0,"srcEndpoint":null,"reservedBits":0,"manufacturerCode":null,"transactionSequenceNumber":null,"writeUndiv":false}) failed (no response received (3))
+    at DeconzAdapter.sendZclFrameToEndpoint (/app/node_modules/zigbee-herdsman/src/adapter/deconz/adapter/deconzAdapter.ts:656:23)
+    at runNextTicks (node:internal/process/task_queues:60:5)
+    at processTimers (node:internal/timers:509:9)
+    at Request.send (/app/node_modules/zigbee-herdsman/src/controller/helpers/request.ts:81:20)
+    at Endpoint.read (/app/node_modules/zigbee-herdsman/src/controller/model/endpoint.ts:559:28)
+    at Object.convertGet (/app/node_modules/zigbee-herdsman-converters/src/converters/toZigbee.js:120:13)
+    at Publish.onMQTTMessage (/app/lib/extension/publish.ts:275:21)
+info  2023-10-05 11:55:20: MQTT publish: topic 'z2m-conbee/bridge/log', payload '{"message":"Publish 'get' 'power_on_behavior' to 'BB96E9' failed: 'Error: Read 0x0017880104cb5e5b/11 genOnOff([\"startUpOnOff\"], {\"sendWhen\":\"immediate\",\"timeout\":10000,\"disableResponse\":false,\"disableRecovery\":false,\"disableDefaultResponse\":true,\"direction\":0,\"srcEndpoint\":null,\"reservedBits\":0,\"manufacturerCode\":null,\"transactionSequenceNumber\":null,\"writeUndiv\":false}) failed (no response received (3))'","meta":{"friendly_name":"BB96E9"},"type":"zigbee_publish_error"}'
+error 2023-10-05 11:55:30: Publish 'get' 'led_indication' to 'hm01' failed: 'Error: Read 0x001788010866ce87/2 genBasic([51], {"sendWhen":"immediate","timeout":10000,"disableResponse":false,"disableRecovery":false,"disableDefaultResponse":true,"direction":0,"srcEndpoint":null,"reservedBits":0,"manufacturerCode":4107,"transactionSequenceNumber":null,"writeUndiv":false}) failed (no response received (5))'
+debug 2023-10-05 11:55:30: Error: Read 0x001788010866ce87/2 genBasic([51], {"sendWhen":"immediate","timeout":10000,"disableResponse":false,"disableRecovery":false,"disableDefaultResponse":true,"direction":0,"srcEndpoint":null,"reservedBits":0,"manufacturerCode":4107,"transactionSequenceNumber":null,"writeUndiv":false}) failed (no response received (5))
+    at DeconzAdapter.sendZclFrameToEndpoint (/app/node_modules/zigbee-herdsman/src/adapter/deconz/adapter/deconzAdapter.ts:656:23)
+    at Request.send (/app/node_modules/zigbee-herdsman/src/controller/helpers/request.ts:81:20)
+    at Endpoint.read (/app/node_modules/zigbee-herdsman/src/controller/model/endpoint.ts:559:28)
+    at Object.convertGet (/app/node_modules/zigbee-herdsman-converters/src/lib/philips.ts:313:13)
+    at Publish.onMQTTMessage (/app/lib/extension/publish.ts:275:21)
+info  2023-10-05 11:55:30: MQTT publish: topic 'z2m-conbee/bridge/log', payload '{"message":"Publish 'get' 'led_indication' to 'hm01' failed: 'Error: Read 0x001788010866ce87/2 genBasic([51], {\"sendWhen\":\"immediate\",\"timeout\":10000,\"disableResponse\":false,\"disableRecovery\":false,\"disableDefaultResponse\":true,\"direction\":0,\"srcEndpoint\":null,\"reservedBits\":0,\"manufacturerCode\":4107,\"transactionSequenceNumber\":null,\"writeUndiv\":false}) failed (no response received (5))'","meta":{"friendly_name":"hm01"},"type":"zigbee_publish_error"}'
+debug 2023-10-05 11:55:30: Publishing get 'get' 'occupancy_timeout' to 'hm01'
+error 2023-10-05 11:55:41: Publish 'get' 'occupancy_timeout' to 'hm01' failed: 'Error: Read 0x001788010866ce87/2 msOccupancySensing(["pirOToUDelay"], {"sendWhen":"immediate","timeout":10000,"disableResponse":false,"disableRecovery":false,"disableDefaultResponse":true,"direction":0,"srcEndpoint":null,"reservedBits":0,"manufacturerCode":null,"transactionSequenceNumber":null,"writeUndiv":false}) failed (no response received (6))'
+debug 2023-10-05 11:55:41: Error: Read 0x001788010866ce87/2 msOccupancySensing(["pirOToUDelay"], {"sendWhen":"immediate","timeout":10000,"disableResponse":false,"disableRecovery":false,"disableDefaultResponse":true,"direction":0,"srcEndpoint":null,"reservedBits":0,"manufacturerCode":null,"transactionSequenceNumber":null,"writeUndiv":false}) failed (no response received (6))
+    at DeconzAdapter.sendZclFrameToEndpoint (/app/node_modules/zigbee-herdsman/src/adapter/deconz/adapter/deconzAdapter.ts:656:23)
+    at Request.send (/app/node_modules/zigbee-herdsman/src/controller/helpers/request.ts:81:20)
+    at Endpoint.read (/app/node_modules/zigbee-herdsman/src/controller/model/endpoint.ts:559:28)
+    at Object.convertGet (/app/node_modules/zigbee-herdsman-converters/src/converters/toZigbee.js:459:13)
+    at Publish.onMQTTMessage (/app/lib/extension/publish.ts:275:21)
+info  2023-10-05 11:55:41: MQTT publish: topic 'z2m-conbee/bridge/log', payload '{"message":"Publish 'get' 'occupancy_timeout' to 'hm01' failed: 'Error: Read 0x001788010866ce87/2 msOccupancySensing([\"pirOToUDelay\"], {\"sendWhen\":\"immediate\",\"timeout\":10000,\"disableResponse\":false,\"disableRecovery\":false,\"disableDefaultResponse\":true,\"direction\":0,\"srcEndpoint\":null,\"reservedBits\":0,\"manufacturerCode\":null,\"transactionSequenceNumber\":null,\"writeUndiv\":false}) failed (no response received (6))'","meta":{"friendly_name":"hm01"},"type":"zigbee_publish_error"}'
+debug 2023-10-05 11:56:19: Received MQTT message on 'z2m-conbee/bridge/request/networkmap' with data '{"routes":false,"transaction":"l4fbl-1","type":"raw"}'
+info  2023-10-05 11:56:19: Starting network scan (includeRoutes 'false')
+debug 2023-10-05 11:56:20: LQI succeeded for 'Coordinator'
+debug 2023-10-05 11:57:48: Received MQTT message on 'z2m-conbee/bridge/request/networkmap' with data '{"routes":false,"transaction":"r180d-1","type":"raw"}'
+info  2023-10-05 11:57:48: Starting network scan (includeRoutes 'false')
+debug 2023-10-05 11:57:49: LQI succeeded for 'Coordinator'
+debug 2023-10-05 11:57:56: Received MQTT message on 'z2m-conbee/bridge/request/permit_join' with data '{"device":null,"time":254,"transaction":"r180d-2","value":true}'
+info  2023-10-05 11:57:56: Zigbee: allowing new devices to join.
+info  2023-10-05 11:57:56: MQTT publish: topic 'z2m-conbee/bridge/response/permit_join', payload '{"data":{"time":254,"value":true},"status":"ok","transaction":"r180d-2"}'
+error 2023-10-05 11:58:26: Failed to execute LQI for 'BB96E9'
+debug 2023-10-05 11:58:26: Error: LQI REQUEST FAILED - addr: 0xd97f waiting for response TIMEOUT
+    at request (/app/node_modules/zigbee-herdsman/src/adapter/deconz/adapter/deconzAdapter.ts:268:43)
+    at DeconzAdapter.lqi (/app/node_modules/zigbee-herdsman/src/adapter/deconz/adapter/deconzAdapter.ts:272:28)
+    at doRequest (/app/lib/extension/networkMap.ts:228:28)
+    at NetworkMap.networkScan (/app/lib/extension/networkMap.ts:241:32)
+    at NetworkMap.onMQTTMessage (/app/lib/extension/networkMap.ts:63:34)
+info  2023-10-05 11:58:26: Network scan finished
+info  2023-10-05 11:58:26: MQTT publish: topic 'z2m-conbee/bridge/response/networkmap', payload '{"data":{"routes":false,"type":"raw","value":{"links":[{"depth":1,"linkquality":124,"lqi":124,"relationship":2,"routes":[],"source":{"ieeeAddr":"0x0017880104cb5e5b","networkAddress":55679},"sourceIeeeAddr":"0x0017880104cb5e5b","sourceNwkAddr":55679,"target":{"ieeeAddr":"0x00212effff098b43","networkAddress":0},"targetIeeeAddr":"0x00212effff098b43"}],"nodes":[{"definition":null,"failed":[],"friendlyName":"Coordinator","ieeeAddr":"0x00212effff098b43","lastSeen":1696419773738,"networkAddress":0,"type":"Coordinator"},{"definition":{"description":"Hue White A60 Single bulb E27/B22","model":"8718696449691","supports":"light (state, brightness), power_on_behavior, effect, linkquality","vendor":"Philips"},"failed":["lqi"],"friendlyName":"BB96E9","ieeeAddr":"0x0017880104cb5e5b","lastSeen":1696495281705,"manufacturerName":"Signify Netherlands B.V.","modelID":"LWB010","networkAddress":55679,"type":"Router"},{"definition":{"description":"Hue motion sensor","model":"9290012607","supports":"temperature, occupancy, battery, illuminance_lux, illuminance, motion_sensitivity, led_indication, occupancy_timeout, linkquality","vendor":"Philips"},"friendlyName":"hm01","ieeeAddr":"0x001788010866ce87","lastSeen":1694697287514,"manufacturerName":"Philips","modelID":"SML001","networkAddress":14925,"type":"EndDevice"}]}},"status":"ok","transaction":"l4fbl-1"}'
+debug 2023-10-05 11:58:56: LQI succeeded for 'BB96E9'
+info  2023-10-05 11:58:56: Network scan finished
+info  2023-10-05 11:58:56: MQTT publish: topic 'z2m-conbee/bridge/response/networkmap', payload '{"data":{"routes":false,"type":"raw","value":{"links":[{"depth":1,"linkquality":105,"lqi":105,"relationship":2,"routes":[],"source":{"ieeeAddr":"0x0017880104cb5e5b","networkAddress":55679},"sourceIeeeAddr":"0x0017880104cb5e5b","sourceNwkAddr":55679,"target":{"ieeeAddr":"0x00212effff098b43","networkAddress":0},"targetIeeeAddr":"0x00212effff098b43"},{"depth":0,"linkquality":5,"lqi":5,"relationship":2,"routes":[],"source":{"ieeeAddr":"0x00212effff098b43","networkAddress":0},"sourceIeeeAddr":"0x00212effff098b43","sourceNwkAddr":0,"target":{"ieeeAddr":"0x0017880104cb5e5b","networkAddress":55679},"targetIeeeAddr":"0x0017880104cb5e5b"}],"nodes":[{"definition":null,"failed":[],"friendlyName":"Coordinator","ieeeAddr":"0x00212effff098b43","lastSeen":1696419773738,"networkAddress":0,"type":"Coordinator"},{"definition":{"description":"Hue White A60 Single bulb E27/B22","model":"8718696449691","supports":"light (state, brightness), power_on_behavior, effect, linkquality","vendor":"Philips"},"failed":[],"friendlyName":"BB96E9","ieeeAddr":"0x0017880104cb5e5b","lastSeen":1696495281705,"manufacturerName":"Signify Netherlands B.V.","modelID":"LWB010","networkAddress":55679,"type":"Router"},{"definition":{"description":"Hue motion sensor","model":"9290012607","supports":"temperature, occupancy, battery, illuminance_lux, illuminance, motion_sensitivity, led_indication, occupancy_timeout, linkquality","vendor":"Philips"},"friendlyName":"hm01","ieeeAddr":"0x001788010866ce87","lastSeen":1694697287514,"manufacturerName":"Philips","modelID":"SML001","networkAddress":14925,"type":"EndDevice"}]}},"status":"ok","transaction":"r180d-1"}'
+debug 2023-10-05 12:00:04: Saving state to file /app/data/state.json
+debug 2023-10-05 12:05:04: Saving state to file /app/data/state.json
+debug 2023-10-05 12:10:04: Saving state to file /app/data/state.json
+debug 2023-10-05 12:10:54: Received MQTT message on 'z2m-conbee/bridge/request/permit_join' with data '{"device":null,"time":254,"transaction":"wsbga-1","value":true}'
+info  2023-10-05 12:10:54: Zigbee: allowing new devices to join.
+info  2023-10-05 12:10:55: MQTT publish: topic 'z2m-conbee/bridge/response/permit_join', payload '{"data":{"time":254,"value":true},"status":"ok","transaction":"wsbga-1"}'
+info  2023-10-05 12:11:10: Rejecting joining device which is on blocklist '0x943469fffea79959'
+debug 2023-10-05 12:11:15: Received MQTT message on 'z2m-conbee/bridge/request/options' with data '{"options":{"blocklist":["0x943469fffea79959"]},"transaction":"wsbga-2"}'
+info  2023-10-05 12:11:15: Successfully changed options
+info  2023-10-05 12:11:15: MQTT publish: topic 'z2m-conbee/bridge/response/options', payload '{"data":{"restart_required":false},"status":"ok","transaction":"wsbga-2"}'
+debug 2023-10-05 12:11:18: Received MQTT message on 'z2m-conbee/bridge/request/options' with data '{"options":{"blocklist":["0x943469fffea79959"]},"transaction":"wsbga-3"}'
+info  2023-10-05 12:11:18: Successfully changed options
+info  2023-10-05 12:11:18: MQTT publish: topic 'z2m-conbee/bridge/response/options', payload '{"data":{"restart_required":false},"status":"ok","transaction":"wsbga-3"}'
+debug 2023-10-05 12:11:52: Saving state to file /app/data/state.json
+info  2023-10-05 12:11:52: MQTT publish: topic 'z2m-conbee/bridge/state', payload 'offline'
+info  2023-10-05 12:11:52: Disconnecting from MQTT server
+info  2023-10-05 12:11:52: Stopping zigbee-herdsman...
+info  2023-10-05 12:11:53: Stopped zigbee-herdsman
+info  2023-10-05 12:11:53: Stopped Zigbee2MQTT

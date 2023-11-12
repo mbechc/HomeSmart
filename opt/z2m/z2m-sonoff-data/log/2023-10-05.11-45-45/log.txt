@@ -1,0 +1,18 @@
+debug 2023-10-05 11:45:45: Loaded state from file /app/data/state.json
+info  2023-10-05 11:45:45: Logging to console and directory: '/app/data/log/2023-10-05.11-45-45' filename: log.txt
+debug 2023-10-05 11:45:45: Removing old log directory '/app/data/log/2023-10-05.11-44-09'
+info  2023-10-05 11:45:45: Starting Zigbee2MQTT version 1.33.0 (commit #7ee207f)
+info  2023-10-05 11:45:45: Starting zigbee-herdsman (0.18.5)
+debug 2023-10-05 11:45:45: Using zigbee-herdsman with settings: '{"adapter":{"concurrent":null,"delay":null,"disableLED":false},"backupPath":"/app/data/coordinator_backup.json","databaseBackupPath":"/app/data/database.db.backup","databasePath":"/app/data/database.db","network":{"channelList":[11],"extendedPanID":[221,221,221,221,221,221,221,221],"networkKey":"HIDDEN","panID":6754},"serialPort":{"adapter":"ezsp","path":"/dev/ttyACM1"}}'
+info  2023-10-05 11:45:48: zigbee-herdsman started (resumed)
+info  2023-10-05 11:45:48: Coordinator firmware version: '{"meta":{"maintrel":"3 ","majorrel":"6","minorrel":"10","product":8,"revision":"6.10.3.0 build 297"},"type":"EZSP v8"}'
+debug 2023-10-05 11:45:48: Zigbee network parameters: {"channel":11,"extendedPanID":221,"panID":6754}
+info  2023-10-05 11:45:48: Currently 1 devices are joined:
+info  2023-10-05 11:45:48: relay01 (0x943469fffea79959): ZG102-BOX-UNIDIM - Envilar ZigBee AC phase-cut dimmer (Router)
+info  2023-10-05 11:45:48: Zigbee: disabling joining new devices.
+info  2023-10-05 11:45:48: Connecting to MQTT server at mqtt://localhost
+debug 2023-10-05 11:45:48: Using MQTT anonymous login
+error 2023-10-05 11:45:48: MQTT error: connect ECONNREFUSED 127.0.0.1:1883
+error 2023-10-05 11:45:48: MQTT failed to connect, exiting...
+info  2023-10-05 11:45:48: Stopping zigbee-herdsman...
+info  2023-10-05 11:45:49: Stopped zigbee-herdsman

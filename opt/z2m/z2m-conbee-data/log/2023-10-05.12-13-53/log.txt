@@ -1,0 +1,306 @@
+debug 2023-10-05 12:13:53: Loaded state from file /app/data/state.json
+info  2023-10-05 12:13:53: Logging to console and directory: '/app/data/log/2023-10-05.12-13-53' filename: log.txt
+debug 2023-10-05 12:13:53: Removing old log directory '/app/data/log/2023-10-05.11-45-16'
+info  2023-10-05 12:13:53: Starting Zigbee2MQTT version 1.33.0 (commit #7ee207f)
+info  2023-10-05 12:13:53: Starting zigbee-herdsman (0.18.5)
+debug 2023-10-05 12:13:53: Using zigbee-herdsman with settings: '{"adapter":{"concurrent":null,"delay":null,"disableLED":false},"backupPath":"/app/data/coordinator_backup.json","databaseBackupPath":"/app/data/database.db.backup","databasePath":"/app/data/database.db","network":{"channelList":[11],"extendedPanID":[221,221,221,221,221,221,221,221],"networkKey":"HIDDEN","panID":6754},"serialPort":{"path":"/dev/ttyACM0"}}'
+info  2023-10-05 12:13:54: zigbee-herdsman started (resumed)
+debug 2023-10-05 12:13:54: Device '0x943469fffea79959' announced itself
+info  2023-10-05 12:13:54: Coordinator firmware version: '{"meta":{"maintrel":0,"majorrel":38,"minorrel":114,"product":0,"revision":"0x26720700","transportrev":0},"type":"ConBee2/RaspBee2"}'
+debug 2023-10-05 12:13:54: Received Zigbee message from '0x943469fffea79959', type 'attributeReport', cluster 'genBasic', data '{"modelId":"ZG102-BOX-UNIDIM"}' from endpoint 1 with groupID null
+debug 2023-10-05 12:13:54: Received Zigbee message from '0x943469fffea79959', type 'attributeReport', cluster 'genOta', data '{"currentFileVersion":55}' from endpoint 1 with groupID null
+debug 2023-10-05 12:13:54: Zigbee network parameters: {"channel":11,"extendedPanID":"0xdddddddddddddddd","panID":6754}
+info  2023-10-05 12:13:54: Currently 5 devices are joined:
+info  2023-10-05 12:13:54: sw02 (0x000000000171a0d9): PTM 215Z - EnOcean Pushbutton transmitter module (GreenPower)
+info  2023-10-05 12:13:54: sw01 (0x000000000171a526): PTM 215Z - EnOcean Pushbutton transmitter module (GreenPower)
+info  2023-10-05 12:13:54: BB96E9 (0x0017880104cb5e5b): 8718696449691 - Philips Hue White A60 Single bulb E27/B22 (Router)
+info  2023-10-05 12:13:54: hm01 (0x001788010866ce87): 9290012607 - Philips Hue motion sensor (EndDevice)
+info  2023-10-05 12:13:54: 0x943469fffea79959 (0x943469fffea79959): ZG102-BOX-UNIDIM - Envilar ZigBee AC phase-cut dimmer (Router)
+info  2023-10-05 12:13:54: Zigbee: disabling joining new devices.
+info  2023-10-05 12:13:54: Connecting to MQTT server at mqtt://172.16.255.164
+debug 2023-10-05 12:13:54: Using MQTT anonymous login
+info  2023-10-05 12:13:54: Connected to MQTT server
+info  2023-10-05 12:13:54: MQTT publish: topic 'z2m-conbee/bridge/state', payload 'online'
+info  2023-10-05 12:13:54: Started frontend on port 0.0.0.0:8080
+info  2023-10-05 12:13:54: MQTT publish: topic 'z2m-conbee/bridge/config', payload '{"commit":"7ee207f","coordinator":{"meta":{"maintrel":0,"majorrel":38,"minorrel":114,"product":0,"revision":"0x26720700","transportrev":0},"type":"ConBee2/RaspBee2"},"log_level":"debug","network":{"channel":11,"extendedPanID":"0xdddddddddddddddd","panID":6754},"permit_join":false,"version":"1.33.0"}'
+info  2023-10-05 12:13:54: MQTT publish: topic 'z2m-conbee/sw02', payload '{"linkquality":127}'
+info  2023-10-05 12:13:54: MQTT publish: topic 'z2m-conbee/sw01', payload '{"linkquality":127}'
+info  2023-10-05 12:13:54: MQTT publish: topic 'z2m-conbee/BB96E9', payload '{"brightness":0,"linkquality":124,"power_on_behavior":"on","state":"OFF"}'
+info  2023-10-05 12:13:54: MQTT publish: topic 'z2m-conbee/hm01', payload '{"battery":34,"illuminance":25184,"illuminance_lux":330,"linkquality":255,"motion_sensitivity":"high","occupancy":false,"occupancy_timeout":0,"temperature":20.36}'
+info  2023-10-05 12:13:54: MQTT publish: topic 'z2m-conbee/0x943469fffea79959', payload '{"brightness":88,"linkquality":255,"power_on_behavior":"previous","state":"ON"}'
+info  2023-10-05 12:13:54: Zigbee2MQTT started!
+debug 2023-10-05 12:13:54: Received MQTT message on 'z2m-conbee/BB96E9/get' with data '{"power_on_behavior":""}'
+debug 2023-10-05 12:13:54: Publishing get 'get' 'power_on_behavior' to 'BB96E9'
+debug 2023-10-05 12:13:54: Received MQTT message on 'z2m-conbee/hm01/get' with data '{"motion_sensitivity":"","led_indication":"","occupancy_timeout":""}'
+debug 2023-10-05 12:13:54: Publishing get 'get' 'motion_sensitivity' to 'hm01'
+debug 2023-10-05 12:13:54: Received MQTT message on 'z2m-conbee/0x943469fffea79959/get' with data '{"power_on_behavior":""}'
+debug 2023-10-05 12:13:54: Publishing get 'get' 'power_on_behavior' to '0x943469fffea79959'
+debug 2023-10-05 12:13:54: Received Zigbee message from 'BB96E9', type 'readResponse', cluster 'genOnOff', data '{"startUpOnOff":1}' from endpoint 11 with groupID null
+info  2023-10-05 12:13:54: MQTT publish: topic 'z2m-conbee/BB96E9', payload '{"brightness":0,"linkquality":112,"power_on_behavior":"on","state":"OFF"}'
+debug 2023-10-05 12:13:55: Received Zigbee message from '0x943469fffea79959', type 'attributeReport', cluster 'genOnOff', data '{"onOff":1}' from endpoint 1 with groupID null
+info  2023-10-05 12:13:55: MQTT publish: topic 'z2m-conbee/0x943469fffea79959', payload '{"brightness":88,"linkquality":255,"power_on_behavior":"previous","state":"ON"}'
+error 2023-10-05 12:14:05: Publish 'get' 'power_on_behavior' to '0x943469fffea79959' failed: 'Error: Read 0x943469fffea79959/1 genOnOff(["startUpOnOff"], {"sendWhen":"immediate","timeout":10000,"disableResponse":false,"disableRecovery":false,"disableDefaultResponse":true,"direction":0,"srcEndpoint":null,"reservedBits":0,"manufacturerCode":null,"transactionSequenceNumber":null,"writeUndiv":false}) failed (no response received (5))'
+debug 2023-10-05 12:14:05: Error: Read 0x943469fffea79959/1 genOnOff(["startUpOnOff"], {"sendWhen":"immediate","timeout":10000,"disableResponse":false,"disableRecovery":false,"disableDefaultResponse":true,"direction":0,"srcEndpoint":null,"reservedBits":0,"manufacturerCode":null,"transactionSequenceNumber":null,"writeUndiv":false}) failed (no response received (5))
+    at DeconzAdapter.sendZclFrameToEndpoint (/app/node_modules/zigbee-herdsman/src/adapter/deconz/adapter/deconzAdapter.ts:656:23)
+    at runNextTicks (node:internal/process/task_queues:60:5)
+    at processTimers (node:internal/timers:509:9)
+    at Request.send (/app/node_modules/zigbee-herdsman/src/controller/helpers/request.ts:81:20)
+    at Endpoint.read (/app/node_modules/zigbee-herdsman/src/controller/model/endpoint.ts:559:28)
+    at Object.convertGet (/app/node_modules/zigbee-herdsman-converters/src/converters/toZigbee.js:120:13)
+    at Publish.onMQTTMessage (/app/lib/extension/publish.ts:275:21)
+info  2023-10-05 12:14:05: MQTT publish: topic 'z2m-conbee/bridge/log', payload '{"message":"Publish 'get' 'power_on_behavior' to '0x943469fffea79959' failed: 'Error: Read 0x943469fffea79959/1 genOnOff([\"startUpOnOff\"], {\"sendWhen\":\"immediate\",\"timeout\":10000,\"disableResponse\":false,\"disableRecovery\":false,\"disableDefaultResponse\":true,\"direction\":0,\"srcEndpoint\":null,\"reservedBits\":0,\"manufacturerCode\":null,\"transactionSequenceNumber\":null,\"writeUndiv\":false}) failed (no response received (5))'","meta":{"friendly_name":"0x943469fffea79959"},"type":"zigbee_publish_error"}'
+error 2023-10-05 12:14:05: Publish 'get' 'motion_sensitivity' to 'hm01' failed: 'Error: Read 0x001788010866ce87/2 msOccupancySensing([48], {"sendWhen":"immediate","timeout":10000,"disableResponse":false,"disableRecovery":false,"disableDefaultResponse":true,"direction":0,"srcEndpoint":null,"reservedBits":0,"manufacturerCode":4107,"transactionSequenceNumber":null,"writeUndiv":false}) failed (no response received (4))'
+debug 2023-10-05 12:14:05: Error: Read 0x001788010866ce87/2 msOccupancySensing([48], {"sendWhen":"immediate","timeout":10000,"disableResponse":false,"disableRecovery":false,"disableDefaultResponse":true,"direction":0,"srcEndpoint":null,"reservedBits":0,"manufacturerCode":4107,"transactionSequenceNumber":null,"writeUndiv":false}) failed (no response received (4))
+    at DeconzAdapter.sendZclFrameToEndpoint (/app/node_modules/zigbee-herdsman/src/adapter/deconz/adapter/deconzAdapter.ts:656:23)
+    at runNextTicks (node:internal/process/task_queues:60:5)
+    at processTimers (node:internal/timers:509:9)
+    at Request.send (/app/node_modules/zigbee-herdsman/src/controller/helpers/request.ts:81:20)
+    at Endpoint.read (/app/node_modules/zigbee-herdsman/src/controller/model/endpoint.ts:559:28)
+    at Object.convertGet (/app/node_modules/zigbee-herdsman-converters/src/lib/philips.ts:302:13)
+    at Publish.onMQTTMessage (/app/lib/extension/publish.ts:275:21)
+info  2023-10-05 12:14:05: MQTT publish: topic 'z2m-conbee/bridge/log', payload '{"message":"Publish 'get' 'motion_sensitivity' to 'hm01' failed: 'Error: Read 0x001788010866ce87/2 msOccupancySensing([48], {\"sendWhen\":\"immediate\",\"timeout\":10000,\"disableResponse\":false,\"disableRecovery\":false,\"disableDefaultResponse\":true,\"direction\":0,\"srcEndpoint\":null,\"reservedBits\":0,\"manufacturerCode\":4107,\"transactionSequenceNumber\":null,\"writeUndiv\":false}) failed (no response received (4))'","meta":{"friendly_name":"hm01"},"type":"zigbee_publish_error"}'
+debug 2023-10-05 12:14:05: Publishing get 'get' 'led_indication' to 'hm01'
+error 2023-10-05 12:14:16: Publish 'get' 'led_indication' to 'hm01' failed: 'Error: Read 0x001788010866ce87/2 genBasic([51], {"sendWhen":"immediate","timeout":10000,"disableResponse":false,"disableRecovery":false,"disableDefaultResponse":true,"direction":0,"srcEndpoint":null,"reservedBits":0,"manufacturerCode":4107,"transactionSequenceNumber":null,"writeUndiv":false}) failed (no response received (6))'
+debug 2023-10-05 12:14:16: Error: Read 0x001788010866ce87/2 genBasic([51], {"sendWhen":"immediate","timeout":10000,"disableResponse":false,"disableRecovery":false,"disableDefaultResponse":true,"direction":0,"srcEndpoint":null,"reservedBits":0,"manufacturerCode":4107,"transactionSequenceNumber":null,"writeUndiv":false}) failed (no response received (6))
+    at DeconzAdapter.sendZclFrameToEndpoint (/app/node_modules/zigbee-herdsman/src/adapter/deconz/adapter/deconzAdapter.ts:656:23)
+    at runNextTicks (node:internal/process/task_queues:60:5)
+    at processTimers (node:internal/timers:509:9)
+    at Request.send (/app/node_modules/zigbee-herdsman/src/controller/helpers/request.ts:81:20)
+    at Endpoint.read (/app/node_modules/zigbee-herdsman/src/controller/model/endpoint.ts:559:28)
+    at Object.convertGet (/app/node_modules/zigbee-herdsman-converters/src/lib/philips.ts:313:13)
+    at Publish.onMQTTMessage (/app/lib/extension/publish.ts:275:21)
+info  2023-10-05 12:14:16: MQTT publish: topic 'z2m-conbee/bridge/log', payload '{"message":"Publish 'get' 'led_indication' to 'hm01' failed: 'Error: Read 0x001788010866ce87/2 genBasic([51], {\"sendWhen\":\"immediate\",\"timeout\":10000,\"disableResponse\":false,\"disableRecovery\":false,\"disableDefaultResponse\":true,\"direction\":0,\"srcEndpoint\":null,\"reservedBits\":0,\"manufacturerCode\":4107,\"transactionSequenceNumber\":null,\"writeUndiv\":false}) failed (no response received (6))'","meta":{"friendly_name":"hm01"},"type":"zigbee_publish_error"}'
+debug 2023-10-05 12:14:16: Publishing get 'get' 'occupancy_timeout' to 'hm01'
+error 2023-10-05 12:14:27: Publish 'get' 'occupancy_timeout' to 'hm01' failed: 'Error: Read 0x001788010866ce87/2 msOccupancySensing(["pirOToUDelay"], {"sendWhen":"immediate","timeout":10000,"disableResponse":false,"disableRecovery":false,"disableDefaultResponse":true,"direction":0,"srcEndpoint":null,"reservedBits":0,"manufacturerCode":null,"transactionSequenceNumber":null,"writeUndiv":false}) failed (no response received (7))'
+debug 2023-10-05 12:14:27: Error: Read 0x001788010866ce87/2 msOccupancySensing(["pirOToUDelay"], {"sendWhen":"immediate","timeout":10000,"disableResponse":false,"disableRecovery":false,"disableDefaultResponse":true,"direction":0,"srcEndpoint":null,"reservedBits":0,"manufacturerCode":null,"transactionSequenceNumber":null,"writeUndiv":false}) failed (no response received (7))
+    at DeconzAdapter.sendZclFrameToEndpoint (/app/node_modules/zigbee-herdsman/src/adapter/deconz/adapter/deconzAdapter.ts:656:23)
+    at Request.send (/app/node_modules/zigbee-herdsman/src/controller/helpers/request.ts:81:20)
+    at Endpoint.read (/app/node_modules/zigbee-herdsman/src/controller/model/endpoint.ts:559:28)
+    at Object.convertGet (/app/node_modules/zigbee-herdsman-converters/src/converters/toZigbee.js:459:13)
+    at Publish.onMQTTMessage (/app/lib/extension/publish.ts:275:21)
+info  2023-10-05 12:14:27: MQTT publish: topic 'z2m-conbee/bridge/log', payload '{"message":"Publish 'get' 'occupancy_timeout' to 'hm01' failed: 'Error: Read 0x001788010866ce87/2 msOccupancySensing([\"pirOToUDelay\"], {\"sendWhen\":\"immediate\",\"timeout\":10000,\"disableResponse\":false,\"disableRecovery\":false,\"disableDefaultResponse\":true,\"direction\":0,\"srcEndpoint\":null,\"reservedBits\":0,\"manufacturerCode\":null,\"transactionSequenceNumber\":null,\"writeUndiv\":false}) failed (no response received (7))'","meta":{"friendly_name":"hm01"},"type":"zigbee_publish_error"}'
+debug 2023-10-05 12:14:31: Received MQTT message on 'z2m-conbee/BB96E9/get' with data '{"power_on_behavior":""}'
+debug 2023-10-05 12:14:31: Publishing get 'get' 'power_on_behavior' to 'BB96E9'
+debug 2023-10-05 12:14:31: Received MQTT message on 'z2m-conbee/hm01/get' with data '{"motion_sensitivity":"","led_indication":"","occupancy_timeout":""}'
+debug 2023-10-05 12:14:31: Publishing get 'get' 'motion_sensitivity' to 'hm01'
+debug 2023-10-05 12:14:31: Received MQTT message on 'z2m-conbee/0x943469fffea79959/get' with data '{"power_on_behavior":""}'
+debug 2023-10-05 12:14:31: Publishing get 'get' 'power_on_behavior' to '0x943469fffea79959'
+debug 2023-10-05 12:14:31: Received Zigbee message from 'BB96E9', type 'readResponse', cluster 'genOnOff', data '{"startUpOnOff":1}' from endpoint 11 with groupID null
+info  2023-10-05 12:14:31: MQTT publish: topic 'z2m-conbee/BB96E9', payload '{"brightness":0,"linkquality":100,"power_on_behavior":"on","state":"OFF"}'
+debug 2023-10-05 12:14:33: Received MQTT message on 'z2m-conbee/BB96E9/set' with data '{"brightness":0}'
+debug 2023-10-05 12:14:33: Publishing 'set' 'brightness' to 'BB96E9'
+info  2023-10-05 12:14:33: MQTT publish: topic 'z2m-conbee/BB96E9', payload '{"brightness":0,"linkquality":120,"power_on_behavior":"on","state":"OFF"}'
+debug 2023-10-05 12:14:34: Received MQTT message on 'z2m-conbee/BB96E9/set' with data '{"brightness":100}'
+debug 2023-10-05 12:14:34: Publishing 'set' 'brightness' to 'BB96E9'
+error 2023-10-05 12:14:42: Publish 'get' 'power_on_behavior' to '0x943469fffea79959' failed: 'Error: Read 0x943469fffea79959/1 genOnOff(["startUpOnOff"], {"sendWhen":"immediate","timeout":10000,"disableResponse":false,"disableRecovery":false,"disableDefaultResponse":true,"direction":0,"srcEndpoint":null,"reservedBits":0,"manufacturerCode":null,"transactionSequenceNumber":null,"writeUndiv":false}) failed (no response received (10))'
+debug 2023-10-05 12:14:42: Error: Read 0x943469fffea79959/1 genOnOff(["startUpOnOff"], {"sendWhen":"immediate","timeout":10000,"disableResponse":false,"disableRecovery":false,"disableDefaultResponse":true,"direction":0,"srcEndpoint":null,"reservedBits":0,"manufacturerCode":null,"transactionSequenceNumber":null,"writeUndiv":false}) failed (no response received (10))
+    at DeconzAdapter.sendZclFrameToEndpoint (/app/node_modules/zigbee-herdsman/src/adapter/deconz/adapter/deconzAdapter.ts:656:23)
+    at Request.send (/app/node_modules/zigbee-herdsman/src/controller/helpers/request.ts:81:20)
+    at Endpoint.read (/app/node_modules/zigbee-herdsman/src/controller/model/endpoint.ts:559:28)
+    at Object.convertGet (/app/node_modules/zigbee-herdsman-converters/src/converters/toZigbee.js:120:13)
+    at Publish.onMQTTMessage (/app/lib/extension/publish.ts:275:21)
+info  2023-10-05 12:14:42: MQTT publish: topic 'z2m-conbee/bridge/log', payload '{"message":"Publish 'get' 'power_on_behavior' to '0x943469fffea79959' failed: 'Error: Read 0x943469fffea79959/1 genOnOff([\"startUpOnOff\"], {\"sendWhen\":\"immediate\",\"timeout\":10000,\"disableResponse\":false,\"disableRecovery\":false,\"disableDefaultResponse\":true,\"direction\":0,\"srcEndpoint\":null,\"reservedBits\":0,\"manufacturerCode\":null,\"transactionSequenceNumber\":null,\"writeUndiv\":false}) failed (no response received (10))'","meta":{"friendly_name":"0x943469fffea79959"},"type":"zigbee_publish_error"}'
+error 2023-10-05 12:14:42: Publish 'get' 'motion_sensitivity' to 'hm01' failed: 'Error: Read 0x001788010866ce87/2 msOccupancySensing([48], {"sendWhen":"immediate","timeout":10000,"disableResponse":false,"disableRecovery":false,"disableDefaultResponse":true,"direction":0,"srcEndpoint":null,"reservedBits":0,"manufacturerCode":4107,"transactionSequenceNumber":null,"writeUndiv":false}) failed (no response received (9))'
+debug 2023-10-05 12:14:42: Error: Read 0x001788010866ce87/2 msOccupancySensing([48], {"sendWhen":"immediate","timeout":10000,"disableResponse":false,"disableRecovery":false,"disableDefaultResponse":true,"direction":0,"srcEndpoint":null,"reservedBits":0,"manufacturerCode":4107,"transactionSequenceNumber":null,"writeUndiv":false}) failed (no response received (9))
+    at DeconzAdapter.sendZclFrameToEndpoint (/app/node_modules/zigbee-herdsman/src/adapter/deconz/adapter/deconzAdapter.ts:656:23)
+    at Request.send (/app/node_modules/zigbee-herdsman/src/controller/helpers/request.ts:81:20)
+    at Endpoint.read (/app/node_modules/zigbee-herdsman/src/controller/model/endpoint.ts:559:28)
+    at Object.convertGet (/app/node_modules/zigbee-herdsman-converters/src/lib/philips.ts:302:13)
+    at Publish.onMQTTMessage (/app/lib/extension/publish.ts:275:21)
+info  2023-10-05 12:14:42: MQTT publish: topic 'z2m-conbee/bridge/log', payload '{"message":"Publish 'get' 'motion_sensitivity' to 'hm01' failed: 'Error: Read 0x001788010866ce87/2 msOccupancySensing([48], {\"sendWhen\":\"immediate\",\"timeout\":10000,\"disableResponse\":false,\"disableRecovery\":false,\"disableDefaultResponse\":true,\"direction\":0,\"srcEndpoint\":null,\"reservedBits\":0,\"manufacturerCode\":4107,\"transactionSequenceNumber\":null,\"writeUndiv\":false}) failed (no response received (9))'","meta":{"friendly_name":"hm01"},"type":"zigbee_publish_error"}'
+debug 2023-10-05 12:14:42: Publishing get 'get' 'led_indication' to 'hm01'
+error 2023-10-05 12:14:45: Publish 'set' 'brightness' to 'BB96E9' failed: 'Error: Command 0x0017880104cb5e5b/11 genLevelCtrl.moveToLevelWithOnOff({"level":100,"transtime":0}, {"sendWhen":"immediate","timeout":10000,"disableResponse":false,"disableRecovery":false,"disableDefaultResponse":false,"direction":0,"srcEndpoint":null,"reservedBits":0,"manufacturerCode":null,"transactionSequenceNumber":null,"writeUndiv":false}) failed (no response received (12))'
+debug 2023-10-05 12:14:45: Error: Command 0x0017880104cb5e5b/11 genLevelCtrl.moveToLevelWithOnOff({"level":100,"transtime":0}, {"sendWhen":"immediate","timeout":10000,"disableResponse":false,"disableRecovery":false,"disableDefaultResponse":false,"direction":0,"srcEndpoint":null,"reservedBits":0,"manufacturerCode":null,"transactionSequenceNumber":null,"writeUndiv":false}) failed (no response received (12))
+    at DeconzAdapter.sendZclFrameToEndpoint (/app/node_modules/zigbee-herdsman/src/adapter/deconz/adapter/deconzAdapter.ts:656:23)
+    at Request.send (/app/node_modules/zigbee-herdsman/src/controller/helpers/request.ts:81:20)
+    at Endpoint.command (/app/node_modules/zigbee-herdsman/src/controller/model/endpoint.ts:834:28)
+    at Object.convertSet (/app/node_modules/zigbee-herdsman-converters/src/converters/toZigbee.js:979:13)
+    at Publish.onMQTTMessage (/app/lib/extension/publish.ts:248:36)
+info  2023-10-05 12:14:45: MQTT publish: topic 'z2m-conbee/bridge/log', payload '{"message":"Publish 'set' 'brightness' to 'BB96E9' failed: 'Error: Command 0x0017880104cb5e5b/11 genLevelCtrl.moveToLevelWithOnOff({\"level\":100,\"transtime\":0}, {\"sendWhen\":\"immediate\",\"timeout\":10000,\"disableResponse\":false,\"disableRecovery\":false,\"disableDefaultResponse\":false,\"direction\":0,\"srcEndpoint\":null,\"reservedBits\":0,\"manufacturerCode\":null,\"transactionSequenceNumber\":null,\"writeUndiv\":false}) failed (no response received (12))'","meta":{"friendly_name":"BB96E9"},"type":"zigbee_publish_error"}'
+error 2023-10-05 12:14:53: Publish 'get' 'led_indication' to 'hm01' failed: 'Error: Read 0x001788010866ce87/2 genBasic([51], {"sendWhen":"immediate","timeout":10000,"disableResponse":false,"disableRecovery":false,"disableDefaultResponse":true,"direction":0,"srcEndpoint":null,"reservedBits":0,"manufacturerCode":4107,"transactionSequenceNumber":null,"writeUndiv":false}) failed (no response received (13))'
+debug 2023-10-05 12:14:53: Error: Read 0x001788010866ce87/2 genBasic([51], {"sendWhen":"immediate","timeout":10000,"disableResponse":false,"disableRecovery":false,"disableDefaultResponse":true,"direction":0,"srcEndpoint":null,"reservedBits":0,"manufacturerCode":4107,"transactionSequenceNumber":null,"writeUndiv":false}) failed (no response received (13))
+    at DeconzAdapter.sendZclFrameToEndpoint (/app/node_modules/zigbee-herdsman/src/adapter/deconz/adapter/deconzAdapter.ts:656:23)
+    at Request.send (/app/node_modules/zigbee-herdsman/src/controller/helpers/request.ts:81:20)
+    at Endpoint.read (/app/node_modules/zigbee-herdsman/src/controller/model/endpoint.ts:559:28)
+    at Object.convertGet (/app/node_modules/zigbee-herdsman-converters/src/lib/philips.ts:313:13)
+    at Publish.onMQTTMessage (/app/lib/extension/publish.ts:275:21)
+info  2023-10-05 12:14:53: MQTT publish: topic 'z2m-conbee/bridge/log', payload '{"message":"Publish 'get' 'led_indication' to 'hm01' failed: 'Error: Read 0x001788010866ce87/2 genBasic([51], {\"sendWhen\":\"immediate\",\"timeout\":10000,\"disableResponse\":false,\"disableRecovery\":false,\"disableDefaultResponse\":true,\"direction\":0,\"srcEndpoint\":null,\"reservedBits\":0,\"manufacturerCode\":4107,\"transactionSequenceNumber\":null,\"writeUndiv\":false}) failed (no response received (13))'","meta":{"friendly_name":"hm01"},"type":"zigbee_publish_error"}'
+debug 2023-10-05 12:14:53: Publishing get 'get' 'occupancy_timeout' to 'hm01'
+error 2023-10-05 12:15:04: Publish 'get' 'occupancy_timeout' to 'hm01' failed: 'Error: Read 0x001788010866ce87/2 msOccupancySensing(["pirOToUDelay"], {"sendWhen":"immediate","timeout":10000,"disableResponse":false,"disableRecovery":false,"disableDefaultResponse":true,"direction":0,"srcEndpoint":null,"reservedBits":0,"manufacturerCode":null,"transactionSequenceNumber":null,"writeUndiv":false}) failed (no response received (14))'
+debug 2023-10-05 12:15:04: Error: Read 0x001788010866ce87/2 msOccupancySensing(["pirOToUDelay"], {"sendWhen":"immediate","timeout":10000,"disableResponse":false,"disableRecovery":false,"disableDefaultResponse":true,"direction":0,"srcEndpoint":null,"reservedBits":0,"manufacturerCode":null,"transactionSequenceNumber":null,"writeUndiv":false}) failed (no response received (14))
+    at DeconzAdapter.sendZclFrameToEndpoint (/app/node_modules/zigbee-herdsman/src/adapter/deconz/adapter/deconzAdapter.ts:656:23)
+    at Request.send (/app/node_modules/zigbee-herdsman/src/controller/helpers/request.ts:81:20)
+    at Endpoint.read (/app/node_modules/zigbee-herdsman/src/controller/model/endpoint.ts:559:28)
+    at Object.convertGet (/app/node_modules/zigbee-herdsman-converters/src/converters/toZigbee.js:459:13)
+    at Publish.onMQTTMessage (/app/lib/extension/publish.ts:275:21)
+info  2023-10-05 12:15:04: MQTT publish: topic 'z2m-conbee/bridge/log', payload '{"message":"Publish 'get' 'occupancy_timeout' to 'hm01' failed: 'Error: Read 0x001788010866ce87/2 msOccupancySensing([\"pirOToUDelay\"], {\"sendWhen\":\"immediate\",\"timeout\":10000,\"disableResponse\":false,\"disableRecovery\":false,\"disableDefaultResponse\":true,\"direction\":0,\"srcEndpoint\":null,\"reservedBits\":0,\"manufacturerCode\":null,\"transactionSequenceNumber\":null,\"writeUndiv\":false}) failed (no response received (14))'","meta":{"friendly_name":"hm01"},"type":"zigbee_publish_error"}'
+debug 2023-10-05 12:15:59: Received Zigbee message from 'sw02', type 'commandNotification', cluster 'greenPower', data '{"commandFrame":{},"commandID":21,"frameCounter":1511,"options":0,"payloadSize":0,"srcID":24223961}' from endpoint 242 with groupID 2948
+info  2023-10-05 12:15:59: MQTT publish: topic 'z2m-conbee/sw02', payload '{"action":"release_2","linkquality":127}'
+debug 2023-10-05 12:15:59: Received MQTT message on 'z2m-conbee/BB96E9/set' with data '{"brightness":0}'
+debug 2023-10-05 12:15:59: Publishing 'set' 'brightness' to 'BB96E9'
+debug 2023-10-05 12:15:59: Received Zigbee message from 'sw02', type 'commandNotification', cluster 'greenPower', data '{"commandFrame":{},"commandID":21,"frameCounter":1513,"options":0,"payloadSize":0,"srcID":24223961}' from endpoint 242 with groupID 2948
+info  2023-10-05 12:15:59: MQTT publish: topic 'z2m-conbee/sw02', payload '{"action":"release_2","linkquality":127}'
+debug 2023-10-05 12:15:59: Received MQTT message on 'z2m-conbee/BB96E9/set' with data '{"brightness":0}'
+debug 2023-10-05 12:15:59: Publishing 'set' 'brightness' to 'BB96E9'
+debug 2023-10-05 12:16:07: Received Zigbee message from 'sw02', type 'commandNotification', cluster 'greenPower', data '{"commandFrame":{},"commandID":16,"frameCounter":1522,"options":0,"payloadSize":0,"srcID":24223961}' from endpoint 242 with groupID 2948
+info  2023-10-05 12:16:07: MQTT publish: topic 'z2m-conbee/sw02', payload '{"action":"press_1","linkquality":127}'
+debug 2023-10-05 12:16:07: Received MQTT message on 'z2m-conbee/BB96E9/set' with data '{"brightness":100}'
+debug 2023-10-05 12:16:07: Publishing 'set' 'brightness' to 'BB96E9'
+info  2023-10-05 12:16:07: MQTT publish: topic 'z2m-conbee/BB96E9', payload '{"brightness":100,"linkquality":120,"power_on_behavior":"on","state":"ON"}'
+debug 2023-10-05 12:16:07: Received Zigbee message from 'sw02', type 'commandNotification', cluster 'greenPower', data '{"commandFrame":{},"commandID":20,"frameCounter":1523,"options":0,"payloadSize":0,"srcID":24223961}' from endpoint 242 with groupID 2948
+info  2023-10-05 12:16:07: MQTT publish: topic 'z2m-conbee/sw02', payload '{"action":"release_1","linkquality":127}'
+debug 2023-10-05 12:16:07: Received MQTT message on 'z2m-conbee/BB96E9/set' with data '{"brightness":100}'
+debug 2023-10-05 12:16:07: Publishing 'set' 'brightness' to 'BB96E9'
+info  2023-10-05 12:16:07: MQTT publish: topic 'z2m-conbee/BB96E9', payload '{"brightness":100,"linkquality":156,"power_on_behavior":"on","state":"ON"}'
+debug 2023-10-05 12:16:08: Received Zigbee message from 'sw02', type 'commandNotification', cluster 'greenPower', data '{"commandFrame":{},"commandID":16,"frameCounter":1524,"options":0,"payloadSize":0,"srcID":24223961}' from endpoint 242 with groupID 2948
+info  2023-10-05 12:16:08: MQTT publish: topic 'z2m-conbee/sw02', payload '{"action":"press_1","linkquality":127}'
+debug 2023-10-05 12:16:08: Received MQTT message on 'z2m-conbee/BB96E9/set' with data '{"brightness":100}'
+debug 2023-10-05 12:16:08: Publishing 'set' 'brightness' to 'BB96E9'
+debug 2023-10-05 12:16:08: Received Zigbee message from 'sw02', type 'commandNotification', cluster 'greenPower', data '{"commandFrame":{},"commandID":20,"frameCounter":1525,"options":0,"payloadSize":0,"srcID":24223961}' from endpoint 242 with groupID 2948
+info  2023-10-05 12:16:08: MQTT publish: topic 'z2m-conbee/sw02', payload '{"action":"release_1","linkquality":127}'
+debug 2023-10-05 12:16:08: Received MQTT message on 'z2m-conbee/BB96E9/set' with data '{"brightness":100}'
+debug 2023-10-05 12:16:08: Publishing 'set' 'brightness' to 'BB96E9'
+debug 2023-10-05 12:16:09: Received Zigbee message from 'sw02', type 'commandNotification', cluster 'greenPower', data '{"commandFrame":{},"commandID":21,"frameCounter":1527,"options":0,"payloadSize":0,"srcID":24223961}' from endpoint 242 with groupID 2948
+info  2023-10-05 12:16:09: MQTT publish: topic 'z2m-conbee/sw02', payload '{"action":"release_2","linkquality":127}'
+debug 2023-10-05 12:16:09: Received MQTT message on 'z2m-conbee/BB96E9/set' with data '{"brightness":0}'
+debug 2023-10-05 12:16:09: Publishing 'set' 'brightness' to 'BB96E9'
+error 2023-10-05 12:16:10: Publish 'set' 'brightness' to 'BB96E9' failed: 'Error: Command 0x0017880104cb5e5b/11 genLevelCtrl.moveToLevelWithOnOff({"level":0,"transtime":0}, {"sendWhen":"immediate","timeout":10000,"disableResponse":false,"disableRecovery":false,"disableDefaultResponse":false,"direction":0,"srcEndpoint":null,"reservedBits":0,"manufacturerCode":null,"transactionSequenceNumber":null,"writeUndiv":false}) failed (no response received (16))'
+debug 2023-10-05 12:16:10: Error: Command 0x0017880104cb5e5b/11 genLevelCtrl.moveToLevelWithOnOff({"level":0,"transtime":0}, {"sendWhen":"immediate","timeout":10000,"disableResponse":false,"disableRecovery":false,"disableDefaultResponse":false,"direction":0,"srcEndpoint":null,"reservedBits":0,"manufacturerCode":null,"transactionSequenceNumber":null,"writeUndiv":false}) failed (no response received (16))
+    at DeconzAdapter.sendZclFrameToEndpoint (/app/node_modules/zigbee-herdsman/src/adapter/deconz/adapter/deconzAdapter.ts:656:23)
+    at runNextTicks (node:internal/process/task_queues:60:5)
+    at processTimers (node:internal/timers:509:9)
+    at Request.send (/app/node_modules/zigbee-herdsman/src/controller/helpers/request.ts:81:20)
+    at Endpoint.command (/app/node_modules/zigbee-herdsman/src/controller/model/endpoint.ts:834:28)
+    at Object.convertSet (/app/node_modules/zigbee-herdsman-converters/src/converters/toZigbee.js:979:13)
+    at Publish.onMQTTMessage (/app/lib/extension/publish.ts:248:36)
+info  2023-10-05 12:16:10: MQTT publish: topic 'z2m-conbee/bridge/log', payload '{"message":"Publish 'set' 'brightness' to 'BB96E9' failed: 'Error: Command 0x0017880104cb5e5b/11 genLevelCtrl.moveToLevelWithOnOff({\"level\":0,\"transtime\":0}, {\"sendWhen\":\"immediate\",\"timeout\":10000,\"disableResponse\":false,\"disableRecovery\":false,\"disableDefaultResponse\":false,\"direction\":0,\"srcEndpoint\":null,\"reservedBits\":0,\"manufacturerCode\":null,\"transactionSequenceNumber\":null,\"writeUndiv\":false}) failed (no response received (16))'","meta":{"friendly_name":"BB96E9"},"type":"zigbee_publish_error"}'
+error 2023-10-05 12:16:10: Publish 'set' 'brightness' to 'BB96E9' failed: 'Error: Command 0x0017880104cb5e5b/11 genLevelCtrl.moveToLevelWithOnOff({"level":0,"transtime":0}, {"sendWhen":"immediate","timeout":10000,"disableResponse":false,"disableRecovery":false,"disableDefaultResponse":false,"direction":0,"srcEndpoint":null,"reservedBits":0,"manufacturerCode":null,"transactionSequenceNumber":null,"writeUndiv":false}) failed (no response received (15))'
+debug 2023-10-05 12:16:10: Error: Command 0x0017880104cb5e5b/11 genLevelCtrl.moveToLevelWithOnOff({"level":0,"transtime":0}, {"sendWhen":"immediate","timeout":10000,"disableResponse":false,"disableRecovery":false,"disableDefaultResponse":false,"direction":0,"srcEndpoint":null,"reservedBits":0,"manufacturerCode":null,"transactionSequenceNumber":null,"writeUndiv":false}) failed (no response received (15))
+    at DeconzAdapter.sendZclFrameToEndpoint (/app/node_modules/zigbee-herdsman/src/adapter/deconz/adapter/deconzAdapter.ts:656:23)
+    at runNextTicks (node:internal/process/task_queues:60:5)
+    at processTimers (node:internal/timers:509:9)
+    at Request.send (/app/node_modules/zigbee-herdsman/src/controller/helpers/request.ts:81:20)
+    at Endpoint.command (/app/node_modules/zigbee-herdsman/src/controller/model/endpoint.ts:834:28)
+    at Object.convertSet (/app/node_modules/zigbee-herdsman-converters/src/converters/toZigbee.js:979:13)
+    at Publish.onMQTTMessage (/app/lib/extension/publish.ts:248:36)
+info  2023-10-05 12:16:10: MQTT publish: topic 'z2m-conbee/bridge/log', payload '{"message":"Publish 'set' 'brightness' to 'BB96E9' failed: 'Error: Command 0x0017880104cb5e5b/11 genLevelCtrl.moveToLevelWithOnOff({\"level\":0,\"transtime\":0}, {\"sendWhen\":\"immediate\",\"timeout\":10000,\"disableResponse\":false,\"disableRecovery\":false,\"disableDefaultResponse\":false,\"direction\":0,\"srcEndpoint\":null,\"reservedBits\":0,\"manufacturerCode\":null,\"transactionSequenceNumber\":null,\"writeUndiv\":false}) failed (no response received (15))'","meta":{"friendly_name":"BB96E9"},"type":"zigbee_publish_error"}'
+debug 2023-10-05 12:16:10: Received Zigbee message from 'sw02', type 'commandNotification', cluster 'greenPower', data '{"commandFrame":{},"commandID":17,"frameCounter":1528,"options":0,"payloadSize":0,"srcID":24223961}' from endpoint 242 with groupID 2948
+info  2023-10-05 12:16:10: MQTT publish: topic 'z2m-conbee/sw02', payload '{"action":"press_2","linkquality":127}'
+debug 2023-10-05 12:16:10: Received MQTT message on 'z2m-conbee/BB96E9/set' with data '{"brightness":0}'
+debug 2023-10-05 12:16:10: Publishing 'set' 'brightness' to 'BB96E9'
+debug 2023-10-05 12:16:10: Received Zigbee message from 'sw02', type 'commandNotification', cluster 'greenPower', data '{"commandFrame":{},"commandID":21,"frameCounter":1529,"options":0,"payloadSize":0,"srcID":24223961}' from endpoint 242 with groupID 2948
+info  2023-10-05 12:16:10: MQTT publish: topic 'z2m-conbee/sw02', payload '{"action":"release_2","linkquality":127}'
+debug 2023-10-05 12:16:10: Received MQTT message on 'z2m-conbee/BB96E9/set' with data '{"brightness":0}'
+debug 2023-10-05 12:16:10: Publishing 'set' 'brightness' to 'BB96E9'
+debug 2023-10-05 12:16:11: Received Zigbee message from 'sw02', type 'commandNotification', cluster 'greenPower', data '{"commandFrame":{},"commandID":17,"frameCounter":1530,"options":0,"payloadSize":0,"srcID":24223961}' from endpoint 242 with groupID 2948
+info  2023-10-05 12:16:11: MQTT publish: topic 'z2m-conbee/sw02', payload '{"action":"press_2","linkquality":127}'
+debug 2023-10-05 12:16:11: Received MQTT message on 'z2m-conbee/BB96E9/set' with data '{"brightness":0}'
+debug 2023-10-05 12:16:11: Publishing 'set' 'brightness' to 'BB96E9'
+debug 2023-10-05 12:16:11: Received Zigbee message from 'sw02', type 'commandNotification', cluster 'greenPower', data '{"commandFrame":{},"commandID":21,"frameCounter":1531,"options":0,"payloadSize":0,"srcID":24223961}' from endpoint 242 with groupID 2948
+info  2023-10-05 12:16:11: MQTT publish: topic 'z2m-conbee/sw02', payload '{"action":"release_2","linkquality":127}'
+debug 2023-10-05 12:16:11: Received MQTT message on 'z2m-conbee/BB96E9/set' with data '{"brightness":0}'
+debug 2023-10-05 12:16:11: Publishing 'set' 'brightness' to 'BB96E9'
+debug 2023-10-05 12:16:12: Received Zigbee message from 'sw02', type 'commandNotification', cluster 'greenPower', data '{"commandFrame":{},"commandID":17,"frameCounter":1532,"options":0,"payloadSize":0,"srcID":24223961}' from endpoint 242 with groupID 2948
+info  2023-10-05 12:16:12: MQTT publish: topic 'z2m-conbee/sw02', payload '{"action":"press_2","linkquality":127}'
+debug 2023-10-05 12:16:12: Received MQTT message on 'z2m-conbee/BB96E9/set' with data '{"brightness":0}'
+debug 2023-10-05 12:16:12: Publishing 'set' 'brightness' to 'BB96E9'
+debug 2023-10-05 12:16:12: Received Zigbee message from 'sw02', type 'commandNotification', cluster 'greenPower', data '{"commandFrame":{},"commandID":21,"frameCounter":1533,"options":0,"payloadSize":0,"srcID":24223961}' from endpoint 242 with groupID 2948
+info  2023-10-05 12:16:12: MQTT publish: topic 'z2m-conbee/sw02', payload '{"action":"release_2","linkquality":127}'
+debug 2023-10-05 12:16:12: Received MQTT message on 'z2m-conbee/BB96E9/set' with data '{"brightness":0}'
+debug 2023-10-05 12:16:12: Publishing 'set' 'brightness' to 'BB96E9'
+error 2023-10-05 12:16:19: Publish 'set' 'brightness' to 'BB96E9' failed: 'Error: Command 0x0017880104cb5e5b/11 genLevelCtrl.moveToLevelWithOnOff({"level":100,"transtime":0}, {"sendWhen":"immediate","timeout":10000,"disableResponse":false,"disableRecovery":false,"disableDefaultResponse":false,"direction":0,"srcEndpoint":null,"reservedBits":0,"manufacturerCode":null,"transactionSequenceNumber":null,"writeUndiv":false}) failed (no response received (20))'
+debug 2023-10-05 12:16:19: Error: Command 0x0017880104cb5e5b/11 genLevelCtrl.moveToLevelWithOnOff({"level":100,"transtime":0}, {"sendWhen":"immediate","timeout":10000,"disableResponse":false,"disableRecovery":false,"disableDefaultResponse":false,"direction":0,"srcEndpoint":null,"reservedBits":0,"manufacturerCode":null,"transactionSequenceNumber":null,"writeUndiv":false}) failed (no response received (20))
+    at DeconzAdapter.sendZclFrameToEndpoint (/app/node_modules/zigbee-herdsman/src/adapter/deconz/adapter/deconzAdapter.ts:656:23)
+    at Request.send (/app/node_modules/zigbee-herdsman/src/controller/helpers/request.ts:81:20)
+    at Endpoint.command (/app/node_modules/zigbee-herdsman/src/controller/model/endpoint.ts:834:28)
+    at Object.convertSet (/app/node_modules/zigbee-herdsman-converters/src/converters/toZigbee.js:979:13)
+    at Publish.onMQTTMessage (/app/lib/extension/publish.ts:248:36)
+info  2023-10-05 12:16:19: MQTT publish: topic 'z2m-conbee/bridge/log', payload '{"message":"Publish 'set' 'brightness' to 'BB96E9' failed: 'Error: Command 0x0017880104cb5e5b/11 genLevelCtrl.moveToLevelWithOnOff({\"level\":100,\"transtime\":0}, {\"sendWhen\":\"immediate\",\"timeout\":10000,\"disableResponse\":false,\"disableRecovery\":false,\"disableDefaultResponse\":false,\"direction\":0,\"srcEndpoint\":null,\"reservedBits\":0,\"manufacturerCode\":null,\"transactionSequenceNumber\":null,\"writeUndiv\":false}) failed (no response received (20))'","meta":{"friendly_name":"BB96E9"},"type":"zigbee_publish_error"}'
+error 2023-10-05 12:16:19: Publish 'set' 'brightness' to 'BB96E9' failed: 'Error: Command 0x0017880104cb5e5b/11 genLevelCtrl.moveToLevelWithOnOff({"level":100,"transtime":0}, {"sendWhen":"immediate","timeout":10000,"disableResponse":false,"disableRecovery":false,"disableDefaultResponse":false,"direction":0,"srcEndpoint":null,"reservedBits":0,"manufacturerCode":null,"transactionSequenceNumber":null,"writeUndiv":false}) failed (no response received (19))'
+debug 2023-10-05 12:16:19: Error: Command 0x0017880104cb5e5b/11 genLevelCtrl.moveToLevelWithOnOff({"level":100,"transtime":0}, {"sendWhen":"immediate","timeout":10000,"disableResponse":false,"disableRecovery":false,"disableDefaultResponse":false,"direction":0,"srcEndpoint":null,"reservedBits":0,"manufacturerCode":null,"transactionSequenceNumber":null,"writeUndiv":false}) failed (no response received (19))
+    at DeconzAdapter.sendZclFrameToEndpoint (/app/node_modules/zigbee-herdsman/src/adapter/deconz/adapter/deconzAdapter.ts:656:23)
+    at Request.send (/app/node_modules/zigbee-herdsman/src/controller/helpers/request.ts:81:20)
+    at Endpoint.command (/app/node_modules/zigbee-herdsman/src/controller/model/endpoint.ts:834:28)
+    at Object.convertSet (/app/node_modules/zigbee-herdsman-converters/src/converters/toZigbee.js:979:13)
+    at Publish.onMQTTMessage (/app/lib/extension/publish.ts:248:36)
+info  2023-10-05 12:16:19: MQTT publish: topic 'z2m-conbee/bridge/log', payload '{"message":"Publish 'set' 'brightness' to 'BB96E9' failed: 'Error: Command 0x0017880104cb5e5b/11 genLevelCtrl.moveToLevelWithOnOff({\"level\":100,\"transtime\":0}, {\"sendWhen\":\"immediate\",\"timeout\":10000,\"disableResponse\":false,\"disableRecovery\":false,\"disableDefaultResponse\":false,\"direction\":0,\"srcEndpoint\":null,\"reservedBits\":0,\"manufacturerCode\":null,\"transactionSequenceNumber\":null,\"writeUndiv\":false}) failed (no response received (19))'","meta":{"friendly_name":"BB96E9"},"type":"zigbee_publish_error"}'
+error 2023-10-05 12:16:20: Publish 'set' 'brightness' to 'BB96E9' failed: 'Error: Command 0x0017880104cb5e5b/11 genLevelCtrl.moveToLevelWithOnOff({"level":0,"transtime":0}, {"sendWhen":"immediate","timeout":10000,"disableResponse":false,"disableRecovery":false,"disableDefaultResponse":false,"direction":0,"srcEndpoint":null,"reservedBits":0,"manufacturerCode":null,"transactionSequenceNumber":null,"writeUndiv":false}) failed (no response received (21))'
+debug 2023-10-05 12:16:20: Error: Command 0x0017880104cb5e5b/11 genLevelCtrl.moveToLevelWithOnOff({"level":0,"transtime":0}, {"sendWhen":"immediate","timeout":10000,"disableResponse":false,"disableRecovery":false,"disableDefaultResponse":false,"direction":0,"srcEndpoint":null,"reservedBits":0,"manufacturerCode":null,"transactionSequenceNumber":null,"writeUndiv":false}) failed (no response received (21))
+    at DeconzAdapter.sendZclFrameToEndpoint (/app/node_modules/zigbee-herdsman/src/adapter/deconz/adapter/deconzAdapter.ts:656:23)
+    at Request.send (/app/node_modules/zigbee-herdsman/src/controller/helpers/request.ts:81:20)
+    at Endpoint.command (/app/node_modules/zigbee-herdsman/src/controller/model/endpoint.ts:834:28)
+    at Object.convertSet (/app/node_modules/zigbee-herdsman-converters/src/converters/toZigbee.js:979:13)
+    at Publish.onMQTTMessage (/app/lib/extension/publish.ts:248:36)
+info  2023-10-05 12:16:20: MQTT publish: topic 'z2m-conbee/bridge/log', payload '{"message":"Publish 'set' 'brightness' to 'BB96E9' failed: 'Error: Command 0x0017880104cb5e5b/11 genLevelCtrl.moveToLevelWithOnOff({\"level\":0,\"transtime\":0}, {\"sendWhen\":\"immediate\",\"timeout\":10000,\"disableResponse\":false,\"disableRecovery\":false,\"disableDefaultResponse\":false,\"direction\":0,\"srcEndpoint\":null,\"reservedBits\":0,\"manufacturerCode\":null,\"transactionSequenceNumber\":null,\"writeUndiv\":false}) failed (no response received (21))'","meta":{"friendly_name":"BB96E9"},"type":"zigbee_publish_error"}'
+error 2023-10-05 12:16:21: Publish 'set' 'brightness' to 'BB96E9' failed: 'Error: Command 0x0017880104cb5e5b/11 genLevelCtrl.moveToLevelWithOnOff({"level":0,"transtime":0}, {"sendWhen":"immediate","timeout":10000,"disableResponse":false,"disableRecovery":false,"disableDefaultResponse":false,"direction":0,"srcEndpoint":null,"reservedBits":0,"manufacturerCode":null,"transactionSequenceNumber":null,"writeUndiv":false}) failed (no response received (23))'
+debug 2023-10-05 12:16:21: Error: Command 0x0017880104cb5e5b/11 genLevelCtrl.moveToLevelWithOnOff({"level":0,"transtime":0}, {"sendWhen":"immediate","timeout":10000,"disableResponse":false,"disableRecovery":false,"disableDefaultResponse":false,"direction":0,"srcEndpoint":null,"reservedBits":0,"manufacturerCode":null,"transactionSequenceNumber":null,"writeUndiv":false}) failed (no response received (23))
+    at DeconzAdapter.sendZclFrameToEndpoint (/app/node_modules/zigbee-herdsman/src/adapter/deconz/adapter/deconzAdapter.ts:656:23)
+    at Request.send (/app/node_modules/zigbee-herdsman/src/controller/helpers/request.ts:81:20)
+    at Endpoint.command (/app/node_modules/zigbee-herdsman/src/controller/model/endpoint.ts:834:28)
+    at Object.convertSet (/app/node_modules/zigbee-herdsman-converters/src/converters/toZigbee.js:979:13)
+    at Publish.onMQTTMessage (/app/lib/extension/publish.ts:248:36)
+info  2023-10-05 12:16:21: MQTT publish: topic 'z2m-conbee/bridge/log', payload '{"message":"Publish 'set' 'brightness' to 'BB96E9' failed: 'Error: Command 0x0017880104cb5e5b/11 genLevelCtrl.moveToLevelWithOnOff({\"level\":0,\"transtime\":0}, {\"sendWhen\":\"immediate\",\"timeout\":10000,\"disableResponse\":false,\"disableRecovery\":false,\"disableDefaultResponse\":false,\"direction\":0,\"srcEndpoint\":null,\"reservedBits\":0,\"manufacturerCode\":null,\"transactionSequenceNumber\":null,\"writeUndiv\":false}) failed (no response received (23))'","meta":{"friendly_name":"BB96E9"},"type":"zigbee_publish_error"}'
+error 2023-10-05 12:16:21: Publish 'set' 'brightness' to 'BB96E9' failed: 'Error: Command 0x0017880104cb5e5b/11 genLevelCtrl.moveToLevelWithOnOff({"level":0,"transtime":0}, {"sendWhen":"immediate","timeout":10000,"disableResponse":false,"disableRecovery":false,"disableDefaultResponse":false,"direction":0,"srcEndpoint":null,"reservedBits":0,"manufacturerCode":null,"transactionSequenceNumber":null,"writeUndiv":false}) failed (no response received (22))'
+debug 2023-10-05 12:16:21: Error: Command 0x0017880104cb5e5b/11 genLevelCtrl.moveToLevelWithOnOff({"level":0,"transtime":0}, {"sendWhen":"immediate","timeout":10000,"disableResponse":false,"disableRecovery":false,"disableDefaultResponse":false,"direction":0,"srcEndpoint":null,"reservedBits":0,"manufacturerCode":null,"transactionSequenceNumber":null,"writeUndiv":false}) failed (no response received (22))
+    at DeconzAdapter.sendZclFrameToEndpoint (/app/node_modules/zigbee-herdsman/src/adapter/deconz/adapter/deconzAdapter.ts:656:23)
+    at Request.send (/app/node_modules/zigbee-herdsman/src/controller/helpers/request.ts:81:20)
+    at Endpoint.command (/app/node_modules/zigbee-herdsman/src/controller/model/endpoint.ts:834:28)
+    at Object.convertSet (/app/node_modules/zigbee-herdsman-converters/src/converters/toZigbee.js:979:13)
+    at Publish.onMQTTMessage (/app/lib/extension/publish.ts:248:36)
+info  2023-10-05 12:16:21: MQTT publish: topic 'z2m-conbee/bridge/log', payload '{"message":"Publish 'set' 'brightness' to 'BB96E9' failed: 'Error: Command 0x0017880104cb5e5b/11 genLevelCtrl.moveToLevelWithOnOff({\"level\":0,\"transtime\":0}, {\"sendWhen\":\"immediate\",\"timeout\":10000,\"disableResponse\":false,\"disableRecovery\":false,\"disableDefaultResponse\":false,\"direction\":0,\"srcEndpoint\":null,\"reservedBits\":0,\"manufacturerCode\":null,\"transactionSequenceNumber\":null,\"writeUndiv\":false}) failed (no response received (22))'","meta":{"friendly_name":"BB96E9"},"type":"zigbee_publish_error"}'
+error 2023-10-05 12:16:22: Publish 'set' 'brightness' to 'BB96E9' failed: 'Error: Command 0x0017880104cb5e5b/11 genLevelCtrl.moveToLevelWithOnOff({"level":0,"transtime":0}, {"sendWhen":"immediate","timeout":10000,"disableResponse":false,"disableRecovery":false,"disableDefaultResponse":false,"direction":0,"srcEndpoint":null,"reservedBits":0,"manufacturerCode":null,"transactionSequenceNumber":null,"writeUndiv":false}) failed (no response received (25))'
+debug 2023-10-05 12:16:22: Error: Command 0x0017880104cb5e5b/11 genLevelCtrl.moveToLevelWithOnOff({"level":0,"transtime":0}, {"sendWhen":"immediate","timeout":10000,"disableResponse":false,"disableRecovery":false,"disableDefaultResponse":false,"direction":0,"srcEndpoint":null,"reservedBits":0,"manufacturerCode":null,"transactionSequenceNumber":null,"writeUndiv":false}) failed (no response received (25))
+    at DeconzAdapter.sendZclFrameToEndpoint (/app/node_modules/zigbee-herdsman/src/adapter/deconz/adapter/deconzAdapter.ts:656:23)
+    at runNextTicks (node:internal/process/task_queues:60:5)
+    at processTimers (node:internal/timers:509:9)
+    at Request.send (/app/node_modules/zigbee-herdsman/src/controller/helpers/request.ts:81:20)
+    at Endpoint.command (/app/node_modules/zigbee-herdsman/src/controller/model/endpoint.ts:834:28)
+    at Object.convertSet (/app/node_modules/zigbee-herdsman-converters/src/converters/toZigbee.js:979:13)
+    at Publish.onMQTTMessage (/app/lib/extension/publish.ts:248:36)
+info  2023-10-05 12:16:22: MQTT publish: topic 'z2m-conbee/bridge/log', payload '{"message":"Publish 'set' 'brightness' to 'BB96E9' failed: 'Error: Command 0x0017880104cb5e5b/11 genLevelCtrl.moveToLevelWithOnOff({\"level\":0,\"transtime\":0}, {\"sendWhen\":\"immediate\",\"timeout\":10000,\"disableResponse\":false,\"disableRecovery\":false,\"disableDefaultResponse\":false,\"direction\":0,\"srcEndpoint\":null,\"reservedBits\":0,\"manufacturerCode\":null,\"transactionSequenceNumber\":null,\"writeUndiv\":false}) failed (no response received (25))'","meta":{"friendly_name":"BB96E9"},"type":"zigbee_publish_error"}'
+error 2023-10-05 12:16:22: Publish 'set' 'brightness' to 'BB96E9' failed: 'Error: Command 0x0017880104cb5e5b/11 genLevelCtrl.moveToLevelWithOnOff({"level":0,"transtime":0}, {"sendWhen":"immediate","timeout":10000,"disableResponse":false,"disableRecovery":false,"disableDefaultResponse":false,"direction":0,"srcEndpoint":null,"reservedBits":0,"manufacturerCode":null,"transactionSequenceNumber":null,"writeUndiv":false}) failed (no response received (24))'
+debug 2023-10-05 12:16:22: Error: Command 0x0017880104cb5e5b/11 genLevelCtrl.moveToLevelWithOnOff({"level":0,"transtime":0}, {"sendWhen":"immediate","timeout":10000,"disableResponse":false,"disableRecovery":false,"disableDefaultResponse":false,"direction":0,"srcEndpoint":null,"reservedBits":0,"manufacturerCode":null,"transactionSequenceNumber":null,"writeUndiv":false}) failed (no response received (24))
+    at DeconzAdapter.sendZclFrameToEndpoint (/app/node_modules/zigbee-herdsman/src/adapter/deconz/adapter/deconzAdapter.ts:656:23)
+    at runNextTicks (node:internal/process/task_queues:60:5)
+    at processTimers (node:internal/timers:509:9)
+    at Request.send (/app/node_modules/zigbee-herdsman/src/controller/helpers/request.ts:81:20)
+    at Endpoint.command (/app/node_modules/zigbee-herdsman/src/controller/model/endpoint.ts:834:28)
+    at Object.convertSet (/app/node_modules/zigbee-herdsman-converters/src/converters/toZigbee.js:979:13)
+    at Publish.onMQTTMessage (/app/lib/extension/publish.ts:248:36)
+info  2023-10-05 12:16:22: MQTT publish: topic 'z2m-conbee/bridge/log', payload '{"message":"Publish 'set' 'brightness' to 'BB96E9' failed: 'Error: Command 0x0017880104cb5e5b/11 genLevelCtrl.moveToLevelWithOnOff({\"level\":0,\"transtime\":0}, {\"sendWhen\":\"immediate\",\"timeout\":10000,\"disableResponse\":false,\"disableRecovery\":false,\"disableDefaultResponse\":false,\"direction\":0,\"srcEndpoint\":null,\"reservedBits\":0,\"manufacturerCode\":null,\"transactionSequenceNumber\":null,\"writeUndiv\":false}) failed (no response received (24))'","meta":{"friendly_name":"BB96E9"},"type":"zigbee_publish_error"}'
+error 2023-10-05 12:16:23: Publish 'set' 'brightness' to 'BB96E9' failed: 'Error: Command 0x0017880104cb5e5b/11 genLevelCtrl.moveToLevelWithOnOff({"level":0,"transtime":0}, {"sendWhen":"immediate","timeout":10000,"disableResponse":false,"disableRecovery":false,"disableDefaultResponse":false,"direction":0,"srcEndpoint":null,"reservedBits":0,"manufacturerCode":null,"transactionSequenceNumber":null,"writeUndiv":false}) failed (no response received (27))'
+debug 2023-10-05 12:16:23: Error: Command 0x0017880104cb5e5b/11 genLevelCtrl.moveToLevelWithOnOff({"level":0,"transtime":0}, {"sendWhen":"immediate","timeout":10000,"disableResponse":false,"disableRecovery":false,"disableDefaultResponse":false,"direction":0,"srcEndpoint":null,"reservedBits":0,"manufacturerCode":null,"transactionSequenceNumber":null,"writeUndiv":false}) failed (no response received (27))
+    at DeconzAdapter.sendZclFrameToEndpoint (/app/node_modules/zigbee-herdsman/src/adapter/deconz/adapter/deconzAdapter.ts:656:23)
+    at Request.send (/app/node_modules/zigbee-herdsman/src/controller/helpers/request.ts:81:20)
+    at Endpoint.command (/app/node_modules/zigbee-herdsman/src/controller/model/endpoint.ts:834:28)
+    at Object.convertSet (/app/node_modules/zigbee-herdsman-converters/src/converters/toZigbee.js:979:13)
+    at Publish.onMQTTMessage (/app/lib/extension/publish.ts:248:36)
+info  2023-10-05 12:16:23: MQTT publish: topic 'z2m-conbee/bridge/log', payload '{"message":"Publish 'set' 'brightness' to 'BB96E9' failed: 'Error: Command 0x0017880104cb5e5b/11 genLevelCtrl.moveToLevelWithOnOff({\"level\":0,\"transtime\":0}, {\"sendWhen\":\"immediate\",\"timeout\":10000,\"disableResponse\":false,\"disableRecovery\":false,\"disableDefaultResponse\":false,\"direction\":0,\"srcEndpoint\":null,\"reservedBits\":0,\"manufacturerCode\":null,\"transactionSequenceNumber\":null,\"writeUndiv\":false}) failed (no response received (27))'","meta":{"friendly_name":"BB96E9"},"type":"zigbee_publish_error"}'
+error 2023-10-05 12:16:23: Publish 'set' 'brightness' to 'BB96E9' failed: 'Error: Command 0x0017880104cb5e5b/11 genLevelCtrl.moveToLevelWithOnOff({"level":0,"transtime":0}, {"sendWhen":"immediate","timeout":10000,"disableResponse":false,"disableRecovery":false,"disableDefaultResponse":false,"direction":0,"srcEndpoint":null,"reservedBits":0,"manufacturerCode":null,"transactionSequenceNumber":null,"writeUndiv":false}) failed (no response received (26))'
+debug 2023-10-05 12:16:23: Error: Command 0x0017880104cb5e5b/11 genLevelCtrl.moveToLevelWithOnOff({"level":0,"transtime":0}, {"sendWhen":"immediate","timeout":10000,"disableResponse":false,"disableRecovery":false,"disableDefaultResponse":false,"direction":0,"srcEndpoint":null,"reservedBits":0,"manufacturerCode":null,"transactionSequenceNumber":null,"writeUndiv":false}) failed (no response received (26))
+    at DeconzAdapter.sendZclFrameToEndpoint (/app/node_modules/zigbee-herdsman/src/adapter/deconz/adapter/deconzAdapter.ts:656:23)
+    at Request.send (/app/node_modules/zigbee-herdsman/src/controller/helpers/request.ts:81:20)
+    at Endpoint.command (/app/node_modules/zigbee-herdsman/src/controller/model/endpoint.ts:834:28)
+    at Object.convertSet (/app/node_modules/zigbee-herdsman-converters/src/converters/toZigbee.js:979:13)
+    at Publish.onMQTTMessage (/app/lib/extension/publish.ts:248:36)
+info  2023-10-05 12:16:23: MQTT publish: topic 'z2m-conbee/bridge/log', payload '{"message":"Publish 'set' 'brightness' to 'BB96E9' failed: 'Error: Command 0x0017880104cb5e5b/11 genLevelCtrl.moveToLevelWithOnOff({\"level\":0,\"transtime\":0}, {\"sendWhen\":\"immediate\",\"timeout\":10000,\"disableResponse\":false,\"disableRecovery\":false,\"disableDefaultResponse\":false,\"direction\":0,\"srcEndpoint\":null,\"reservedBits\":0,\"manufacturerCode\":null,\"transactionSequenceNumber\":null,\"writeUndiv\":false}) failed (no response received (26))'","meta":{"friendly_name":"BB96E9"},"type":"zigbee_publish_error"}'
+debug 2023-10-05 12:16:42: Received MQTT message on 'z2m-conbee/bridge/request/networkmap' with data '{"routes":false,"transaction":"7avfb-1","type":"raw"}'
+info  2023-10-05 12:16:42: Starting network scan (includeRoutes 'false')
+debug 2023-10-05 12:16:43: LQI succeeded for 'Coordinator'
+debug 2023-10-05 12:16:45: LQI succeeded for 'BB96E9'
+error 2023-10-05 12:18:52: Failed to execute LQI for '0x943469fffea79959'
+debug 2023-10-05 12:18:52: Error: LQI REQUEST FAILED - addr: 0xa101 waiting for response TIMEOUT
+    at request (/app/node_modules/zigbee-herdsman/src/adapter/deconz/adapter/deconzAdapter.ts:268:43)
+    at DeconzAdapter.lqi (/app/node_modules/zigbee-herdsman/src/adapter/deconz/adapter/deconzAdapter.ts:272:28)
+    at doRequest (/app/lib/extension/networkMap.ts:228:28)
+    at NetworkMap.networkScan (/app/lib/extension/networkMap.ts:241:32)
+    at NetworkMap.onMQTTMessage (/app/lib/extension/networkMap.ts:63:34)
+info  2023-10-05 12:18:52: Network scan finished
+info  2023-10-05 12:18:52: MQTT publish: topic 'z2m-conbee/bridge/response/networkmap', payload '{"data":{"routes":false,"type":"raw","value":{"links":[{"depth":1,"linkquality":164,"lqi":164,"relationship":2,"routes":[],"source":{"ieeeAddr":"0x0017880104cb5e5b","networkAddress":55679},"sourceIeeeAddr":"0x0017880104cb5e5b","sourceNwkAddr":55679,"target":{"ieeeAddr":"0x00212effff098b43","networkAddress":0},"targetIeeeAddr":"0x00212effff098b43"},{"depth":0,"linkquality":7,"lqi":7,"relationship":2,"routes":[],"source":{"ieeeAddr":"0x00212effff098b43","networkAddress":0},"sourceIeeeAddr":"0x00212effff098b43","sourceNwkAddr":0,"target":{"ieeeAddr":"0x0017880104cb5e5b","networkAddress":55679},"targetIeeeAddr":"0x0017880104cb5e5b"}],"nodes":[{"definition":null,"failed":[],"friendlyName":"Coordinator","ieeeAddr":"0x00212effff098b43","lastSeen":1696500826684,"networkAddress":0,"type":"Coordinator"},{"definition":{"description":"Hue White A60 Single bulb E27/B22","model":"8718696449691","supports":"light (state, brightness), power_on_behavior, effect, linkquality","vendor":"Philips"},"failed":[],"friendlyName":"BB96E9","ieeeAddr":"0x0017880104cb5e5b","lastSeen":1696500967670,"manufacturerName":"Signify Netherlands B.V.","modelID":"LWB010","networkAddress":55679,"type":"Router"},{"definition":{"description":"Hue motion sensor","model":"9290012607","supports":"temperature, occupancy, battery, illuminance_lux, illuminance, motion_sensitivity, led_indication, occupancy_timeout, linkquality","vendor":"Philips"},"friendlyName":"hm01","ieeeAddr":"0x001788010866ce87","lastSeen":1694697287514,"manufacturerName":"Philips","modelID":"SML001","networkAddress":14925,"type":"EndDevice"},{"definition":{"description":"ZigBee AC phase-cut dimmer","model":"ZG102-BOX-UNIDIM","supports":"light (state, brightness), effect, power_on_behavior, linkquality","vendor":"Envilar"},"failed":["lqi"],"friendlyName":"0x943469fffea79959","ieeeAddr":"0x943469fffea79959","lastSeen":1696500835752,"manufacturerName":"ENVILAR","modelID":"ZG102-BOX-UNIDIM","networkAddress":41217,"type":"Router"}]}},"status":"ok","transaction":"7avfb-1"}'
+debug 2023-10-05 12:18:53: Saving state to file /app/data/state.json
+debug 2023-10-05 12:19:22: Saving state to file /app/data/state.json
+info  2023-10-05 12:19:22: MQTT publish: topic 'z2m-conbee/bridge/state', payload 'offline'
+info  2023-10-05 12:19:22: Disconnecting from MQTT server
+info  2023-10-05 12:19:22: Stopping zigbee-herdsman...
+info  2023-10-05 12:19:22: Stopped zigbee-herdsman
+info  2023-10-05 12:19:22: Stopped Zigbee2MQTT

@@ -390,7 +390,7 @@ module.exports = {
 
         projects: {
             /** To enable the Projects feature, set this value to true */
-            enabled: false,
+            enabled: true,
             workflow: {
                 /** Set the default projects workflow mode.
                  *  - manual - you must manually commit changes
@@ -398,7 +398,7 @@ module.exports = {
                  * This can be overridden per-user from the 'Git config'
                  * section of 'User Settings' within the editor
                  */
-                mode: "manual"
+                mode: "true"
             }
         },
 

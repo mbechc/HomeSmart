@@ -1,0 +1,121 @@
+debug 2023-10-05 12:11:59: Loaded state from file /app/data/state.json
+info  2023-10-05 12:11:59: Logging to console and directory: '/app/data/log/2023-10-05.12-11-59' filename: log.txt
+debug 2023-10-05 12:11:59: Removing old log directory '/app/data/log/2023-10-05.11-45-08'
+info  2023-10-05 12:11:59: Starting Zigbee2MQTT version 1.33.0 (commit #7ee207f)
+info  2023-10-05 12:11:59: Starting zigbee-herdsman (0.18.5)
+debug 2023-10-05 12:11:59: Using zigbee-herdsman with settings: '{"adapter":{"concurrent":null,"delay":null,"disableLED":false},"backupPath":"/app/data/coordinator_backup.json","databaseBackupPath":"/app/data/database.db.backup","databasePath":"/app/data/database.db","network":{"channelList":[11],"extendedPanID":[221,221,221,221,221,221,221,221],"networkKey":"HIDDEN","panID":6754},"serialPort":{"path":"/dev/ttyACM0"}}'
+info  2023-10-05 12:11:59: zigbee-herdsman started (resumed)
+info  2023-10-05 12:11:59: Coordinator firmware version: '{"meta":{"maintrel":0,"majorrel":38,"minorrel":114,"product":0,"revision":"0x26720700","transportrev":0},"type":"ConBee2/RaspBee2"}'
+debug 2023-10-05 12:11:59: Zigbee network parameters: {"channel":11,"extendedPanID":"0xdddddddddddddddd","panID":6754}
+info  2023-10-05 12:11:59: Currently 4 devices are joined:
+info  2023-10-05 12:11:59: sw02 (0x000000000171a0d9): PTM 215Z - EnOcean Pushbutton transmitter module (GreenPower)
+info  2023-10-05 12:11:59: sw01 (0x000000000171a526): PTM 215Z - EnOcean Pushbutton transmitter module (GreenPower)
+info  2023-10-05 12:11:59: BB96E9 (0x0017880104cb5e5b): 8718696449691 - Philips Hue White A60 Single bulb E27/B22 (Router)
+info  2023-10-05 12:11:59: hm01 (0x001788010866ce87): 9290012607 - Philips Hue motion sensor (EndDevice)
+info  2023-10-05 12:11:59: Zigbee: disabling joining new devices.
+info  2023-10-05 12:12:00: Connecting to MQTT server at mqtt://172.16.255.164
+debug 2023-10-05 12:12:00: Using MQTT anonymous login
+info  2023-10-05 12:12:00: Connected to MQTT server
+info  2023-10-05 12:12:00: MQTT publish: topic 'z2m-conbee/bridge/state', payload 'online'
+info  2023-10-05 12:12:00: Started frontend on port 0.0.0.0:8080
+info  2023-10-05 12:12:00: MQTT publish: topic 'z2m-conbee/bridge/config', payload '{"commit":"7ee207f","coordinator":{"meta":{"maintrel":0,"majorrel":38,"minorrel":114,"product":0,"revision":"0x26720700","transportrev":0},"type":"ConBee2/RaspBee2"},"log_level":"debug","network":{"channel":11,"extendedPanID":"0xdddddddddddddddd","panID":6754},"permit_join":false,"version":"1.33.0"}'
+info  2023-10-05 12:12:00: MQTT publish: topic 'z2m-conbee/sw02', payload '{"linkquality":127}'
+info  2023-10-05 12:12:00: MQTT publish: topic 'z2m-conbee/sw01', payload '{"linkquality":127}'
+info  2023-10-05 12:12:00: MQTT publish: topic 'z2m-conbee/BB96E9', payload '{"brightness":0,"linkquality":255,"power_on_behavior":"on","state":"OFF"}'
+info  2023-10-05 12:12:00: MQTT publish: topic 'z2m-conbee/hm01', payload '{"battery":34,"illuminance":25184,"illuminance_lux":330,"linkquality":255,"motion_sensitivity":"high","occupancy":false,"occupancy_timeout":0,"temperature":20.36}'
+info  2023-10-05 12:12:00: Zigbee2MQTT started!
+debug 2023-10-05 12:12:00: Received MQTT message on 'z2m-conbee/BB96E9/get' with data '{"power_on_behavior":""}'
+debug 2023-10-05 12:12:00: Publishing get 'get' 'power_on_behavior' to 'BB96E9'
+debug 2023-10-05 12:12:00: Received MQTT message on 'z2m-conbee/hm01/get' with data '{"motion_sensitivity":"","led_indication":"","occupancy_timeout":""}'
+debug 2023-10-05 12:12:00: Publishing get 'get' 'motion_sensitivity' to 'hm01'
+debug 2023-10-05 12:12:00: Received Zigbee message from 'BB96E9', type 'readResponse', cluster 'genOnOff', data '{"startUpOnOff":1}' from endpoint 11 with groupID null
+info  2023-10-05 12:12:00: MQTT publish: topic 'z2m-conbee/BB96E9', payload '{"brightness":0,"linkquality":124,"power_on_behavior":"on","state":"OFF"}'
+error 2023-10-05 12:12:11: Publish 'get' 'motion_sensitivity' to 'hm01' failed: 'Error: Read 0x001788010866ce87/2 msOccupancySensing([48], {"sendWhen":"immediate","timeout":10000,"disableResponse":false,"disableRecovery":false,"disableDefaultResponse":true,"direction":0,"srcEndpoint":null,"reservedBits":0,"manufacturerCode":4107,"transactionSequenceNumber":null,"writeUndiv":false}) failed (no response received (4))'
+debug 2023-10-05 12:12:11: Error: Read 0x001788010866ce87/2 msOccupancySensing([48], {"sendWhen":"immediate","timeout":10000,"disableResponse":false,"disableRecovery":false,"disableDefaultResponse":true,"direction":0,"srcEndpoint":null,"reservedBits":0,"manufacturerCode":4107,"transactionSequenceNumber":null,"writeUndiv":false}) failed (no response received (4))
+    at DeconzAdapter.sendZclFrameToEndpoint (/app/node_modules/zigbee-herdsman/src/adapter/deconz/adapter/deconzAdapter.ts:656:23)
+    at runNextTicks (node:internal/process/task_queues:60:5)
+    at processTimers (node:internal/timers:509:9)
+    at Request.send (/app/node_modules/zigbee-herdsman/src/controller/helpers/request.ts:81:20)
+    at Endpoint.read (/app/node_modules/zigbee-herdsman/src/controller/model/endpoint.ts:559:28)
+    at Object.convertGet (/app/node_modules/zigbee-herdsman-converters/src/lib/philips.ts:302:13)
+    at Publish.onMQTTMessage (/app/lib/extension/publish.ts:275:21)
+info  2023-10-05 12:12:11: MQTT publish: topic 'z2m-conbee/bridge/log', payload '{"message":"Publish 'get' 'motion_sensitivity' to 'hm01' failed: 'Error: Read 0x001788010866ce87/2 msOccupancySensing([48], {\"sendWhen\":\"immediate\",\"timeout\":10000,\"disableResponse\":false,\"disableRecovery\":false,\"disableDefaultResponse\":true,\"direction\":0,\"srcEndpoint\":null,\"reservedBits\":0,\"manufacturerCode\":4107,\"transactionSequenceNumber\":null,\"writeUndiv\":false}) failed (no response received (4))'","meta":{"friendly_name":"hm01"},"type":"zigbee_publish_error"}'
+debug 2023-10-05 12:12:11: Publishing get 'get' 'led_indication' to 'hm01'
+debug 2023-10-05 12:12:15: Received MQTT message on 'z2m-conbee/bridge/request/permit_join' with data '{"device":null,"time":254,"transaction":"t5p07-1","value":true}'
+info  2023-10-05 12:12:15: Zigbee: allowing new devices to join.
+info  2023-10-05 12:12:16: MQTT publish: topic 'z2m-conbee/bridge/response/permit_join', payload '{"data":{"time":254,"value":true},"status":"ok","transaction":"t5p07-1"}'
+error 2023-10-05 12:12:22: Publish 'get' 'led_indication' to 'hm01' failed: 'Error: Read 0x001788010866ce87/2 genBasic([51], {"sendWhen":"immediate","timeout":10000,"disableResponse":false,"disableRecovery":false,"disableDefaultResponse":true,"direction":0,"srcEndpoint":null,"reservedBits":0,"manufacturerCode":4107,"transactionSequenceNumber":null,"writeUndiv":false}) failed (no response received (5))'
+debug 2023-10-05 12:12:22: Error: Read 0x001788010866ce87/2 genBasic([51], {"sendWhen":"immediate","timeout":10000,"disableResponse":false,"disableRecovery":false,"disableDefaultResponse":true,"direction":0,"srcEndpoint":null,"reservedBits":0,"manufacturerCode":4107,"transactionSequenceNumber":null,"writeUndiv":false}) failed (no response received (5))
+    at DeconzAdapter.sendZclFrameToEndpoint (/app/node_modules/zigbee-herdsman/src/adapter/deconz/adapter/deconzAdapter.ts:656:23)
+    at runNextTicks (node:internal/process/task_queues:60:5)
+    at processTimers (node:internal/timers:509:9)
+    at Request.send (/app/node_modules/zigbee-herdsman/src/controller/helpers/request.ts:81:20)
+    at Endpoint.read (/app/node_modules/zigbee-herdsman/src/controller/model/endpoint.ts:559:28)
+    at Object.convertGet (/app/node_modules/zigbee-herdsman-converters/src/lib/philips.ts:313:13)
+    at Publish.onMQTTMessage (/app/lib/extension/publish.ts:275:21)
+info  2023-10-05 12:12:22: MQTT publish: topic 'z2m-conbee/bridge/log', payload '{"message":"Publish 'get' 'led_indication' to 'hm01' failed: 'Error: Read 0x001788010866ce87/2 genBasic([51], {\"sendWhen\":\"immediate\",\"timeout\":10000,\"disableResponse\":false,\"disableRecovery\":false,\"disableDefaultResponse\":true,\"direction\":0,\"srcEndpoint\":null,\"reservedBits\":0,\"manufacturerCode\":4107,\"transactionSequenceNumber\":null,\"writeUndiv\":false}) failed (no response received (5))'","meta":{"friendly_name":"hm01"},"type":"zigbee_publish_error"}'
+debug 2023-10-05 12:12:22: Publishing get 'get' 'occupancy_timeout' to 'hm01'
+error 2023-10-05 12:12:33: Publish 'get' 'occupancy_timeout' to 'hm01' failed: 'Error: Read 0x001788010866ce87/2 msOccupancySensing(["pirOToUDelay"], {"sendWhen":"immediate","timeout":10000,"disableResponse":false,"disableRecovery":false,"disableDefaultResponse":true,"direction":0,"srcEndpoint":null,"reservedBits":0,"manufacturerCode":null,"transactionSequenceNumber":null,"writeUndiv":false}) failed (no response received (7))'
+debug 2023-10-05 12:12:33: Error: Read 0x001788010866ce87/2 msOccupancySensing(["pirOToUDelay"], {"sendWhen":"immediate","timeout":10000,"disableResponse":false,"disableRecovery":false,"disableDefaultResponse":true,"direction":0,"srcEndpoint":null,"reservedBits":0,"manufacturerCode":null,"transactionSequenceNumber":null,"writeUndiv":false}) failed (no response received (7))
+    at DeconzAdapter.sendZclFrameToEndpoint (/app/node_modules/zigbee-herdsman/src/adapter/deconz/adapter/deconzAdapter.ts:656:23)
+    at Request.send (/app/node_modules/zigbee-herdsman/src/controller/helpers/request.ts:81:20)
+    at Endpoint.read (/app/node_modules/zigbee-herdsman/src/controller/model/endpoint.ts:559:28)
+    at Object.convertGet (/app/node_modules/zigbee-herdsman-converters/src/converters/toZigbee.js:459:13)
+    at Publish.onMQTTMessage (/app/lib/extension/publish.ts:275:21)
+info  2023-10-05 12:12:33: MQTT publish: topic 'z2m-conbee/bridge/log', payload '{"message":"Publish 'get' 'occupancy_timeout' to 'hm01' failed: 'Error: Read 0x001788010866ce87/2 msOccupancySensing([\"pirOToUDelay\"], {\"sendWhen\":\"immediate\",\"timeout\":10000,\"disableResponse\":false,\"disableRecovery\":false,\"disableDefaultResponse\":true,\"direction\":0,\"srcEndpoint\":null,\"reservedBits\":0,\"manufacturerCode\":null,\"transactionSequenceNumber\":null,\"writeUndiv\":false}) failed (no response received (7))'","meta":{"friendly_name":"hm01"},"type":"zigbee_publish_error"}'
+info  2023-10-05 12:13:29: Device '0x943469fffea79959' joined
+info  2023-10-05 12:13:29: MQTT publish: topic 'z2m-conbee/bridge/event', payload '{"data":{"friendly_name":"0x943469fffea79959","ieee_address":"0x943469fffea79959"},"type":"device_joined"}'
+info  2023-10-05 12:13:29: MQTT publish: topic 'z2m-conbee/bridge/log', payload '{"message":{"friendly_name":"0x943469fffea79959"},"type":"device_connected"}'
+info  2023-10-05 12:13:29: Starting interview of '0x943469fffea79959'
+info  2023-10-05 12:13:29: MQTT publish: topic 'z2m-conbee/bridge/event', payload '{"data":{"friendly_name":"0x943469fffea79959","ieee_address":"0x943469fffea79959","status":"started"},"type":"device_interview"}'
+info  2023-10-05 12:13:29: MQTT publish: topic 'z2m-conbee/bridge/log', payload '{"message":"interview_started","meta":{"friendly_name":"0x943469fffea79959"},"type":"pairing"}'
+debug 2023-10-05 12:13:29: Received Zigbee message from '0x943469fffea79959', type 'attributeReport', cluster 'genBasic', data '{"modelId":"ZG102-BOX-UNIDIM"}' from endpoint 1 with groupID null
+debug 2023-10-05 12:13:29: Skipping message, definition is undefined and still interviewing
+debug 2023-10-05 12:13:29: Received Zigbee message from '0x943469fffea79959', type 'attributeReport', cluster 'genOta', data '{"currentFileVersion":55}' from endpoint 1 with groupID null
+debug 2023-10-05 12:13:29: Skipping message, definition is undefined and still interviewing
+debug 2023-10-05 12:13:29: Received Zigbee message from '0x943469fffea79959', type 'readResponse', cluster 'genBasic', data '{"manufacturerName":"ENVILAR"}' from endpoint 1 with groupID null
+debug 2023-10-05 12:13:29: Skipping message, definition is undefined and still interviewing
+debug 2023-10-05 12:13:29: Received Zigbee message from '0x943469fffea79959', type 'readResponse', cluster 'genBasic', data '{"powerSource":1}' from endpoint 1 with groupID null
+debug 2023-10-05 12:13:29: Skipping message, definition is undefined and still interviewing
+debug 2023-10-05 12:13:29: Received Zigbee message from '0x943469fffea79959', type 'readResponse', cluster 'genBasic', data '{"zclVersion":3}' from endpoint 1 with groupID null
+debug 2023-10-05 12:13:29: Skipping message, definition is undefined and still interviewing
+debug 2023-10-05 12:13:29: Received Zigbee message from '0x943469fffea79959', type 'readResponse', cluster 'genBasic', data '{"appVersion":0}' from endpoint 1 with groupID null
+debug 2023-10-05 12:13:29: Skipping message, definition is undefined and still interviewing
+debug 2023-10-05 12:13:30: Received Zigbee message from '0x943469fffea79959', type 'readResponse', cluster 'genBasic', data '{"stackVersion":0}' from endpoint 1 with groupID null
+debug 2023-10-05 12:13:30: Skipping message, definition is undefined and still interviewing
+debug 2023-10-05 12:13:30: Received Zigbee message from '0x943469fffea79959', type 'readResponse', cluster 'genBasic', data '{"hwVersion":1}' from endpoint 1 with groupID null
+debug 2023-10-05 12:13:30: Skipping message, definition is undefined and still interviewing
+debug 2023-10-05 12:13:30: Received Zigbee message from '0x943469fffea79959', type 'readResponse', cluster 'genBasic', data '{"dateCode":"NULL"}' from endpoint 1 with groupID null
+debug 2023-10-05 12:13:30: Skipping message, definition is undefined and still interviewing
+debug 2023-10-05 12:13:30: Received Zigbee message from '0x943469fffea79959', type 'readResponse', cluster 'genBasic', data '{"swBuildId":"2.9.2_r54"}' from endpoint 1 with groupID null
+debug 2023-10-05 12:13:30: Skipping message, definition is undefined and still interviewing
+info  2023-10-05 12:13:30: Successfully interviewed '0x943469fffea79959', device has successfully been paired
+info  2023-10-05 12:13:30: Device '0x943469fffea79959' is supported, identified as: Envilar ZigBee AC phase-cut dimmer (ZG102-BOX-UNIDIM)
+info  2023-10-05 12:13:30: MQTT publish: topic 'z2m-conbee/bridge/event', payload '{"data":{"definition":{"description":"ZigBee AC phase-cut dimmer","exposes":[{"features":[{"access":7,"description":"On/off state of this light","label":"State","name":"state","property":"state","type":"binary","value_off":"OFF","value_on":"ON","value_toggle":"TOGGLE"},{"access":7,"description":"Brightness of this light","label":"Brightness","name":"brightness","property":"brightness","type":"numeric","value_max":254,"value_min":0}],"type":"light"},{"access":2,"description":"Triggers an effect on the light (e.g. make light blink for a few seconds)","label":"Effect","name":"effect","property":"effect","type":"enum","values":["blink","breathe","okay","channel_change","finish_effect","stop_effect"]},{"access":7,"description":"Controls the behavior when the device is powered on after power loss","label":"Power-on behavior","name":"power_on_behavior","property":"power_on_behavior","type":"enum","values":["off","on","toggle","previous"]},{"access":1,"description":"Link quality (signal strength)","label":"Linkquality","name":"linkquality","property":"linkquality","type":"numeric","unit":"lqi","value_max":255,"value_min":0}],"model":"ZG102-BOX-UNIDIM","options":[{"access":2,"description":"Controls the transition time (in seconds) of on/off, brightness, color temperature (if applicable) and color (if applicable) changes. Defaults to `0` (no transition).","label":"Transition","name":"transition","property":"transition","type":"numeric","value_min":0},{"access":2,"description":"State actions will also be published as 'action' when true (default false).","label":"State action","name":"state_action","property":"state_action","type":"binary","value_off":false,"value_on":true}],"supports_ota":false,"vendor":"Envilar"},"friendly_name":"0x943469fffea79959","ieee_address":"0x943469fffea79959","status":"successful","supported":true},"type":"device_interview"}'
+info  2023-10-05 12:13:30: Configuring '0x943469fffea79959'
+info  2023-10-05 12:13:30: MQTT publish: topic 'z2m-conbee/bridge/log', payload '{"message":"interview_successful","meta":{"description":"ZigBee AC phase-cut dimmer","friendly_name":"0x943469fffea79959","model":"ZG102-BOX-UNIDIM","supported":true,"vendor":"Envilar"},"type":"pairing"}'
+debug 2023-10-05 12:13:30: Received MQTT message on 'z2m-conbee/0x943469fffea79959/get' with data '{"power_on_behavior":""}'
+debug 2023-10-05 12:13:30: Publishing get 'get' 'power_on_behavior' to '0x943469fffea79959'
+debug 2023-10-05 12:13:30: Received Zigbee message from '0x943469fffea79959', type 'readResponse', cluster 'genOnOff', data '{"startUpOnOff":255}' from endpoint 1 with groupID null
+info  2023-10-05 12:13:30: MQTT publish: topic 'z2m-conbee/0x943469fffea79959', payload '{"linkquality":255,"power_on_behavior":"previous"}'
+info  2023-10-05 12:13:31: Successfully configured '0x943469fffea79959'
+debug 2023-10-05 12:13:37: Received Zigbee message from '0x943469fffea79959', type 'attributeReport', cluster 'genOnOff', data '{"onOff":1}' from endpoint 1 with groupID null
+info  2023-10-05 12:13:37: MQTT publish: topic 'z2m-conbee/0x943469fffea79959', payload '{"linkquality":252,"power_on_behavior":"previous","state":"ON"}'
+debug 2023-10-05 12:13:38: Received Zigbee message from '0x943469fffea79959', type 'attributeReport', cluster 'genOnOff', data '{"onOff":1}' from endpoint 1 with groupID null
+info  2023-10-05 12:13:38: MQTT publish: topic 'z2m-conbee/0x943469fffea79959', payload '{"linkquality":252,"power_on_behavior":"previous","state":"ON"}'
+debug 2023-10-05 12:13:38: Received Zigbee message from '0x943469fffea79959', type 'attributeReport', cluster 'genLevelCtrl', data '{"currentLevel":254}' from endpoint 1 with groupID null
+info  2023-10-05 12:13:38: MQTT publish: topic 'z2m-conbee/0x943469fffea79959', payload '{"brightness":254,"linkquality":255,"power_on_behavior":"previous","state":"ON"}'
+debug 2023-10-05 12:13:39: Received Zigbee message from '0x943469fffea79959', type 'attributeReport', cluster 'genBasic', data '{"modelId":"ZG102-BOX-UNIDIM"}' from endpoint 1 with groupID null
+debug 2023-10-05 12:13:39: Received Zigbee message from '0x943469fffea79959', type 'attributeReport', cluster 'genOta', data '{"currentFileVersion":55}' from endpoint 1 with groupID null
+debug 2023-10-05 12:13:46: Received Zigbee message from '0x943469fffea79959', type 'attributeReport', cluster 'genOnOff', data '{"onOff":1}' from endpoint 1 with groupID null
+info  2023-10-05 12:13:46: MQTT publish: topic 'z2m-conbee/0x943469fffea79959', payload '{"brightness":254,"linkquality":248,"power_on_behavior":"previous","state":"ON"}'
+debug 2023-10-05 12:13:46: Received Zigbee message from '0x943469fffea79959', type 'attributeReport', cluster 'genLevelCtrl', data '{"currentLevel":88}' from endpoint 1 with groupID null
+info  2023-10-05 12:13:46: MQTT publish: topic 'z2m-conbee/0x943469fffea79959', payload '{"brightness":88,"linkquality":255,"power_on_behavior":"previous","state":"ON"}'
+debug 2023-10-05 12:13:47: Received Zigbee message from '0x943469fffea79959', type 'attributeReport', cluster 'genOnOff', data '{"onOff":1}' from endpoint 1 with groupID null
+info  2023-10-05 12:13:47: MQTT publish: topic 'z2m-conbee/0x943469fffea79959', payload '{"brightness":88,"linkquality":255,"power_on_behavior":"previous","state":"ON"}'
+debug 2023-10-05 12:13:48: Saving state to file /app/data/state.json
+info  2023-10-05 12:13:48: MQTT publish: topic 'z2m-conbee/bridge/state', payload 'offline'
+info  2023-10-05 12:13:48: Disconnecting from MQTT server
+info  2023-10-05 12:13:48: Stopping zigbee-herdsman...
+info  2023-10-05 12:13:49: Stopped zigbee-herdsman
+info  2023-10-05 12:13:49: Stopped Zigbee2MQTT

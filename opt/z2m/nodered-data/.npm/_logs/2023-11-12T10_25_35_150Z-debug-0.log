@@ -1,0 +1,80 @@
+0 verbose cli /usr/local/bin/node /usr/local/bin/npm
+1 info using npm@8.19.4
+2 info using node@v16.20.1
+3 timing npm:load:whichnode Completed in 0ms
+4 timing config:load:defaults Completed in 4ms
+5 timing config:load:file:/usr/local/lib/node_modules/npm/npmrc Completed in 1ms
+6 timing config:load:builtin Completed in 2ms
+7 warn config production Use `--omit=dev` instead.
+8 timing config:load:cli Completed in 7ms
+9 timing config:load:env Completed in 0ms
+10 timing config:load:file:/data/.npmrc Completed in 0ms
+11 timing config:load:project Completed in 1ms
+12 timing config:load:file:/root/.npmrc Completed in 0ms
+13 timing config:load:user Completed in 0ms
+14 timing config:load:file:/usr/local/etc/npmrc Completed in 1ms
+15 timing config:load:global Completed in 1ms
+16 timing config:load:validate Completed in 0ms
+17 timing config:load:credentials Completed in 1ms
+18 timing config:load:setEnvs Completed in 1ms
+19 timing config:load Completed in 18ms
+20 timing npm:load:configload Completed in 19ms
+21 timing npm:load:mkdirpcache Completed in 1ms
+22 timing npm:load:mkdirplogs Completed in 0ms
+23 verbose title npm install node-red-contrib-timed-counter@0.1.0
+24 verbose argv "install" "--no-audit" "--no-update-notifier" "--no-fund" "--save" "--save-prefix" "~" "--production" "--engine-strict" "node-red-contrib-timed-counter@0.1.0"
+25 timing npm:load:setTitle Completed in 2ms
+26 timing config:load:flatten Completed in 3ms
+27 timing npm:load:display Completed in 5ms
+28 verbose logfile logs-max:10 dir:/data/.npm/_logs
+29 verbose logfile /data/.npm/_logs/2023-11-12T10_25_35_150Z-debug-0.log
+30 timing npm:load:logFile Completed in 5ms
+31 timing npm:load:timers Completed in 0ms
+32 timing npm:load:configScope Completed in 0ms
+33 timing npm:load Completed in 33ms
+34 timing arborist:ctor Completed in 1ms
+35 silly logfile start cleaning logs, removing 1 files
+36 silly logfile done cleaning log files
+37 timing idealTree:init Completed in 193ms
+38 timing idealTree:userRequests Completed in 2ms
+39 silly idealTree buildDeps
+40 silly fetch manifest node-red-contrib-timed-counter@0.1.0
+41 verbose shrinkwrap failed to load node_modules/.package-lock.json missing from node_modules: ../root/smartButtons
+42 http fetch GET 200 https://registry.npmjs.org/node-red-contrib-timed-counter 962ms (cache miss)
+43 silly placeDep ROOT node-red-contrib-timed-counter@0.1.0 OK for: node-red-project@0.0.1 want: 0.1.0
+44 timing idealTree:#root Completed in 969ms
+45 timing idealTree:node_modules/node-red-contrib-timed-counter Completed in 0ms
+46 timing idealTree:buildDeps Completed in 970ms
+47 timing idealTree:fixDepFlags Completed in 7ms
+48 timing idealTree Completed in 1180ms
+49 timing reify:loadTrees Completed in 1181ms
+50 timing reify:diffTrees Completed in 7ms
+51 silly reify mark retired [ '/data/node_modules/smartButtons' ]
+52 silly reify moves {
+52 silly reify   '/data/node_modules/smartButtons': '/data/node_modules/.smartButtons-7IP2qf4q'
+52 silly reify }
+53 timing reify:retireShallow Completed in 4ms
+54 timing reify:createSparse Completed in 1ms
+55 timing reify:trashOmits Completed in 1ms
+56 timing reify:loadBundles Completed in 0ms
+57 silly tarball no local data for node-red-contrib-timed-counter@https://registry.npmjs.org/node-red-contrib-timed-counter/-/node-red-contrib-timed-counter-0.1.0.tgz. Extracting by manifest.
+58 timing reifyNode:node_modules/smartButtons Completed in 205ms
+59 http fetch GET 200 https://registry.npmjs.org/node-red-contrib-timed-counter/-/node-red-contrib-timed-counter-0.1.0.tgz 141ms (cache miss)
+60 timing reifyNode:node_modules/node-red-contrib-timed-counter Completed in 207ms
+61 timing reify:unpack Completed in 207ms
+62 timing reify:unretire Completed in 1ms
+63 timing build:queue Completed in 0ms
+64 timing build:deps Completed in 1ms
+65 timing build:queue Completed in 0ms
+66 timing build:links Completed in 0ms
+67 timing build Completed in 2ms
+68 timing reify:build Completed in 2ms
+69 timing reify:trash Completed in 1ms
+70 timing reify:save Completed in 69ms
+71 timing reify Completed in 1501ms
+72 silly ADD node_modules/node-red-contrib-timed-counter
+73 silly CHANGE node_modules/smartButtons
+74 timing command:install Completed in 1506ms
+75 verbose exit 0
+76 timing npm Completed in 1625ms
+77 info ok

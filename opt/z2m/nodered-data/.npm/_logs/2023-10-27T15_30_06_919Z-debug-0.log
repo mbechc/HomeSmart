@@ -1,0 +1,431 @@
+0 verbose cli /usr/local/bin/node /usr/local/bin/npm
+1 info using npm@8.19.4
+2 info using node@v16.20.1
+3 timing npm:load:whichnode Completed in 0ms
+4 timing config:load:defaults Completed in 6ms
+5 timing config:load:file:/usr/local/lib/node_modules/npm/npmrc Completed in 0ms
+6 timing config:load:builtin Completed in 1ms
+7 warn config production Use `--omit=dev` instead.
+8 timing config:load:cli Completed in 2ms
+9 timing config:load:env Completed in 0ms
+10 timing config:load:file:/data/.npmrc Completed in 0ms
+11 timing config:load:project Completed in 1ms
+12 timing config:load:file:/root/.npmrc Completed in 0ms
+13 timing config:load:user Completed in 0ms
+14 timing config:load:file:/usr/local/etc/npmrc Completed in 1ms
+15 timing config:load:global Completed in 1ms
+16 timing config:load:validate Completed in 0ms
+17 timing config:load:credentials Completed in 1ms
+18 timing config:load:setEnvs Completed in 1ms
+19 timing config:load Completed in 15ms
+20 timing npm:load:configload Completed in 15ms
+21 timing npm:load:mkdirpcache Completed in 1ms
+22 timing npm:load:mkdirplogs Completed in 0ms
+23 verbose title npm install node-red-contrib-shelly@10.14.2
+24 verbose argv "install" "--no-audit" "--no-update-notifier" "--no-fund" "--save" "--save-prefix" "~" "--production" "--engine-strict" "node-red-contrib-shelly@10.14.2"
+25 timing npm:load:setTitle Completed in 2ms
+26 timing config:load:flatten Completed in 3ms
+27 timing npm:load:display Completed in 5ms
+28 verbose logfile logs-max:10 dir:/data/.npm/_logs
+29 verbose logfile /data/.npm/_logs/2023-10-27T15_30_06_919Z-debug-0.log
+30 timing npm:load:logFile Completed in 5ms
+31 timing npm:load:timers Completed in 0ms
+32 timing npm:load:configScope Completed in 0ms
+33 timing npm:load Completed in 29ms
+34 timing arborist:ctor Completed in 1ms
+35 silly logfile start cleaning logs, removing 37 files
+36 silly logfile done cleaning log files
+37 timing idealTree:init Completed in 165ms
+38 timing idealTree:userRequests Completed in 2ms
+39 silly idealTree buildDeps
+40 silly fetch manifest node-red-contrib-shelly@10.14.2
+41 timing arborist:ctor Completed in 0ms
+42 http fetch GET 200 https://registry.npmjs.org/node-red-contrib-shelly 944ms (cache miss)
+43 silly placeDep ROOT node-red-contrib-shelly@10.14.2 OK for: node-red-project@0.0.1 want: 10.14.2
+44 silly placeDep ROOT smartButtons@ REPLACE for: node-red-project@0.0.1 want: file:../../../root/smartButtons
+45 silly fetch manifest axios@^0.26.0
+46 silly fetch manifest axios-rate-limit@^1.3.0
+47 silly fetch manifest crypto@^1.0.1
+48 silly fetch manifest fastify@^3.29.0
+49 silly fetch manifest path@^0.12.7
+50 http fetch GET 200 https://registry.npmjs.org/axios 104ms (cache miss)
+51 http fetch GET 200 https://registry.npmjs.org/path 137ms (cache miss)
+52 http fetch GET 200 https://registry.npmjs.org/fastify 161ms (cache miss)
+53 http fetch GET 200 https://registry.npmjs.org/crypto 790ms (cache miss)
+54 http fetch GET 200 https://registry.npmjs.org/axios-rate-limit 804ms (cache miss)
+55 timing idealTree:#root Completed in 1769ms
+56 silly placeDep ROOT axios@0.26.1 OK for: node-red-contrib-shelly@10.14.2 want: ^0.26.0
+57 silly placeDep ROOT axios-rate-limit@1.3.0 OK for: node-red-contrib-shelly@10.14.2 want: ^1.3.0
+58 silly placeDep ROOT crypto@1.0.1 OK for: node-red-contrib-shelly@10.14.2 want: ^1.0.1
+59 silly placeDep ROOT fastify@3.29.5 OK for: node-red-contrib-shelly@10.14.2 want: ^3.29.0
+60 silly placeDep ROOT path@0.12.7 OK for: node-red-contrib-shelly@10.14.2 want: ^0.12.7
+61 silly fetch manifest follow-redirects@^1.14.8
+62 silly fetch manifest @fastify/ajv-compiler@^1.0.0
+63 silly fetch manifest @fastify/error@^2.0.0
+64 silly fetch manifest abstract-logging@^2.0.0
+65 silly fetch manifest avvio@^7.1.2
+66 silly fetch manifest fast-content-type-parse@^1.0.0
+67 silly fetch manifest fast-json-stringify@^2.5.2
+68 silly fetch manifest find-my-way@^4.5.0
+69 silly fetch manifest flatstr@^1.0.12
+70 silly fetch manifest light-my-request@^4.2.0
+71 silly fetch manifest pino@^6.13.0
+72 silly fetch manifest process-warning@^1.0.0
+73 silly fetch manifest secure-json-parse@^2.0.0
+74 silly fetch manifest semver@^7.3.2
+75 silly fetch manifest tiny-lru@^8.0.1
+76 silly fetch manifest process@^0.11.1
+77 silly fetch manifest util@^0.10.3
+78 http fetch GET 200 https://registry.npmjs.org/follow-redirects 89ms (cache miss)
+79 http fetch GET 200 https://registry.npmjs.org/abstract-logging 97ms (cache miss)
+80 http fetch GET 200 https://registry.npmjs.org/process 104ms (cache miss)
+81 http fetch GET 200 https://registry.npmjs.org/avvio 123ms (cache miss)
+82 http fetch GET 200 https://registry.npmjs.org/util 142ms (cache miss)
+83 http fetch GET 200 https://registry.npmjs.org/fast-content-type-parse 175ms (cache miss)
+84 http fetch GET 200 https://registry.npmjs.org/@fastify%2ferror 184ms (cache miss)
+85 http fetch GET 200 https://registry.npmjs.org/process-warning 170ms (cache miss)
+86 http fetch GET 200 https://registry.npmjs.org/light-my-request 177ms (cache miss)
+87 http fetch GET 200 https://registry.npmjs.org/@fastify%2fajv-compiler 222ms (cache miss)
+88 http fetch GET 200 https://registry.npmjs.org/flatstr 208ms (cache miss)
+89 http fetch GET 200 https://registry.npmjs.org/find-my-way 222ms (cache miss)
+90 http fetch GET 200 https://registry.npmjs.org/fast-json-stringify 227ms (cache miss)
+91 http fetch GET 200 https://registry.npmjs.org/secure-json-parse 227ms (cache miss)
+92 http fetch GET 200 https://registry.npmjs.org/semver 227ms (cache miss)
+93 http fetch GET 200 https://registry.npmjs.org/tiny-lru 229ms (cache miss)
+94 http fetch GET 200 https://registry.npmjs.org/pino 294ms (cache miss)
+95 timing idealTree:node_modules/node-red-contrib-shelly Completed in 364ms
+96 silly placeDep ROOT follow-redirects@1.15.3 OK for: axios@0.26.1 want: ^1.14.8
+97 timing idealTree:node_modules/axios Completed in 3ms
+98 timing idealTree:node_modules/axios-rate-limit Completed in 0ms
+99 timing idealTree:node_modules/crypto Completed in 0ms
+100 silly placeDep ROOT @fastify/ajv-compiler@1.1.0 OK for: fastify@3.29.5 want: ^1.0.0
+101 silly placeDep ROOT @fastify/error@2.0.0 OK for: fastify@3.29.5 want: ^2.0.0
+102 silly placeDep ROOT abstract-logging@2.0.1 OK for: fastify@3.29.5 want: ^2.0.0
+103 silly placeDep ROOT avvio@7.2.5 OK for: fastify@3.29.5 want: ^7.1.2
+104 silly placeDep ROOT fast-content-type-parse@1.1.0 OK for: fastify@3.29.5 want: ^1.0.0
+105 silly placeDep ROOT fast-json-stringify@2.7.13 OK for: fastify@3.29.5 want: ^2.5.2
+106 silly placeDep ROOT find-my-way@4.5.1 OK for: fastify@3.29.5 want: ^4.5.0
+107 silly placeDep ROOT flatstr@1.0.12 OK for: fastify@3.29.5 want: ^1.0.12
+108 silly placeDep ROOT light-my-request@4.12.0 OK for: fastify@3.29.5 want: ^4.2.0
+109 silly placeDep ROOT pino@6.14.0 OK for: fastify@3.29.5 want: ^6.13.0
+110 silly placeDep ROOT process-warning@1.0.0 OK for: fastify@3.29.5 want: ^1.0.0
+111 silly placeDep ROOT secure-json-parse@2.7.0 OK for: fastify@3.29.5 want: ^2.0.0
+112 silly placeDep ROOT semver@7.5.4 OK for: fastify@3.29.5 want: ^7.3.2
+113 silly placeDep ROOT tiny-lru@8.0.2 OK for: fastify@3.29.5 want: ^8.0.1
+114 silly fetch manifest archy@^1.0.0
+115 silly fetch manifest fastq@^1.6.1
+116 silly fetch manifest queue-microtask@^1.1.2
+117 silly fetch manifest deepmerge@^4.2.2
+118 silly fetch manifest string-similarity@^4.0.1
+119 silly fetch manifest fast-decode-uri-component@^1.0.1
+120 silly fetch manifest safe-regex2@^2.0.0
+121 silly fetch manifest semver-store@^0.3.0
+122 silly fetch manifest ajv@^8.1.0
+123 silly fetch manifest set-cookie-parser@^2.4.1
+124 silly fetch manifest fast-redact@^3.0.0
+125 silly fetch manifest fast-safe-stringify@^2.0.8
+126 silly fetch manifest pino-std-serializers@^3.1.0
+127 silly fetch manifest quick-format-unescaped@^4.0.3
+128 silly fetch manifest sonic-boom@^1.0.2
+129 http fetch GET 200 https://registry.npmjs.org/fast-decode-uri-component 56ms (cache miss)
+130 http fetch GET 200 https://registry.npmjs.org/safe-regex2 56ms (cache miss)
+131 http fetch GET 200 https://registry.npmjs.org/set-cookie-parser 61ms (cache miss)
+132 http fetch GET 200 https://registry.npmjs.org/fast-redact 62ms (cache miss)
+133 http fetch GET 200 https://registry.npmjs.org/pino-std-serializers 65ms (cache miss)
+134 http fetch GET 200 https://registry.npmjs.org/quick-format-unescaped 88ms (cache miss)
+135 http fetch GET 200 https://registry.npmjs.org/archy 114ms (cache miss)
+136 http fetch GET 200 https://registry.npmjs.org/fast-safe-stringify 106ms (cache miss)
+137 http fetch GET 200 https://registry.npmjs.org/deepmerge 122ms (cache miss)
+138 http fetch GET 200 https://registry.npmjs.org/queue-microtask 129ms (cache miss)
+139 http fetch GET 200 https://registry.npmjs.org/sonic-boom 123ms (cache miss)
+140 http fetch GET 200 https://registry.npmjs.org/ajv 131ms (cache revalidated)
+141 http fetch GET 200 https://registry.npmjs.org/fastq 142ms (cache miss)
+142 http fetch GET 200 https://registry.npmjs.org/semver-store 723ms (cache miss)
+143 http fetch GET 200 https://registry.npmjs.org/string-similarity 744ms (cache miss)
+144 timing idealTree:node_modules/fastify Completed in 776ms
+145 timing idealTree:node_modules/@fastify/ajv-compiler Completed in 0ms
+146 timing idealTree:node_modules/@fastify/error Completed in 0ms
+147 timing idealTree:node_modules/abstract-logging Completed in 0ms
+148 silly placeDep ROOT archy@1.0.0 OK for: avvio@7.2.5 want: ^1.0.0
+149 silly placeDep ROOT fastq@1.15.0 OK for: avvio@7.2.5 want: ^1.6.1
+150 silly placeDep ROOT queue-microtask@1.2.3 OK for: avvio@7.2.5 want: ^1.1.2
+151 silly fetch manifest reusify@^1.0.4
+152 http fetch GET 200 https://registry.npmjs.org/reusify 44ms (cache miss)
+153 timing idealTree:node_modules/avvio Completed in 50ms
+154 timing idealTree:node_modules/archy Completed in 0ms
+155 timing idealTree:node_modules/fast-content-type-parse Completed in 0ms
+156 silly placeDep ROOT deepmerge@4.3.1 OK for: fast-json-stringify@2.7.13 want: ^4.2.2
+157 silly placeDep ROOT string-similarity@4.0.4 OK for: fast-json-stringify@2.7.13 want: ^4.0.1
+158 timing idealTree:node_modules/fast-json-stringify Completed in 2ms
+159 timing idealTree:node_modules/deepmerge Completed in 0ms
+160 silly placeDep ROOT reusify@1.0.4 OK for: fastq@1.15.0 want: ^1.0.4
+161 timing idealTree:node_modules/fastq Completed in 1ms
+162 silly placeDep ROOT fast-decode-uri-component@1.0.1 OK for: find-my-way@4.5.1 want: ^1.0.1
+163 silly placeDep ROOT safe-regex2@2.0.0 OK for: find-my-way@4.5.1 want: ^2.0.0
+164 silly placeDep ROOT semver-store@0.3.0 OK for: find-my-way@4.5.1 want: ^0.3.0
+165 silly fetch manifest ret@~0.2.0
+166 http fetch GET 200 https://registry.npmjs.org/ret 31ms (cache miss)
+167 timing idealTree:node_modules/find-my-way Completed in 36ms
+168 timing idealTree:node_modules/fast-decode-uri-component Completed in 0ms
+169 timing idealTree:node_modules/flatstr Completed in 0ms
+170 timing idealTree:node_modules/follow-redirects Completed in 0ms
+171 silly placeDep node_modules/light-my-request ajv@8.12.0 OK for: light-my-request@4.12.0 want: ^8.1.0
+172 silly placeDep ROOT set-cookie-parser@2.6.0 OK for: light-my-request@4.12.0 want: ^2.4.1
+173 silly fetch manifest json-schema-traverse@^1.0.0
+174 silly fetch manifest require-from-string@^2.0.2
+175 http fetch GET 200 https://registry.npmjs.org/json-schema-traverse 34ms (cache revalidated)
+176 http fetch GET 200 https://registry.npmjs.org/require-from-string 51ms (cache miss)
+177 timing idealTree:node_modules/light-my-request Completed in 56ms
+178 silly placeDep ROOT process@0.11.10 OK for: path@0.12.7 want: ^0.11.1
+179 silly placeDep ROOT util@0.10.4 OK for: path@0.12.7 want: ^0.10.3
+180 silly fetch manifest inherits@2.0.3
+181 http fetch GET 200 https://registry.npmjs.org/inherits 41ms (cache revalidated)
+182 timing idealTree:node_modules/path Completed in 46ms
+183 silly placeDep ROOT fast-redact@3.3.0 OK for: pino@6.14.0 want: ^3.0.0
+184 silly placeDep ROOT fast-safe-stringify@2.1.1 OK for: pino@6.14.0 want: ^2.0.8
+185 silly placeDep ROOT pino-std-serializers@3.2.0 OK for: pino@6.14.0 want: ^3.1.0
+186 silly placeDep ROOT quick-format-unescaped@4.0.4 OK for: pino@6.14.0 want: ^4.0.3
+187 silly placeDep ROOT sonic-boom@1.4.1 OK for: pino@6.14.0 want: ^1.0.2
+188 silly fetch manifest atomic-sleep@^1.0.0
+189 http fetch GET 200 https://registry.npmjs.org/atomic-sleep 42ms (cache miss)
+190 timing idealTree:node_modules/pino Completed in 48ms
+191 timing idealTree:node_modules/fast-redact Completed in 0ms
+192 timing idealTree:node_modules/fast-safe-stringify Completed in 0ms
+193 timing idealTree:node_modules/pino-std-serializers Completed in 0ms
+194 timing idealTree:node_modules/process Completed in 0ms
+195 timing idealTree:node_modules/process-warning Completed in 0ms
+196 timing idealTree:node_modules/queue-microtask Completed in 0ms
+197 timing idealTree:node_modules/quick-format-unescaped Completed in 0ms
+198 timing idealTree:node_modules/reusify Completed in 0ms
+199 silly placeDep ROOT ret@0.2.2 OK for: safe-regex2@2.0.0 want: ~0.2.0
+200 timing idealTree:node_modules/safe-regex2 Completed in 1ms
+201 timing idealTree:node_modules/ret Completed in 0ms
+202 timing idealTree:node_modules/secure-json-parse Completed in 0ms
+203 timing idealTree:node_modules/semver Completed in 0ms
+204 timing idealTree:node_modules/semver-store Completed in 0ms
+205 timing idealTree:node_modules/set-cookie-parser Completed in 0ms
+206 timing idealTree:node_modules/smartButtons Completed in 0ms
+207 silly placeDep ROOT atomic-sleep@1.0.0 OK for: sonic-boom@1.4.1 want: ^1.0.0
+208 timing idealTree:node_modules/sonic-boom Completed in 1ms
+209 timing idealTree:node_modules/atomic-sleep Completed in 0ms
+210 timing idealTree:node_modules/string-similarity Completed in 0ms
+211 timing idealTree:node_modules/tiny-lru Completed in 0ms
+212 silly placeDep node_modules/util inherits@2.0.3 OK for: util@0.10.4 want: 2.0.3
+213 timing idealTree:node_modules/util Completed in 1ms
+214 silly placeDep node_modules/light-my-request json-schema-traverse@1.0.0 OK for: ajv@8.12.0 want: ^1.0.0
+215 silly placeDep ROOT require-from-string@2.0.2 OK for: ajv@8.12.0 want: ^2.0.2
+216 timing idealTree:node_modules/light-my-request/node_modules/ajv Completed in 2ms
+217 timing idealTree:node_modules/require-from-string Completed in 0ms
+218 timing idealTree:node_modules/light-my-request/node_modules/json-schema-traverse Completed in 0ms
+219 timing idealTree:node_modules/util/node_modules/inherits Completed in 0ms
+220 timing idealTree:buildDeps Completed in 3162ms
+221 timing idealTree:fixDepFlags Completed in 2ms
+222 timing idealTree Completed in 3335ms
+223 timing reify:loadTrees Completed in 3335ms
+224 timing reify:diffTrees Completed in 39ms
+225 silly reify mark retired [ '/data/node_modules/smartButtons' ]
+226 silly reify moves {
+226 silly reify   '/data/node_modules/smartButtons': '/data/node_modules/.smartButtons-7IP2qf4q'
+226 silly reify }
+227 timing reify:retireShallow Completed in 5ms
+228 timing reify:createSparse Completed in 8ms
+229 timing reify:trashOmits Completed in 1ms
+230 timing reify:loadBundles Completed in 0ms
+231 silly tarball no local data for require-from-string@https://registry.npmjs.org/require-from-string/-/require-from-string-2.0.2.tgz. Extracting by manifest.
+232 silly tarball no local data for atomic-sleep@https://registry.npmjs.org/atomic-sleep/-/atomic-sleep-1.0.0.tgz. Extracting by manifest.
+233 silly tarball no local data for ret@https://registry.npmjs.org/ret/-/ret-0.2.2.tgz. Extracting by manifest.
+234 silly tarball no local data for sonic-boom@https://registry.npmjs.org/sonic-boom/-/sonic-boom-1.4.1.tgz. Extracting by manifest.
+235 silly tarball no local data for fast-redact@https://registry.npmjs.org/fast-redact/-/fast-redact-3.3.0.tgz. Extracting by manifest.
+236 silly tarball no local data for process@https://registry.npmjs.org/process/-/process-0.11.10.tgz. Extracting by manifest.
+237 silly tarball no local data for set-cookie-parser@https://registry.npmjs.org/set-cookie-parser/-/set-cookie-parser-2.6.0.tgz. Extracting by manifest.
+238 silly tarball no local data for semver-store@https://registry.npmjs.org/semver-store/-/semver-store-0.3.0.tgz. Extracting by manifest.
+239 silly tarball no local data for safe-regex2@https://registry.npmjs.org/safe-regex2/-/safe-regex2-2.0.0.tgz. Extracting by manifest.
+240 silly tarball no local data for pino-std-serializers@https://registry.npmjs.org/pino-std-serializers/-/pino-std-serializers-3.2.0.tgz. Extracting by manifest.
+241 silly tarball no local data for fast-safe-stringify@https://registry.npmjs.org/fast-safe-stringify/-/fast-safe-stringify-2.1.1.tgz. Extracting by manifest.
+242 silly tarball no local data for quick-format-unescaped@https://registry.npmjs.org/quick-format-unescaped/-/quick-format-unescaped-4.0.4.tgz. Extracting by manifest.
+243 silly tarball no local data for deepmerge@https://registry.npmjs.org/deepmerge/-/deepmerge-4.3.1.tgz. Extracting by manifest.
+244 silly tarball no local data for fastq@https://registry.npmjs.org/fastq/-/fastq-1.15.0.tgz. Extracting by manifest.
+245 silly tarball no local data for queue-microtask@https://registry.npmjs.org/queue-microtask/-/queue-microtask-1.2.3.tgz. Extracting by manifest.
+246 silly tarball no local data for fast-decode-uri-component@https://registry.npmjs.org/fast-decode-uri-component/-/fast-decode-uri-component-1.0.1.tgz. Extracting by manifest.
+247 silly tarball no local data for semver@https://registry.npmjs.org/semver/-/semver-7.5.4.tgz. Extracting by manifest.
+248 silly tarball no local data for secure-json-parse@https://registry.npmjs.org/secure-json-parse/-/secure-json-parse-2.7.0.tgz. Extracting by manifest.
+249 silly tarball no local data for string-similarity@https://registry.npmjs.org/string-similarity/-/string-similarity-4.0.4.tgz. Extracting by manifest.
+250 silly tarball no local data for pino@https://registry.npmjs.org/pino/-/pino-6.14.0.tgz. Extracting by manifest.
+251 silly tarball no local data for flatstr@https://registry.npmjs.org/flatstr/-/flatstr-1.0.12.tgz. Extracting by manifest.
+252 silly tarball no local data for find-my-way@https://registry.npmjs.org/find-my-way/-/find-my-way-4.5.1.tgz. Extracting by manifest.
+253 silly tarball no local data for process-warning@https://registry.npmjs.org/process-warning/-/process-warning-1.0.0.tgz. Extracting by manifest.
+254 silly tarball no local data for avvio@https://registry.npmjs.org/avvio/-/avvio-7.2.5.tgz. Extracting by manifest.
+255 silly tarball no local data for fast-content-type-parse@https://registry.npmjs.org/fast-content-type-parse/-/fast-content-type-parse-1.1.0.tgz. Extracting by manifest.
+256 silly tarball no local data for archy@https://registry.npmjs.org/archy/-/archy-1.0.0.tgz. Extracting by manifest.
+257 silly tarball no local data for @fastify/error@https://registry.npmjs.org/@fastify/error/-/error-2.0.0.tgz. Extracting by manifest.
+258 silly tarball no local data for @fastify/ajv-compiler@https://registry.npmjs.org/@fastify/ajv-compiler/-/ajv-compiler-1.1.0.tgz. Extracting by manifest.
+259 silly tarball no local data for follow-redirects@https://registry.npmjs.org/follow-redirects/-/follow-redirects-1.15.3.tgz. Extracting by manifest.
+260 silly tarball no local data for path@https://registry.npmjs.org/path/-/path-0.12.7.tgz. Extracting by manifest.
+261 silly tarball no local data for fastify@https://registry.npmjs.org/fastify/-/fastify-3.29.5.tgz. Extracting by manifest.
+262 silly tarball no local data for fast-json-stringify@https://registry.npmjs.org/fast-json-stringify/-/fast-json-stringify-2.7.13.tgz. Extracting by manifest.
+263 silly tarball no local data for tiny-lru@https://registry.npmjs.org/tiny-lru/-/tiny-lru-8.0.2.tgz. Extracting by manifest.
+264 silly tarball no local data for axios@https://registry.npmjs.org/axios/-/axios-0.26.1.tgz. Extracting by manifest.
+265 silly tarball no local data for crypto@https://registry.npmjs.org/crypto/-/crypto-1.0.1.tgz. Extracting by manifest.
+266 silly tarball no local data for inherits@https://registry.npmjs.org/inherits/-/inherits-2.0.3.tgz. Extracting by manifest.
+267 silly tarball no local data for json-schema-traverse@https://registry.npmjs.org/json-schema-traverse/-/json-schema-traverse-1.0.0.tgz. Extracting by manifest.
+268 silly tarball no local data for ajv@https://registry.npmjs.org/ajv/-/ajv-8.12.0.tgz. Extracting by manifest.
+269 silly tarball no local data for reusify@https://registry.npmjs.org/reusify/-/reusify-1.0.4.tgz. Extracting by manifest.
+270 silly tarball no local data for abstract-logging@https://registry.npmjs.org/abstract-logging/-/abstract-logging-2.0.1.tgz. Extracting by manifest.
+271 silly tarball no local data for axios-rate-limit@https://registry.npmjs.org/axios-rate-limit/-/axios-rate-limit-1.3.0.tgz. Extracting by manifest.
+272 silly tarball no local data for node-red-contrib-shelly@https://registry.npmjs.org/node-red-contrib-shelly/-/node-red-contrib-shelly-10.14.2.tgz. Extracting by manifest.
+273 silly tarball no local data for util@https://registry.npmjs.org/util/-/util-0.10.4.tgz. Extracting by manifest.
+274 silly tarball no local data for light-my-request@https://registry.npmjs.org/light-my-request/-/light-my-request-4.12.0.tgz. Extracting by manifest.
+275 timing reifyNode:node_modules/smartButtons Completed in 492ms
+276 http fetch GET 200 https://registry.npmjs.org/pino-std-serializers/-/pino-std-serializers-3.2.0.tgz 447ms (cache miss)
+277 http fetch GET 200 https://registry.npmjs.org/fast-safe-stringify/-/fast-safe-stringify-2.1.1.tgz 442ms (cache miss)
+278 timing reifyNode:node_modules/fast-safe-stringify Completed in 528ms
+279 http fetch GET 200 https://registry.npmjs.org/quick-format-unescaped/-/quick-format-unescaped-4.0.4.tgz 445ms (cache miss)
+280 http fetch GET 200 https://registry.npmjs.org/set-cookie-parser/-/set-cookie-parser-2.6.0.tgz 460ms (cache miss)
+281 http fetch GET 200 https://registry.npmjs.org/safe-regex2/-/safe-regex2-2.0.0.tgz 458ms (cache miss)
+282 timing reifyNode:node_modules/quick-format-unescaped Completed in 532ms
+283 timing reifyNode:node_modules/set-cookie-parser Completed in 531ms
+284 timing reifyNode:node_modules/safe-regex2 Completed in 531ms
+285 http fetch GET 200 https://registry.npmjs.org/fast-decode-uri-component/-/fast-decode-uri-component-1.0.1.tgz 436ms (cache miss)
+286 timing reifyNode:node_modules/fast-decode-uri-component Completed in 534ms
+287 http fetch GET 200 https://registry.npmjs.org/process-warning/-/process-warning-1.0.0.tgz 424ms (cache miss)
+288 http fetch GET 200 https://registry.npmjs.org/ret/-/ret-0.2.2.tgz 488ms (cache miss)
+289 http fetch GET 200 https://registry.npmjs.org/inherits/-/inherits-2.0.3.tgz 402ms (cache miss)
+290 timing reifyNode:node_modules/process-warning Completed in 537ms
+291 timing reifyNode:node_modules/ret Completed in 539ms
+292 timing reifyNode:node_modules/util/node_modules/inherits Completed in 539ms
+293 http fetch GET 200 https://registry.npmjs.org/crypto/-/crypto-1.0.1.tgz 407ms (cache miss)
+294 http fetch GET 200 https://registry.npmjs.org/require-from-string/-/require-from-string-2.0.2.tgz 501ms (cache miss)
+295 http fetch GET 200 https://registry.npmjs.org/follow-redirects/-/follow-redirects-1.15.3.tgz 420ms (cache miss)
+296 http fetch GET 200 https://registry.npmjs.org/archy/-/archy-1.0.0.tgz 424ms (cache miss)
+297 http fetch GET 200 https://registry.npmjs.org/tiny-lru/-/tiny-lru-8.0.2.tgz 417ms (cache miss)
+298 http fetch GET 200 https://registry.npmjs.org/abstract-logging/-/abstract-logging-2.0.1.tgz 401ms (cache miss)
+299 warn deprecated crypto@1.0.1: This package is no longer supported. It's now a built-in Node module. If you've depended on crypto, you should switch to the one that's built-in.
+300 timing reifyNode:node_modules/crypto Completed in 540ms
+301 timing reifyNode:node_modules/require-from-string Completed in 542ms
+302 timing reifyNode:node_modules/follow-redirects Completed in 540ms
+303 timing reifyNode:node_modules/archy Completed in 541ms
+304 timing reifyNode:node_modules/tiny-lru Completed in 542ms
+305 timing reifyNode:node_modules/abstract-logging Completed in 542ms
+306 http fetch GET 200 https://registry.npmjs.org/sonic-boom/-/sonic-boom-1.4.1.tgz 478ms (cache miss)
+307 http fetch GET 200 https://registry.npmjs.org/queue-microtask/-/queue-microtask-1.2.3.tgz 458ms (cache miss)
+308 http fetch GET 200 https://registry.npmjs.org/axios-rate-limit/-/axios-rate-limit-1.3.0.tgz 406ms (cache miss)
+309 http fetch GET 200 https://registry.npmjs.org/process/-/process-0.11.10.tgz 478ms (cache miss)
+310 timing reifyNode:node_modules/queue-microtask Completed in 548ms
+311 timing reifyNode:node_modules/axios-rate-limit Completed in 547ms
+312 timing reifyNode:node_modules/process Completed in 548ms
+313 http fetch GET 200 https://registry.npmjs.org/semver-store/-/semver-store-0.3.0.tgz 479ms (cache miss)
+314 http fetch GET 200 https://registry.npmjs.org/string-similarity/-/string-similarity-4.0.4.tgz 449ms (cache miss)
+315 http fetch GET 200 https://registry.npmjs.org/util/-/util-0.10.4.tgz 194ms (cache miss)
+316 warn deprecated string-similarity@4.0.4: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
+317 timing reifyNode:node_modules/semver-store Completed in 551ms
+318 timing reifyNode:node_modules/string-similarity Completed in 552ms
+319 timing reifyNode:node_modules/util Completed in 553ms
+320 http fetch GET 200 https://registry.npmjs.org/fast-content-type-parse/-/fast-content-type-parse-1.1.0.tgz 438ms (cache miss)
+321 http fetch GET 200 https://registry.npmjs.org/flatstr/-/flatstr-1.0.12.tgz 450ms (cache miss)
+322 timing reifyNode:node_modules/flatstr Completed in 555ms
+323 timing reifyNode:node_modules/sonic-boom Completed in 556ms
+324 http fetch GET 200 https://registry.npmjs.org/json-schema-traverse/-/json-schema-traverse-1.0.0.tgz 420ms (cache miss)
+325 timing reifyNode:node_modules/pino-std-serializers Completed in 562ms
+326 http fetch GET 200 https://registry.npmjs.org/atomic-sleep/-/atomic-sleep-1.0.0.tgz 521ms (cache miss)
+327 timing reifyNode:node_modules/atomic-sleep Completed in 564ms
+328 timing reifyNode:node_modules/light-my-request/node_modules/json-schema-traverse Completed in 564ms
+329 http fetch GET 200 https://registry.npmjs.org/reusify/-/reusify-1.0.4.tgz 426ms (cache miss)
+330 timing reifyNode:node_modules/reusify Completed in 565ms
+331 http fetch GET 200 https://registry.npmjs.org/deepmerge/-/deepmerge-4.3.1.tgz 488ms (cache miss)
+332 http fetch GET 200 https://registry.npmjs.org/fastq/-/fastq-1.15.0.tgz 488ms (cache miss)
+333 timing reifyNode:node_modules/deepmerge Completed in 577ms
+334 timing reifyNode:node_modules/fastq Completed in 577ms
+335 http fetch GET 200 https://registry.npmjs.org/secure-json-parse/-/secure-json-parse-2.7.0.tgz 483ms (cache miss)
+336 timing reifyNode:node_modules/secure-json-parse Completed in 588ms
+337 timing reifyNode:node_modules/fast-content-type-parse Completed in 588ms
+338 http fetch GET 200 https://registry.npmjs.org/fast-redact/-/fast-redact-3.3.0.tgz 523ms (cache miss)
+339 timing reifyNode:node_modules/fast-redact Completed in 600ms
+340 http fetch GET 200 https://registry.npmjs.org/light-my-request/-/light-my-request-4.12.0.tgz 202ms (cache miss)
+341 timing reifyNode:node_modules/light-my-request Completed in 605ms
+342 http fetch GET 200 https://registry.npmjs.org/path/-/path-0.12.7.tgz 494ms (cache miss)
+343 timing reifyNode:node_modules/path Completed in 614ms
+344 http fetch GET 200 https://registry.npmjs.org/semver/-/semver-7.5.4.tgz 529ms (cache miss)
+345 http fetch GET 200 https://registry.npmjs.org/avvio/-/avvio-7.2.5.tgz 521ms (cache miss)
+346 timing reifyNode:node_modules/avvio Completed in 636ms
+347 timing reifyNode:node_modules/semver Completed in 636ms
+348 http fetch GET 200 https://registry.npmjs.org/node-red-contrib-shelly/-/node-red-contrib-shelly-10.14.2.tgz 503ms (cache miss)
+349 timing reifyNode:node_modules/node-red-contrib-shelly Completed in 645ms
+350 http fetch GET 200 https://registry.npmjs.org/find-my-way/-/find-my-way-4.5.1.tgz 563ms (cache miss)
+351 timing reifyNode:node_modules/find-my-way Completed in 671ms
+352 http fetch GET 200 https://registry.npmjs.org/axios/-/axios-0.26.1.tgz 547ms (cache miss)
+353 timing reifyNode:node_modules/axios Completed in 671ms
+354 http fetch GET 200 https://registry.npmjs.org/fast-json-stringify/-/fast-json-stringify-2.7.13.tgz 589ms (cache miss)
+355 timing reifyNode:node_modules/fast-json-stringify Completed in 712ms
+356 http fetch GET 200 https://registry.npmjs.org/pino/-/pino-6.14.0.tgz 614ms (cache miss)
+357 timing reifyNode:node_modules/pino Completed in 717ms
+358 http fetch GET 200 https://registry.npmjs.org/fastify/-/fastify-3.29.5.tgz 712ms (cache miss)
+359 timing reifyNode:node_modules/fastify Completed in 834ms
+360 http fetch GET 200 https://registry.npmjs.org/ajv/-/ajv-8.12.0.tgz 746ms (cache miss)
+361 timing reifyNode:node_modules/light-my-request/node_modules/ajv Completed in 884ms
+362 http fetch GET 200 https://registry.npmjs.org/@fastify/error/-/error-2.0.0.tgz 939ms (cache miss)
+363 timing reifyNode:node_modules/@fastify/error Completed in 1057ms
+364 http fetch GET 200 https://registry.npmjs.org/@fastify/ajv-compiler/-/ajv-compiler-1.1.0.tgz 961ms (cache miss)
+365 timing reifyNode:node_modules/@fastify/ajv-compiler Completed in 1081ms
+366 timing reify:unpack Completed in 1083ms
+367 timing reify:unretire Completed in 1ms
+368 timing build:queue Completed in 2ms
+369 timing build:link:node_modules/pino Completed in 2ms
+370 timing build:link:node_modules/semver Completed in 1ms
+371 timing build:link Completed in 3ms
+372 timing build:deps Completed in 5ms
+373 timing build:queue Completed in 0ms
+374 timing build:links Completed in 0ms
+375 timing build Completed in 5ms
+376 timing reify:build Completed in 5ms
+377 timing reify:trash Completed in 1ms
+378 timing reify:save Completed in 59ms
+379 timing reify Completed in 4564ms
+380 silly ADD node_modules/require-from-string
+381 silly ADD node_modules/atomic-sleep
+382 silly ADD node_modules/ret
+383 silly ADD node_modules/sonic-boom
+384 silly ADD node_modules/quick-format-unescaped
+385 silly ADD node_modules/pino-std-serializers
+386 silly ADD node_modules/fast-safe-stringify
+387 silly ADD node_modules/fast-redact
+388 silly ADD node_modules/util
+389 silly ADD node_modules/util/node_modules/inherits
+390 silly ADD node_modules/process
+391 silly ADD node_modules/set-cookie-parser
+392 silly ADD node_modules/semver-store
+393 silly ADD node_modules/safe-regex2
+394 silly ADD node_modules/fast-decode-uri-component
+395 silly ADD node_modules/reusify
+396 silly ADD node_modules/string-similarity
+397 silly ADD node_modules/deepmerge
+398 silly ADD node_modules/queue-microtask
+399 silly ADD node_modules/fastq
+400 silly ADD node_modules/archy
+401 silly ADD node_modules/tiny-lru
+402 silly ADD node_modules/semver
+403 silly ADD node_modules/secure-json-parse
+404 silly ADD node_modules/process-warning
+405 silly ADD node_modules/pino
+406 silly ADD node_modules/light-my-request
+407 silly ADD node_modules/light-my-request/node_modules/json-schema-traverse
+408 silly ADD node_modules/light-my-request/node_modules/ajv
+409 silly ADD node_modules/flatstr
+410 silly ADD node_modules/find-my-way
+411 silly ADD node_modules/fast-json-stringify
+412 silly ADD node_modules/fast-content-type-parse
+413 silly ADD node_modules/avvio
+414 silly ADD node_modules/abstract-logging
+415 silly ADD node_modules/@fastify/error
+416 silly ADD node_modules/@fastify/ajv-compiler
+417 silly ADD node_modules/follow-redirects
+418 silly ADD node_modules/path
+419 silly ADD node_modules/fastify
+420 silly ADD node_modules/crypto
+421 silly ADD node_modules/axios-rate-limit
+422 silly ADD node_modules/axios
+423 silly ADD node_modules/node-red-contrib-shelly
+424 silly CHANGE node_modules/smartButtons
+425 timing command:install Completed in 4569ms
+426 verbose exit 0
+427 timing npm Completed in 4979ms
+428 info ok

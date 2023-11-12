@@ -1,0 +1,49 @@
+permit_join: false
+mqtt:
+  base_topic: z2m-conbee
+  server: mqtt://172.16.255.164
+serial:
+  port: /dev/ttyACM0
+  adapter: auto
+  baudrate: 38400
+frontend:
+  port: 8080
+devices:
+  '0x000000000171a526':
+    friendly_name: sw01
+  '0x000000000171a0d9':
+    friendly_name: sw02
+  '0x0017880104cb5e5b':
+    friendly_name: BB96E9
+  '0x943469fffea79959':
+    friendly_name: '0x943469fffea79959'
+  '0x001788010203653f':
+    friendly_name: hm03
+    description: Bathroom
+  '0x001788010328496a':
+    friendly_name: hm04
+    description: Kitchen
+  '0x0017880104b70f79':
+    friendly_name: hm05
+    description: bedroom
+  '0x001788010866ce87':
+    friendly_name: hm01
+    description: oscar
+  '0x0017880104b73739':
+    friendly_name: hm02
+    description: Livingroom
+advanced:
+  log_level: warn
+  log_syslog:
+    app_name: conbe
+    eol: /n
+    host: localhost
+    localhost: localhost
+    path: /dev/log
+    pid: process.pid
+    port: 514
+    protocol: udp4
+    type: '5424'
+ota:
+  ikea_ota_use_test_url: false
+  disable_automatic_update_check: true

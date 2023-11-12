@@ -1,0 +1,111 @@
+{
+    "0x000000000171a526": {
+        "linkquality": 127
+    },
+    "0x000000000171a0d9": {
+        "linkquality": 127
+    },
+    "0x0017880104cb5e5b": {
+        "linkquality": 255,
+        "power_on_behavior": "on",
+        "brightness": 0,
+        "state": "OFF",
+        "update": {
+            "state": "idle",
+            "installed_version": 16786948,
+            "latest_version": 16786948
+        },
+        "update_available": false
+    },
+    "0x943469fffea79959": {
+        "power_on_behavior": "previous",
+        "state": "ON",
+        "brightness": 88,
+        "linkquality": 252
+    },
+    "0x001788010203653f": {
+        "motion_sensitivity": "high",
+        "led_indication": false,
+        "occupancy_timeout": 0,
+        "battery": 90.5,
+        "illuminance": 0,
+        "illuminance_lux": 0,
+        "occupancy": false,
+        "temperature": 21.15,
+        "linkquality": 255,
+        "update": {
+            "state": "idle",
+            "installed_version": 1107323831,
+            "latest_version": 1107323831
+        },
+        "update_available": false
+    },
+    "0x001788010328496a": {
+        "motion_sensitivity": "high",
+        "led_indication": false,
+        "occupancy_timeout": 0,
+        "battery": 48,
+        "occupancy": false,
+        "temperature": 22.22,
+        "illuminance": 5047,
+        "illuminance_lux": 3,
+        "linkquality": 255,
+        "update": {
+            "state": "idle",
+            "installed_version": 1107323831,
+            "latest_version": 1107323831
+        },
+        "update_available": false
+    },
+    "0x0017880104b70f79": {
+        "motion_sensitivity": "high",
+        "led_indication": false,
+        "occupancy_timeout": 0,
+        "battery": 100,
+        "illuminance": 0,
+        "illuminance_lux": 0,
+        "occupancy": false,
+        "linkquality": 255,
+        "temperature": 17.48,
+        "update": {
+            "state": "idle",
+            "installed_version": 1107323831,
+            "latest_version": 1107323831
+        },
+        "update_available": false
+    },
+    "0x001788010866ce87": {
+        "motion_sensitivity": "high",
+        "led_indication": false,
+        "occupancy_timeout": 0,
+        "battery": 31,
+        "occupancy": false,
+        "temperature": 20.22,
+        "illuminance": 0,
+        "illuminance_lux": 0,
+        "linkquality": 220,
+        "update": {
+            "state": "idle",
+            "installed_version": 1107323831,
+            "latest_version": 1107323831
+        },
+        "update_available": false
+    },
+    "0x0017880104b73739": {
+        "motion_sensitivity": "high",
+        "led_indication": false,
+        "occupancy_timeout": 0,
+        "battery": 100,
+        "occupancy": false,
+        "temperature": 19.92,
+        "illuminance": 5738,
+        "illuminance_lux": 4,
+        "linkquality": 255,
+        "update": {
+            "state": "idle",
+            "installed_version": 1107323831,
+            "latest_version": 1107323831
+        },
+        "update_available": false
+    }
+}

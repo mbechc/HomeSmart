@@ -487,5 +487,69 @@
                 "file": "/data/node_modules/node-red-contrib-zigbee2mqtt/api.js"
             }
         }
+    },
+    "node-red-contrib-amazon-echo": {
+        "name": "node-red-contrib-amazon-echo",
+        "version": "0.1.10",
+        "local": true,
+        "user": true,
+        "nodes": {
+            "alexa-local-hub": {
+                "name": "alexa-local-hub",
+                "types": [
+                    "amazon-echo-hub",
+                    "amazon-echo-device"
+                ],
+                "enabled": true,
+                "local": true,
+                "user": false,
+                "module": "node-red-contrib-amazon-echo",
+                "file": "/data/node_modules/node-red-contrib-amazon-echo/index.js"
+            }
+        }
+    },
+    "node-red-contrib-shelly": {
+        "name": "node-red-contrib-shelly",
+        "version": "10.14.2",
+        "local": true,
+        "user": true,
+        "nodes": {
+            "shelly": {
+                "name": "shelly",
+                "types": [
+                    "shelly-gen1-server",
+                    "shelly-gen1",
+                    "shelly-gen2-server",
+                    "shelly-gen2",
+                    "shelly-cloud-server",
+                    "shelly-cloud"
+                ],
+                "enabled": true,
+                "local": true,
+                "user": false,
+                "module": "node-red-contrib-shelly",
+                "file": "/data/node_modules/node-red-contrib-shelly/shelly/99-shelly.js"
+            }
+        },
+        "pending_version": "10.14.3"
+    },
+    "node-red-contrib-timed-counter": {
+        "name": "node-red-contrib-timed-counter",
+        "version": "0.1.0",
+        "local": true,
+        "user": true,
+        "nodes": {
+            "timed-counter": {
+                "name": "timed-counter",
+                "types": [
+                    "timed-counter"
+                ],
+                "enabled": true,
+                "local": true,
+                "user": false,
+                "module": "node-red-contrib-timed-counter",
+                "file": "/data/node_modules/node-red-contrib-timed-counter/timed-counter.js"
+            }
+        }
     }
 }

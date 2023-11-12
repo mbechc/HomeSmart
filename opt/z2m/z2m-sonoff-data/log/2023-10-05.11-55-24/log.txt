@@ -1,0 +1,28 @@
+debug 2023-10-05 11:55:24: Loaded state from file /app/data/state.json
+info  2023-10-05 11:55:24: Logging to console and directory: '/app/data/log/2023-10-05.11-55-24' filename: log.txt
+debug 2023-10-05 11:55:24: Removing old log directory '/app/data/log/2023-10-05.11-44-59'
+info  2023-10-05 11:55:24: Starting Zigbee2MQTT version 1.33.0 (commit #7ee207f)
+info  2023-10-05 11:55:24: Starting zigbee-herdsman (0.18.5)
+debug 2023-10-05 11:55:24: Using zigbee-herdsman with settings: '{"adapter":{"concurrent":null,"delay":null,"disableLED":false},"backupPath":"/app/data/coordinator_backup.json","databaseBackupPath":"/app/data/database.db.backup","databasePath":"/app/data/database.db","network":{"channelList":[11],"extendedPanID":[221,221,221,221,221,221,221,221],"networkKey":"HIDDEN","panID":6754},"serialPort":{"adapter":"ezsp","path":"/dev/ttyACM1"}}'
+info  2023-10-05 11:55:26: zigbee-herdsman started (resumed)
+info  2023-10-05 11:55:26: Coordinator firmware version: '{"meta":{"maintrel":"3 ","majorrel":"6","minorrel":"10","product":8,"revision":"6.10.3.0 build 297"},"type":"EZSP v8"}'
+debug 2023-10-05 11:55:26: Zigbee network parameters: {"channel":11,"extendedPanID":221,"panID":6754}
+info  2023-10-05 11:55:26: Currently 1 devices are joined:
+info  2023-10-05 11:55:26: relay01 (0x943469fffea79959): ZG102-BOX-UNIDIM - Envilar ZigBee AC phase-cut dimmer (Router)
+info  2023-10-05 11:55:26: Zigbee: disabling joining new devices.
+info  2023-10-05 11:55:27: Connecting to MQTT server at mqtt://172.16.255.164
+debug 2023-10-05 11:55:27: Using MQTT anonymous login
+info  2023-10-05 11:55:27: Connected to MQTT server
+info  2023-10-05 11:55:27: MQTT publish: topic 'z2m-sonoff/bridge/state', payload '{"state":"online"}'
+info  2023-10-05 11:55:27: Started frontend on port 0.0.0.0:8081
+info  2023-10-05 11:55:27: MQTT publish: topic 'z2m-sonoff/relay01', payload '{"brightness":254,"linkquality":116,"power_on_behavior":"previous","state":"ON"}'
+info  2023-10-05 11:55:27: Zigbee2MQTT started!
+debug 2023-10-05 11:55:27: Received MQTT message on 'z2m-sonoff/relay01/get' with data '{"power_on_behavior":""}'
+debug 2023-10-05 11:55:27: Publishing get 'get' 'power_on_behavior' to 'relay01'
+error 2023-10-05 11:55:55: Publish 'get' 'power_on_behavior' to 'relay01' failed: 'Error: Read 0x943469fffea79959/1 genOnOff(["startUpOnOff"], {"sendWhen":"immediate","timeout":10000,"disableResponse":false,"disableRecovery":false,"disableDefaultResponse":true,"direction":0,"srcEndpoint":null,"reservedBits":0,"manufacturerCode":null,"transactionSequenceNumber":null,"writeUndiv":false}) failed (sendZclFrameToEndpointInternal error)'
+debug 2023-10-05 11:55:55: Error: Read 0x943469fffea79959/1 genOnOff(["startUpOnOff"], {"sendWhen":"immediate","timeout":10000,"disableResponse":false,"disableRecovery":false,"disableDefaultResponse":true,"direction":0,"srcEndpoint":null,"reservedBits":0,"manufacturerCode":null,"transactionSequenceNumber":null,"writeUndiv":false}) failed (sendZclFrameToEndpointInternal error)
+    at EZSPAdapter.sendZclFrameToEndpointInternal (/app/node_modules/zigbee-herdsman/src/adapter/ezsp/adapter/ezspAdapter.ts:462:19)
+    at Request.send (/app/node_modules/zigbee-herdsman/src/controller/helpers/request.ts:81:20)
+    at Endpoint.read (/app/node_modules/zigbee-herdsman/src/controller/model/endpoint.ts:559:28)
+    at Object.convertGet (/app/node_modules/zigbee-herdsman-converters/src/converters/toZigbee.js:120:13)
+    at Publish.onMQTTMessage (/app/lib/extension/publish.ts:275:21)

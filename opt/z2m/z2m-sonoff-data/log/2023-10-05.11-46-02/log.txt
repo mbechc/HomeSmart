@@ -1,0 +1,7 @@
+debug 2023-10-05 11:46:02: Loaded state from file /app/data/state.json
+info  2023-10-05 11:46:02: Logging to console and directory: '/app/data/log/2023-10-05.11-46-02' filename: log.txt
+debug 2023-10-05 11:46:02: Removing old log directory '/app/data/log/2023-10-05.11-44-28'
+info  2023-10-05 11:46:02: Starting Zigbee2MQTT version 1.33.0 (commit #7ee207f)
+info  2023-10-05 11:46:02: Starting zigbee-herdsman (0.18.5)
+debug 2023-10-05 11:46:02: Using zigbee-herdsman with settings: '{"adapter":{"concurrent":null,"delay":null,"disableLED":false},"backupPath":"/app/data/coordinator_backup.json","databaseBackupPath":"/app/data/database.db.backup","databasePath":"/app/data/database.db","network":{"channelList":[11],"extendedPanID":[221,221,221,221,221,221,221,221],"networkKey":"HIDDEN","panID":6754},"serialPort":{"adapter":"ezsp","path":"/dev/ttyACM1"}}'
+debug 2023-10-05 11:46:07: Saving state to file /app/data/state.json

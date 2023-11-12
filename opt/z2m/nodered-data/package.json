@@ -4,7 +4,10 @@
     "version": "0.0.1",
     "private": true,
     "dependencies": {
-        "node-red-contrib-button-events": "~2.0.0",
-        "node-red-contrib-zigbee2mqtt": "~2.7.1"
+        "node-red-contrib-amazon-echo": "~0.1.10",
+        "node-red-contrib-shelly": "~10.14.3",
+        "node-red-contrib-timed-counter": "~0.1.0",
+        "node-red-contrib-zigbee2mqtt": "~2.7.1",
+        "smartButtons": "file:../../../root/smartButtons"
     }
 }
