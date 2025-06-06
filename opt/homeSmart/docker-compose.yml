@@ -7,4 +7,5 @@ services:
       - BRIDGE_IP=192.168.88.157
       - API_KEY=n7tQojvnCYgoUeFsAhHQ0S0q18zZZqjmIoHRoeef
       - MQTT_URL=mqtt://192.168.88.5
+      - DEBUG=1 # 0=No logs, 1=summary logs, 2=Full verbose
 

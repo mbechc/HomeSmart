@@ -1,103 +1,131 @@
-/* hue_event - Version 1.1.2
- * Updated: 2025-06-05
- * Description: Full event listener that parses MQTT_URL and publishes Hue events to MQTT.
+/*
+ * hue_event - Version 1.1.3
+ * Uses Hue v2 Event Stream API (HTTP/2) with CLI args and MQTT.
+ * FIXED: MQTT always emits regardless of debug level.
  */
 
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <unistd.h>
+#include <stdarg.h>
 #include <curl/curl.h>
 #include <mosquitto.h>
 
-#define EVENT_STREAM_ENDPOINT "/eventstream/clip/v2"
+#define EVENT_STREAM_PATH "/eventstream/clip/v2"
+#define DEFAULT_PORT 1883
 
-static struct mosquitto *mosq = NULL;
+enum DebugLevel {
+    DEBUG_NONE = 0,
+    DEBUG_INFO = 1,
+    DEBUG_VERBOSE = 2
+};
 
-// Callback for incoming data from CURL
-static size_t curl_callback(char *ptr, size_t size, size_t nmemb, void *userdata) {
-    size_t total_size = size * nmemb;
-    if (total_size > 0) {
-        printf("[hue_event] Event: %.*s\n", (int)total_size, ptr);
-        mosquitto_publish(mosq, NULL, (const char *)userdata, total_size, ptr, 0, false);
+static int debug_level = DEBUG_INFO;
+
+static void log_debug(int level, const char *fmt, ...) {
+    if (level <= debug_level) {
+        va_list args;
+        va_start(args, fmt);
+        vfprintf(stderr, fmt, args);
+        va_end(args);
     }
+}
+
+static size_t stream_callback(char *ptr, size_t size, size_t nmemb, void *userdata) {
+    size_t total_size = size * nmemb;
+    ptr[total_size] = '\0';
+
+    char *start = strstr(ptr, "data:");
+    if (start) {
+        start += 5;
+        while (*start == ' ') start++;
+
+        // Always publish
+        struct mosquitto *mosq = (struct mosquitto *)userdata;
+        mosquitto_publish(mosq, NULL, "hue/events/raw", strlen(start), start, 0, false);
+
+        // Only log if debug
+        log_debug(DEBUG_VERBOSE, "[hue_event] Received: %s\n", start);
+    }
+
     return total_size;
 }
 
-int main() {
-    const char *bridge_ip = getenv("BRIDGE_IP");
-    const char *api_key = getenv("API_KEY");
-    const char *mqtt_url = getenv("MQTT_URL");
+void parse_mqtt_url(const char *url, char *host, int *port) {
+    *port = DEFAULT_PORT;
+    if (sscanf(url, "mqtt://%255[^:]:%d", host, port) >= 1) return;
+    if (sscanf(url, "mqtt://%255[^/]", host) == 1) return;
+    strcpy(host, "localhost");
+}
 
-    if (!bridge_ip || !api_key || !mqtt_url) {
-        fprintf(stderr, "[hue_event] Required env vars: BRIDGE_IP, API_KEY, MQTT_URL\n");
+int main(int argc, char *argv[]) {
+    const char *debug_env = getenv("DEBUG");
+    if (debug_env) {
+        debug_level = atoi(debug_env);
+        if (debug_level < 0 || debug_level > 2) debug_level = DEBUG_INFO;
+    }
+
+    if (argc < 4 || strcmp(argv[3], "--mqtt") != 0 || argc < 5) {
+        fprintf(stderr, "Usage: %s <bridge_ip> <api_key> --mqtt <mqtt_url>\n", argv[0]);
         return 1;
     }
 
-    // Parse MQTT_URL
-    char *mqtt_host = NULL;
-    int mqtt_port = 1883;
-    if (strncmp(mqtt_url, "mqtt://", 7) == 0) {
-        mqtt_url += 7;
-        char *url_copy = strdup(mqtt_url);
-        char *colon = strchr(url_copy, ':');
-        if (colon) {
-            *colon = '\0';
-            mqtt_host = url_copy;
-            mqtt_port = atoi(colon + 1);
-        } else {
-            mqtt_host = url_copy;
-        }
-        printf("[hue_event] MQTT host parsed as: %s\n", mqtt_host);
-        printf("[hue_event] MQTT port parsed as: %d\n", mqtt_port);
-    } else {
-        fprintf(stderr, "[hue_event] Invalid MQTT_URL. Expected mqtt://host[:port]\n");
-        return 1;
-    }
+    const char *bridge_ip = argv[1];
+    const char *api_key = argv[2];
+    const char *mqtt_url = argv[4];
+    char mqtt_host[256] = "localhost";
+    int mqtt_port = DEFAULT_PORT;
 
-    // Init MQTT
+    parse_mqtt_url(mqtt_url, mqtt_host, &mqtt_port);
+    log_debug(DEBUG_INFO, "[hue_event] MQTT -> host: %s, port: %d\n", mqtt_host, mqtt_port);
+
     mosquitto_lib_init();
-    mosq = mosquitto_new(NULL, true, NULL);
+    struct mosquitto *mosq = mosquitto_new(NULL, true, NULL);
     if (!mosq) {
         fprintf(stderr, "[hue_event] Failed to create MQTT client\n");
         return 1;
     }
+
     if (mosquitto_connect(mosq, mqtt_host, mqtt_port, 60) != MOSQ_ERR_SUCCESS) {
-        fprintf(stderr, "[hue_event] Failed to connect to MQTT broker\n");
+        fprintf(stderr, "[hue_event] MQTT connection failed\n");
         return 1;
     }
 
-    // Setup CURL for Hue event stream
     CURL *curl = curl_easy_init();
     if (!curl) {
-        fprintf(stderr, "[hue_event] Failed to init CURL\n");
+        fprintf(stderr, "[hue_event] Failed to initialize CURL\n");
         return 1;
     }
 
-    char url[256];
-    snprintf(url, sizeof(url), "http://%s%s", bridge_ip, EVENT_STREAM_ENDPOINT);
-    char auth_header[256];
-    snprintf(auth_header, sizeof(auth_header), "hue-application-key: %s", api_key);
+    char url[512];
+    snprintf(url, sizeof(url), "https://%s%s", bridge_ip, EVENT_STREAM_PATH);
 
     struct curl_slist *headers = NULL;
+    char auth_header[512];
+    snprintf(auth_header, sizeof(auth_header), "hue-application-key: %s", api_key);
     headers = curl_slist_append(headers, auth_header);
-    curl_easy_setopt(curl, CURLOPT_HTTPHEADER, headers);
+    headers = curl_slist_append(headers, "Accept: text/event-stream");
+
     curl_easy_setopt(curl, CURLOPT_URL, url);
-    curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, curl_callback);
+    curl_easy_setopt(curl, CURLOPT_HTTPHEADER, headers);
+    curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, stream_callback);
+    curl_easy_setopt(curl, CURLOPT_WRITEDATA, (void *)mosq);
+    curl_easy_setopt(curl, CURLOPT_HTTP_VERSION, CURL_HTTP_VERSION_2TLS);
+    curl_easy_setopt(curl, CURLOPT_SSL_VERIFYPEER, 0L);
+    curl_easy_setopt(curl, CURLOPT_SSL_VERIFYHOST, 0L);
 
-    char topic[128];
-    snprintf(topic, sizeof(topic), "hue/events/%s", bridge_ip);
-    curl_easy_setopt(curl, CURLOPT_WRITEDATA, topic);
+    log_debug(DEBUG_INFO, "[hue_event] Connecting to Hue event stream at %s...\n", url);
+    CURLcode res = curl_easy_perform(curl);
+    if (res != CURLE_OK) {
+        fprintf(stderr, "[hue_event] CURL failed: %s\n", curl_easy_strerror(res));
+    }
 
-    printf("[hue_event] Starting event stream from %s\n", url);
-    curl_easy_perform(curl);
-
-    // Cleanup
     curl_easy_cleanup(curl);
     curl_slist_free_all(headers);
+    mosquitto_disconnect(mosq);
     mosquitto_destroy(mosq);
     mosquitto_lib_cleanup();
-    free(mqtt_host);
 
     return 0;
 }
