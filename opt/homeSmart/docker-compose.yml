@@ -1,0 +1,10 @@
+
+services:
+  hue_event_gw01:
+    build: ./hue_events
+    entrypoint: ./hue_events 192.168.88.157 n7tQojvnCYgoUeFsAhHQ0S0q18zZZqjmIoHRoeef --mqtt mqtt://192.168.88.5
+    environment:
+      - BRIDGE_IP=192.168.88.157
+      - API_KEY=n7tQojvnCYgoUeFsAhHQ0S0q18zZZqjmIoHRoeef
+      - MQTT_URL=mqtt://192.168.88.5
+
